@@ -8,33 +8,45 @@
 :root{--bg:#f6f5f1;--card:#fff;--ink:#1d1d1b;--mute:#6b6a64;--line:#e4e2da;--acc:#b3261e;--tag:#eceae2}
 @media (prefers-color-scheme:dark){:root{--bg:#121212;--card:#1c1c1b;--ink:#ecebe6;--mute:#9a988f;--line:#2e2d2a;--acc:#ff8a80;--tag:#2a2927}}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-main{max-width:720px;margin:0 auto;padding:16px 14px 40px}
+main{max-width:760px;margin:0 auto;padding:16px 14px 40px}
 header{display:flex;justify-content:space-between;align-items:baseline}
 h1{font-size:20px;margin:0}
 .date,.stamp,.sub,footer{color:var(--mute);font-size:13px}
 .stamp{margin:2px 0 14px}
-section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+section,.fold{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px}
+.fold{padding:10px 14px}
 h2{font-size:13px;letter-spacing:.08em;color:var(--acc);margin:0 0 8px}
+.fold summary{cursor:pointer;font-size:13px;letter-spacing:.08em;color:var(--acc);font-weight:600;list-style:none}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::before{content:"▸ "}
+.fold[open] summary::before{content:"▾ "}
+.fold[open] summary{margin-bottom:8px}
 .item{padding:7px 0;border-top:1px solid var(--line)}
 .item:first-of-type{border-top:0}
 .item b{font-weight:600}
 .tag{display:inline-block;background:var(--tag);color:var(--mute);font-size:11px;border-radius:5px;padding:0 6px;margin-right:6px}
 .when{float:right;color:var(--acc);font-size:13px;font-weight:600;margin-left:8px}
 .src a{color:var(--mute);font-size:12px;margin-right:8px}
-.fold{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:12px}
-.fold summary{cursor:pointer;font-size:13px;letter-spacing:.08em;color:var(--acc);font-weight:600;list-style:none}
-.fold summary::-webkit-details-marker{display:none}
-.fold summary::before{content:"▸ ";}
-.fold[open] summary::before{content:"▾ ";}
-.fold[open] summary{margin-bottom:8px}
 .empty{color:var(--mute);font-size:14px}
+.ov{border-left:4px solid var(--acc)}
+.ov p{margin:0;font-size:15px}
+.tabs{display:flex;gap:6px;margin:0 0 12px}
+.tabs button{flex:1;padding:8px 0;border:1px solid var(--line);background:var(--card);color:var(--mute);border-radius:10px;font:inherit;font-size:14px;cursor:pointer}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
 </style>
 </head>
 <body>
 <main>
 <header><h1>每日大事簡報</h1><span class="date" id="today"></span></header>
 <div class="stamp" id="stamp">載入中…</div>
-<div id="app"></div>
+<div id="ov"></div>
+<div id="cal"></div>
+<div class="tabs" id="tabs" hidden>
+  <button id="t-all" type="button">全部摘要</button>
+  <button id="t-cat" type="button">分類檢視</button>
+</div>
+<div id="v-all"></div>
+<div id="v-cat" hidden></div>
 <footer>內容依新聞標題自動整理，僅供速覽；請點來源連結確認細節。</footer>
 </main>
 <script>
@@ -54,28 +66,43 @@ function item(tag,text,detail,links,when){
     if(!/^https?:\/\//.test(l.url))return;
     var a=el("a",null,"↗ "+l.src);a.href=l.url;a.target="_blank";a.rel="noopener noreferrer";s.appendChild(a)});d.appendChild(s)}
   return d}
+function mkItems(list){return (list||[]).map(function(i){return item(i.tag||"",i.text,i.detail,i.links)})}
 function sec(title,items,emptyMsg,collapsed){
-  var s=el(collapsed?"details":"section"); if(collapsed)s.className="fold";
-  var head=el(collapsed?"summary":"h2",null,collapsed?title+"（"+items.length+"）":title);
-  if(!collapsed)head.className="";
-  s.appendChild(head);
+  var s=el(collapsed?"details":"section");if(collapsed)s.className="fold";
+  s.appendChild(el(collapsed?"summary":"h2",null,collapsed?title+"（"+items.length+"）":title+(items.length>1?"（"+items.length+"）":"")));
   if(items.length)items.forEach(function(i){s.appendChild(i)});else s.appendChild(el("div","empty",emptyMsg||"今日無相關重點"));
   return s}
 function rel(n){return n<=0?"今天":n===1?"明天":n+" 天後"}
+function show(which){
+  $("v-all").hidden=(which!=="all");$("v-cat").hidden=(which!=="cat");
+  $("t-all").className=which==="all"?"on":"";$("t-cat").className=which==="cat"?"on":"";
+  try{localStorage.setItem("briefTab",which)}catch(e){}}
 fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
   var age=Math.round((today-d0(d.updated.slice(0,10)))/DAY);
   $("stamp").textContent="更新於 "+d.updated+"（台灣時間）"+(age>1?" ⚠ 已 "+age+" 天未更新":"")+(d.ai===false?"｜今日為標題模式（AI 摘要未啟用）":"");
-  var app=$("app");
-  if((d.top||[]).length)app.appendChild(sec("今日重點",d.top.map(function(i){return item(i.tag||"",i.text,i.detail,i.links)})));
+  // AI 總摘要
+  if(d.overview){var o=el("section","ov");o.appendChild(el("h2",null,"AI 今日總摘要"));o.appendChild(el("p",null,d.overview));$("ov").appendChild(o)}
   // 行程倒數
   var ev=[];
   (d.calendar||[]).forEach(function(c){var s=d0(c.date),e=c.end?d0(c.end):s;
     if(e>=today){var n=Math.round((s-today)/DAY);ev.push({k:Math.max(n,0),w:(n<=0&&c.end?"進行中":rel(n)),c:c})}});
   (d.weekly||[]).forEach(function(w){var n=(w.dow-today.getDay()+7)%7;ev.push({k:n,w:rel(n),c:w})});
   ev.sort(function(a,b){return a.k-b.k});
-  app.appendChild(sec("未來行程與會議",ev.map(function(x){return item(x.c.tag,x.c.t,x.c.s,null,x.w)}),"近期無已登錄行程"));
+  $("cal").appendChild(sec("未來行程與會議",ev.slice(0,8).map(function(x){return item(x.c.tag,x.c.t,x.c.s,null,x.w)}),"近期無已登錄行程"));
+  // 視圖一：全部摘要（所有被摘要出的新聞，全部展開）
+  var all=$("v-all"),total=0;
+  if((d.top||[]).length){all.appendChild(sec("今日重點",mkItems(d.top)));total+=d.top.length}
   (d.sections||[]).forEach(function(s){
-    app.appendChild(sec(s.title,(s.items||[]).map(function(i){return item(i.tag||"",i.text,i.detail,i.links)}),null,!!s.collapsed))});
+    var n=(s.items||[]).length;if(!n)return;total+=n;all.appendChild(sec(s.title,mkItems(s.items)))});
+  if(!total)all.appendChild(sec("全部摘要",[],"尚無內容"));
+  // 視圖二：分類檢視（目錄類收合）
+  var cat=$("v-cat");
+  if((d.top||[]).length)cat.appendChild(sec("今日重點",mkItems(d.top)));
+  (d.sections||[]).forEach(function(s){cat.appendChild(sec(s.title,mkItems(s.items),null,!!s.collapsed))});
+  $("tabs").hidden=false;
+  $("t-all").onclick=function(){show("all")};$("t-cat").onclick=function(){show("cat")};
+  var pref="all";try{pref=localStorage.getItem("briefTab")||"all"}catch(e){}
+  show(pref==="cat"?"cat":"all");
 }).catch(function(){$("stamp").textContent="尚無資料：請先到 GitHub 的 Actions 手動執行一次「Daily Brief」。"});
 </script>
 </body>
