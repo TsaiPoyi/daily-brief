@@ -20,6 +20,7 @@ MODELS = ([os.environ["GEMINI_MODEL"]] if os.environ.get("GEMINI_MODEL") else []
     "gemini-3-flash-preview", "gemini-2.5-flash"]
 API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 GOOD_MODEL = None  # 第一次成功的模型，之後直接沿用
+VERSION = "v5-總摘要+回填"  # 版本標記：網頁頂端會顯示，用來確認 GitHub 上跑的是不是最新版
 
 # ---------- 1. 固定行程（你可以自己新增／修改）----------
 # date 與 end 格式：YYYY-MM-DD；end 可省略
@@ -382,6 +383,7 @@ def dir_headlines(items):
 
 # ---------- 6. 主程式 ----------
 def main():
+    print("程式版本：", VERSION)
     items = collect()
     if not items:
         raise SystemExit("沒有抓到任何新聞，保留舊的 data.json。")
@@ -427,6 +429,8 @@ def main():
         "updated": datetime.now(TW).strftime("%Y-%m-%d %H:%M"),
         "source_count": len(items),
         "ai": ai_core,
+        "version": VERSION,
+        "model": GOOD_MODEL or "",
         "ai_dir": ai_dir,
     }
     with open("data.json", "w", encoding="utf-8") as f:
