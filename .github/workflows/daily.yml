@@ -1,23 +1,22 @@
 name: Daily Brief
 
 on:
-  schedule:
-    - cron: "0 22 * * *"   # UTC 22:00 = 台灣時間早上 06:00 → 早報
-    - cron: "0 4 * * *"    # UTC 04:00 = 台灣時間中午 12:00 → 午報
-    - cron: "0 10 * * *"   # UTC 10:00 = 台灣時間下午 18:00 → 晚報
-  workflow_dispatch:        # 允許在網頁上手動按「Run workflow」
+  schedule:                 # GitHub 內建排程（備援；可能延遲或被跳過）
+    - cron: "7 22 * * *"    # UTC 22:07 = 台灣 06:07
+    - cron: "7 4 * * *"     # UTC 04:07 = 台灣 12:07
+    - cron: "7 10 * * *"    # UTC 10:07 = 台灣 18:07
+  workflow_dispatch:        # 手動按「Run workflow」，或由外部定時服務呼叫
     inputs:
-      edition:
-        description: "要產生哪一報（auto＝依目前時間自動判斷）"
-        default: "auto"
-        type: choice
-        options: [auto, morning, noon, evening]
+      min_gap_minutes:
+        description: "距離上次更新不到幾分鐘就略過（手動執行請維持 0）"
+        default: "0"
+        type: string
 
 permissions:
-  contents: write           # 允許機器人把 data/ 存回儲存庫
+  contents: write
 
 concurrency:
-  group: daily-brief        # 避免兩次執行同時跑、互相打架
+  group: daily-brief        # 避免兩次執行同時跑
 
 jobs:
   build:
@@ -31,15 +30,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 抓新聞並產生 data/*.json
+      - name: 抓新聞並產生 data.json
         run: python fetch_news.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          EDITION: ${{ github.event.inputs.edition || 'auto' }}
+          # 排程觸發時：2 小時內剛更新過就略過，避免與外部定時服務重複
+          MIN_GAP_MINUTES: ${{ github.event.inputs.min_gap_minutes || (github.event_name == 'schedule' && '120' || '0') }}
 
       - name: 有變動就存回儲存庫
         run: |
           git config user.name "daily-brief-bot"
           git config user.email "bot@users.noreply.github.com"
-          git add data
+          git add data.json
           git diff --cached --quiet || (git commit -m "update brief" && git pull --rebase && git push)
