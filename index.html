@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -9,7 +8,7 @@
 :root{--bg:#f6f5f1;--card:#fff;--ink:#1d1d1b;--mute:#6b6a64;--line:#e4e2da;--acc:#b3261e;--tag:#eceae2}
 @media (prefers-color-scheme:dark){:root{--bg:#121212;--card:#1c1c1b;--ink:#ecebe6;--mute:#9a988f;--line:#2e2d2a;--acc:#ff8a80;--tag:#2a2927}}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-main{max-width:640px;margin:0 auto;padding:16px 14px 40px}
+main{max-width:720px;margin:0 auto;padding:16px 14px 40px}
 header{display:flex;justify-content:space-between;align-items:baseline}
 h1{font-size:20px;margin:0}
 .date,.stamp,.sub,footer{color:var(--mute);font-size:13px}
@@ -58,7 +57,7 @@ fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json
   var age=Math.round((today-d0(d.updated.slice(0,10)))/DAY);
   $("stamp").textContent="更新於 "+d.updated+"（台灣時間）"+(age>1?" ⚠ 已 "+age+" 天未更新":"")+(d.ai===false?"｜今日為標題模式（AI 摘要未啟用）":"");
   var app=$("app");
-  app.appendChild(sec("今日重點",(d.top||[]).map(function(i){return item("",i.text,i.detail,i.links)})));
+  if((d.top||[]).length)app.appendChild(sec("今日重點",d.top.map(function(i){return item(i.tag||"",i.text,i.detail,i.links)})));
   // 行程倒數
   var ev=[];
   (d.calendar||[]).forEach(function(c){var s=d0(c.date),e=c.end?d0(c.end):s;
@@ -67,7 +66,7 @@ fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json
   ev.sort(function(a,b){return a.k-b.k});
   app.appendChild(sec("未來行程與會議",ev.map(function(x){return item(x.c.tag,x.c.t,x.c.s,null,x.w)}),"近期無已登錄行程"));
   (d.sections||[]).forEach(function(s){
-    app.appendChild(sec(s.title,(s.items||[]).map(function(i){return item("",i.text,i.detail,i.links)})))});
+    app.appendChild(sec(s.title,(s.items||[]).map(function(i){return item(i.tag||"",i.text,i.detail,i.links)})))});
 }).catch(function(){$("stamp").textContent="尚無資料：請先到 GitHub 的 Actions 手動執行一次「Daily Brief」。"});
 </script>
 </body>
