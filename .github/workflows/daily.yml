@@ -1,0 +1,33 @@
+name: Daily Brief
+
+on:
+  schedule:
+    - cron: "0 22 * * *"   # UTC 22:00 = 台灣時間每天早上 06:00
+  workflow_dispatch:        # 允許在網頁上手動按「Run workflow」
+
+permissions:
+  contents: write           # 允許機器人把 data.json 存回儲存庫
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 下載儲存庫
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 抓新聞並產生 data.json
+        run: python fetch_news.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+      - name: 有變動就存回儲存庫
+        run: |
+          git config user.name "daily-brief-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data.json
+          git diff --cached --quiet || (git commit -m "update brief" && git push)
