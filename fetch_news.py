@@ -1,6 +1,6 @@
-"""每日簡報產生器（早報／午報／晚報）
-流程：抓 RSS 標題 -> Gemini 整理核心新聞與目錄類 -> Gemini 寫「AI 今日總摘要」-> 存成 data/<edition>.json
-由 GitHub Actions 每天跑三次；環境變數：GEMINI_API_KEY（免費金鑰）、EDITION（auto/morning/noon/evening）。
+"""每日簡報產生器
+流程：抓 RSS 標題 -> Gemini 整理核心新聞與目錄類 -> Gemini 寫「AI 今日總摘要」-> 存成 data.json
+每天更新三次（約 06:00、12:00、18:00）；環境變數：GEMINI_API_KEY（免費金鑰）、MIN_GAP_MINUTES（距離上次更新太近就略過，避免重複）。
 沒有金鑰或 AI 失敗時，自動改為「只列標題」模式，網頁照常更新。
 """
 import os
@@ -21,9 +21,7 @@ MODELS = ([os.environ["GEMINI_MODEL"]] if os.environ.get("GEMINI_MODEL") else []
     "gemini-3-flash-preview", "gemini-2.5-flash"]
 API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
 GOOD_MODEL = None  # 第一次成功的模型，之後直接沿用
-VERSION = "v6-三報+完整總摘要"  # 版本標記：網頁頂端會顯示，用來確認 GitHub 上跑的是不是最新版
-
-EDITIONS = {"morning": "早報", "noon": "午報", "evening": "晚報"}
+VERSION = "v7-單頁三次更新"  # 版本標記：網頁頂端會顯示，用來確認 GitHub 上跑的是不是最新版
 
 # ---------- 1. 固定行程（你可以自己新增／修改）----------
 # date 與 end 格式：YYYY-MM-DD；end 可省略
@@ -218,8 +216,8 @@ PROMPT_DIR = """你是每日新聞簡報編輯。以下標題已依「主題」�
 標題清單：
 """
 
-PROMPT_OVERVIEW = """你是每日新聞簡報的總編輯，現在要為「{LABEL}」寫「AI 今日總摘要」。
-下面是本期已整理好的全部重點（涵蓋國際、台灣中央的行政院與立法院、各縣市、學術）{PREV_NOTE}
+PROMPT_OVERVIEW = """你是每日新聞簡報的總編輯，現在要為本次簡報寫「AI 今日總摘要」。
+下面是本期已整理好的全部重點（涵蓋國際、台灣中央的行政院與立法院、各縣市、學術）。
 
 寫作要求：
 1. 只能根據下面提供的內容整理，不可加入任何未提供的事實、日期、數字或推測。
@@ -388,30 +386,7 @@ def backfill(dirs, dir_items):
         sec["items"].sort(key=lambda i: TOPIC_ORDER.get(i.get("tag"), 999))
 
 
-# ---------- 6. 三報：前期內容、總摘要、「新」標記 ----------
-def pick_edition():
-    e = os.environ.get("EDITION", "auto").strip()
-    if e in EDITIONS:
-        return e
-    h = datetime.now(TW).hour
-    return "morning" if h < 10 else "noon" if h < 16 else "evening"
-
-
-def load_prev(edition, today):
-    """讀取今天較早的各期（早報→午報→晚報），供總摘要回顧與標記「新」。"""
-    order = list(EDITIONS)
-    out = []
-    for e in order[:order.index(edition)]:
-        try:
-            with open(f"data/{e}.json", encoding="utf-8") as f:
-                d = json.load(f)
-            if d.get("date") == today:
-                out.append((e, d))
-        except Exception:
-            pass
-    return out
-
-
+# ---------- 6. 總摘要 ----------
 def all_items(data):
     for it in data.get("top", []):
         yield "今日重點", it
@@ -420,21 +395,7 @@ def all_items(data):
             yield sec.get("title", ""), it
 
 
-def mark_new(data, prev):
-    if not prev:
-        return
-    seen = set()
-    for _, d in prev:
-        for _, it in all_items(d):
-            for l in it.get("links", []):
-                seen.add(l.get("url"))
-    for _, it in all_items(data):
-        links = it.get("links", [])
-        if links and not it.get("empty") and links[0].get("url") not in seen:
-            it["new"] = True
-
-
-def make_overview(data, edition, prev):
+def make_overview(data):
     parts = []
     for title, it in all_items(data):
         if it.get("empty"):
@@ -448,20 +409,7 @@ def make_overview(data, edition, prev):
              "   - 【台灣中央】：行政院與各部會、立法院與各委員會的動向",
              "   - 【各縣市】：各縣市值得注意的地方大事",
              "   - 【學術】：哲學、文學、藝術、社會學、經濟學、心理學、法律、數學、物理學、生物學、工程、醫學的動態"]
-    prev_note = "。"
-    if prev:
-        prev_txt = []
-        for e, d in prev:
-            ov = d.get("overview") or []
-            if ov:
-                prev_txt.append(f"〔{EDITIONS[e]}總摘要〕" + " ".join(ov))
-            else:
-                prev_txt.append(f"〔{EDITIONS[e]}重點〕" + "；".join(
-                    it.get("text", "") for it in d.get("top", [])[:5]))
-        prev_note = "。另外附上今天較早各期的內容。" + "\n".join(prev_txt)
-        paras.insert(0, "   - 【今日回顧】：先用 2~3 句回顧今天較早各期的重點，並點出本期相較之前有什麼新進展")
-    prompt = (PROMPT_OVERVIEW.replace("{LABEL}", EDITIONS[edition])
-              .replace("{PREV_NOTE}", prev_note).replace("{PARAS}", "\n".join(paras)))
+    prompt = PROMPT_OVERVIEW.replace("{PARAS}", "\n".join(paras))
     out = call_gemini(prompt + "\n".join(parts))
     ov = out.get("overview", [])
     if isinstance(ov, str):
@@ -469,19 +417,31 @@ def make_overview(data, edition, prev):
     return [x.strip() for x in ov if isinstance(x, str) and x.strip()]
 
 
+def too_fresh():
+    """距離上次更新不到 MIN_GAP_MINUTES 分鐘就略過（避免排程與外部觸發重複執行）。"""
+    try:
+        gap = int(os.environ.get("MIN_GAP_MINUTES", "0") or 0)
+        if gap <= 0:
+            return False
+        with open("data.json", encoding="utf-8") as f:
+            t = datetime.strptime(json.load(f)["updated"], "%Y-%m-%d %H:%M").replace(tzinfo=TW)
+        return datetime.now(TW) - t < timedelta(minutes=gap)
+    except Exception:
+        return False
+
+
 # ---------- 7. 主程式 ----------
 def main():
     print("程式版本：", VERSION)
-    edition = pick_edition()
-    today = datetime.now(TW).strftime("%Y-%m-%d")
-    print("本次產生：", EDITIONS[edition], today)
+    if too_fresh():
+        print("距離上次更新還不到間隔時間，本次略過。")
+        return
     items = collect()
     if not items:
         raise SystemExit("沒有抓到任何新聞，保留舊的資料。")
     by_id = {i["id"]: i for i in items}
     core_items = [i for i in items if i.get("group") in (None,) + CORE_GROUPS]
     dir_items = [i for i in items if i.get("group") in DIR_GROUPS]
-    prev = load_prev(edition, today)
 
     core, dirs, ai_core, ai_dir = None, None, False, False
     print("GEMINI_API_KEY：", f"已設定（長度 {len(API_KEY)}）" if API_KEY else "【未設定】")
@@ -512,11 +472,10 @@ def main():
     for s in dirs.get("sections", []):
         s["collapsed"] = True  # 目錄式區塊預設收合；總摘要已涵蓋其內容
 
+    now = datetime.now(TW)
     data = {
-        "edition": edition,
-        "edition_label": EDITIONS[edition],
-        "date": today,
-        "updated": datetime.now(TW).strftime("%Y-%m-%d %H:%M"),
+        "date": now.strftime("%Y-%m-%d"),
+        "updated": now.strftime("%Y-%m-%d %H:%M"),
         "top": core.get("top", []),
         "sections": core.get("sections", []) + dirs.get("sections", []),
         "calendar": CALENDAR,
@@ -527,18 +486,15 @@ def main():
         "version": VERSION,
         "overview": [],
     }
-    mark_new(data, prev)
     if API_KEY and (ai_core or ai_dir):
         try:
-            data["overview"] = make_overview(data, edition, prev)
+            data["overview"] = make_overview(data)
         except Exception as e:
-            print("[總摘要失敗，本期不顯示總摘要]", e)
+            print("[總摘要失敗，本次不顯示總摘要]", e)
     data["model"] = GOOD_MODEL or ""
-
-    os.makedirs("data", exist_ok=True)
-    with open(f"data/{edition}.json", "w", encoding="utf-8") as f:
+    with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    print(f"data/{edition}.json 已更新：", data["updated"], "| 核心AI:", ai_core,
+    print("data.json 已更新：", data["updated"], "| 核心AI:", ai_core,
           "| 目錄AI:", ai_dir, "| 總摘要段數:", len(data["overview"]))
 
 
