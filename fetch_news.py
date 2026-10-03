@@ -19,42 +19,111 @@ API_KEY = os.environ.get("GEMINI_API_KEY", "")
 # ---------- 1. 固定行程（你可以自己新增／修改）----------
 # date 與 end 格式：YYYY-MM-DD；end 可省略
 CALENDAR = [
+    {"date": "2026-10-05", "tag": "諾貝爾", "t": "諾貝爾生理學或醫學獎公布"},
+    {"date": "2026-10-06", "tag": "諾貝爾", "t": "諾貝爾物理學獎公布"},
+    {"date": "2026-10-07", "tag": "諾貝爾", "t": "諾貝爾化學獎公布"},
+    {"date": "2026-10-08", "tag": "諾貝爾", "t": "諾貝爾文學獎公布"},
+    {"date": "2026-10-09", "tag": "諾貝爾", "t": "諾貝爾和平獎公布"},
     {"date": "2026-10-10", "tag": "國內", "t": "中華民國國慶日"},
+    {"date": "2026-10-12", "tag": "諾貝爾", "t": "諾貝爾經濟學獎公布"},
     {"date": "2026-10-12", "end": "2026-10-18", "tag": "IMF/世銀",
      "t": "IMF–世界銀行年會（曼谷）", "s": "10/16 全體會議"},
 ]
 
-# ---------- 2. 新聞來源 ----------
-# (顯示標籤, 搜尋關鍵字, 分組)　分組：領袖／會議／台灣
+# ---------- 2. 追蹤主題 ----------
+# 分組 group：
+#   核心（頁面最上方）：領袖、會議、台灣
+#   目錄式（預設收合）：縣市、委員會、部會、學術
+CORE_GROUPS = ("領袖", "會議", "台灣")
+DIR_GROUPS = ("縣市", "委員會", "部會", "學術")
+
+
+def T(label, query, group, days=1, lang="zh", limit=6):
+    return {"label": label, "query": query, "group": group,
+            "days": days, "lang": lang, "limit": limit}
+
+
 TOPICS = [
-    ("川普", "川普 行程 OR 會晤 OR 訪問", "領袖"),
-    ("習近平", "習近平 會見 OR 訪問 OR 會議", "領袖"),
-    ("日本", "日本首相 會談 OR 訪問", "領袖"),
-    ("韓國", "韓國總統 會談 OR 訪問", "領袖"),
-    ("國際會議", "聯合國 OR G20 OR APEC OR 金磚 OR 東協 峰會", "會議"),
-    ("IMF/世銀", "IMF OR 世界銀行 報告 OR 預測", "會議"),
-    ("立法院", "立法院 院會 OR 三讀 OR 委員會", "台灣"),
-    ("行政院", "行政院會 政策 OR 通過", "台灣"),
+    # --- 核心 ---
+    T("川普", "川普 行程 OR 會晤 OR 訪問", "領袖", limit=8),
+    T("習近平", "習近平 會見 OR 訪問 OR 會議", "領袖", limit=8),
+    T("日本", "日本首相 會談 OR 訪問", "領袖", limit=8),
+    T("韓國", "韓國總統 會談 OR 訪問", "領袖", limit=8),
+    T("國際會議", "聯合國 OR G20 OR APEC OR 金磚 OR 東協 峰會", "會議", limit=8),
+    T("IMF/世銀", "IMF OR 世界銀行 報告 OR 預測", "會議", limit=8),
+    T("立法院", "立法院 院會 OR 三讀 OR 委員會", "台灣", limit=8),
+    T("行政院", "行政院會 政策 OR 通過", "台灣", limit=8),
 ]
 
+# --- 1. 各縣市（22 個）---
+COUNTIES = ["臺北市", "新北市", "桃園市", "臺中市", "臺南市", "高雄市", "基隆市",
+            "新竹市", "嘉義市", "新竹縣", "苗栗縣", "彰化縣", "南投縣", "雲林縣",
+            "嘉義縣", "屏東縣", "宜蘭縣", "花蓮縣", "臺東縣", "澎湖縣", "金門縣", "連江縣"]
+for c in COUNTIES:
+    short = c.replace("臺", "台")  # 媒體多用「台」，搜尋用這個比較準
+    kw = "市長 OR 市府 OR 市議會" if c.endswith("市") else "縣長 OR 縣府 OR 縣議會"
+    TOPICS.append(T(c, f"{short} {kw}", "縣市", days=2, limit=4))
 
-def google_news(label, query, limit=8):
-    q = urllib.parse.quote(query + " when:1d")
-    url = f"https://news.google.com/rss/search?q={q}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
-    return ("主題:" + label, url, limit)
+# --- 2. 立法院常設委員會（8 個）---
+COMMITTEES = ["內政", "外交及國防", "經濟", "財政", "教育及文化", "交通",
+              "司法及法制", "社會福利及衛生環境"]
+for c in COMMITTEES:
+    TOPICS.append(T(f"{c}委員會", f"立法院 {c}委員會", "委員會", days=3, limit=5))
 
+# --- 3. 行政院各部會 ---
+MINISTRIES = [
+    ("內政部", "內政部"), ("外交部", "外交部"), ("國防部", "國防部"), ("財政部", "財政部"),
+    ("教育部", "教育部"), ("法務部", "法務部"), ("經濟部", "經濟部"), ("交通部", "交通部"),
+    ("勞動部", "勞動部"), ("農業部", "農業部"), ("衛福部", "衛福部 OR 衛生福利部"),
+    ("環境部", "環境部"), ("文化部", "文化部"), ("數位發展部", "數位發展部"),
+    ("國科會", "國科會 OR 國家科學及技術委員會"), ("金管會", "金管會 OR 金融監督管理委員會"),
+    ("國發會", "國發會 OR 國家發展委員會"), ("陸委會", "陸委會 OR 大陸委員會"),
+    ("運動部", "運動部"),
+]
+for label, q in MINISTRIES:
+    TOPICS.append(T(label, f"{q} 宣布 OR 公告 OR 政策 OR 修正", "部會", days=2, limit=5))
 
-FEEDS = [
+# --- 4. 學術與知識界（人文社科用中文；理工醫用英文來源，再由 AI 譯成中文）---
+TOPICS += [
+    T("哲學", "哲學 學者 OR 新書 OR 研究 OR 論壇", "學術", days=3, limit=4),
+    T("文學", "文學獎 OR 作家 OR 新書 OR 詩人", "學術", days=3, limit=4),
+    T("藝術", "藝術 展覽 OR 藝術家 OR 雙年展 OR 美術館", "學術", days=3, limit=4),
+    T("社會學", "社會學 研究 OR 調查 OR 學者", "學術", days=3, limit=4),
+    T("經濟學", "經濟學家 OR 經濟學 研究 OR 諾貝爾經濟學獎", "學術", days=3, limit=4),
+    T("心理學", "心理學 研究 OR 心理學家", "學術", days=3, limit=4),
+    T("法律", "大法官 OR 憲法法庭 OR 法律 修法 OR 判決", "學術", days=2, limit=4),
+    T("數學", "mathematics breakthrough OR mathematician OR theorem", "學術", days=7, lang="en", limit=4),
+    T("物理學", "physics discovery OR physicists", "學術", days=3, lang="en", limit=4),
+    T("生物學", "biology discovery OR biologists OR genome", "學術", days=3, lang="en", limit=4),
+    T("工程", "engineering breakthrough OR semiconductor OR robotics research", "學術", days=3, lang="en", limit=4),
+    T("醫學", "medical study OR clinical trial OR FDA approval", "學術", days=3, lang="en", limit=4),
+]
+
+TOPIC_BY_LABEL = {t["label"]: t for t in TOPICS}
+
+# ---------- 3. 新聞來源 ----------
+BASE_FEEDS = [
     ("中央社-政治", "https://feeds.feedburner.com/rsscna/politics", 10),
     ("中央社-國際", "https://feeds.feedburner.com/rsscna/intworld", 10),
     ("中央社-兩岸", "https://feeds.feedburner.com/rsscna/mainland", 8),
     ("中央社-財經", "https://feeds.feedburner.com/rsscna/finance", 8),
     ("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml", 10),
-] + [google_news(label, q) for label, q, _ in TOPICS]
+]
+
+
+def google_news_url(t):
+    q = urllib.parse.quote(f"{t['query']} when:{t['days']}d")
+    if t["lang"] == "en":
+        return f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
+    return f"https://news.google.com/rss/search?q={q}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
+
+
+FEEDS = BASE_FEEDS + [("主題:" + t["label"], google_news_url(t), t["limit"]) for t in TOPICS]
 
 
 def fetch_items(name, url, limit):
-    topic = name[3:] if name.startswith("主題:") else None
+    label = name[3:] if name.startswith("主題:") else None
+    group = TOPIC_BY_LABEL[label]["group"] if label else None
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 daily-brief"})
     with urllib.request.urlopen(req, timeout=20) as r:
         root = ET.fromstring(r.read())
@@ -63,12 +132,12 @@ def fetch_items(name, url, limit):
         title = html.unescape((it.findtext("title") or "").strip())
         link = (it.findtext("link") or "").strip()
         outlet = html.unescape((it.findtext("source") or "").strip())
-        # Google 新聞標題尾巴會附「 - 媒體名」，拆開來讓標題更乾淨
+        # Google 新聞標題尾巴會附「 - 媒體名」，拆開讓標題更乾淨
         if outlet and title.endswith(" - " + outlet):
             title = title[: -(len(outlet) + 3)].strip()
         if title and link:
-            out.append({"src": outlet or (name if not topic else "Google 新聞"),
-                        "topic": topic, "title": title, "link": link})
+            out.append({"src": outlet or (name if not label else "Google 新聞"),
+                        "topic": label, "group": group, "title": title, "link": link})
         if len(out) >= limit:
             break
     return out
@@ -82,7 +151,9 @@ def collect():
             print(f"[ok] {name}: {len(got)}")
         except Exception as e:  # 某個來源壞掉不影響其他來源
             print(f"[skip] {name}: {e}")
-            continue
+            got = []
+        if name.startswith("主題:"):
+            time.sleep(0.4)  # 對 Google 客氣一點，避免被擋
         for it in got:
             key = it["title"][:18]
             if key in seen:
@@ -90,28 +161,53 @@ def collect():
             seen.add(key)
             it["id"] = len(items)
             items.append(it)
-    return items[:200]
+    return items
 
 
-# ---------- 3. 請 Gemini 整理 ----------
-PROMPT = """你是每日新聞簡報編輯。讀者是台灣的公務員，每天早上要在 1 分鐘內讀完。
+# ---------- 4. 請 Gemini 整理 ----------
+RULES = """規則（非常重要）：
+1. 只能根據清單內的標題整理，不可加入清單以外的事實、日期或數字；標題沒說的就不要寫。
+2. 每則用繁體中文（英文標題請譯成中文），text 不超過 28 字，detail 不超過 45 字（可省略）。
+3. 每則必須附 refs：支持該則的標題編號（1~2 個整數）。
+4. 沒有相關內容就給空陣列或省略，不要硬湊。
+5. 同一事件只寫一則；依重要性排序。
+"""
+
+PROMPT_CORE = """你是每日新聞簡報編輯。讀者是台灣的公務員，每天早上要在 1 分鐘內讀完。
 以下是今天抓到的新聞標題清單（格式：[編號] 來源 | 標題）。
 
-規則（非常重要）：
-1. 只能根據清單內的標題整理，不可加入清單以外的事實、日期或數字；標題沒說的就不要寫。
-2. 每則重點用繁體中文，text 不超過 28 字，detail 不超過 45 字（可省略）。
-3. 每則必須附 refs：支持該則的標題編號（1~2 個整數）。
-4. 清單中沒有相關內容的分類，items 給空陣列，不要硬湊。
-5. 同一事件只寫一則；依重要性排序。
+""" + RULES + """
+請只輸出一個 JSON 物件，不要任何其他文字，格式：
+{
+ "top": [ {"text":"", "detail":"", "refs":[0]} ],
+ "sections": [
+  {"title":"國際領袖動態", "items":[{"text":"","detail":"","refs":[0]}]},
+  {"title":"國際會議與機構", "items":[]},
+  {"title":"台灣政府與立法", "items":[]},
+  {"title":"其他重要新聞", "items":[]}
+ ]
+}
+說明：top 為今日最重要 3~5 則；「國際領袖動態」最多 6 則，每位人物最多 2 則，讓美、中、日、韓盡量都有機會出現；
+「國際會議與機構」（聯合國、G20、APEC、金磚、IMF、世銀等）最多 5 則；「台灣政府與立法」（立法院、行政院、重要政策）最多 6 則；
+「其他重要新聞」最多 5 則。
+
+標題清單：
+"""
+
+PROMPT_DIR = """你是每日新聞簡報編輯。以下標題已依「主題」分類（格式：[編號] 來源（主題:xxx） | 標題）。
+請為每個有實質新聞的主題各寫 1 則最值得一看的重點（重要的主題可寫到 2 則）。
+
+""" + RULES + """6. 每則另加 tag 欄位，內容就是該標題的「主題」名稱（例如 臺北市、內政委員會、衛福部、物理學）。
+7. 縣市／部會／委員會若只是例行活動或沒有實質消息，就略過，不要湊數。
+8. 學術類（哲學、文學、藝術、社會學、經濟學、心理學、法律、數學、物理學、生物學、工程、醫學）優先挑「新發現、重要獎項、重大研究或政策」。
 
 請只輸出一個 JSON 物件，不要任何其他文字，格式：
 {
- "top": [ {"text":"", "detail":"", "refs":[0]} ],            // 今日最重要 3~5 則
  "sections": [
-  {"title":"國際領袖動態", "items":[{"text":"","detail":"","refs":[0]}]},   // 美國、中國、日本、韓國等領袖行程與會談，最多 6 則，每位人物最多 2 則，讓美、中、日、韓盡量都有機會出現
-  {"title":"國際會議與機構", "items":[...]},                                 // 聯合國、G20、APEC、金磚、IMF、世銀等，最多 5 則
-  {"title":"台灣政府與立法", "items":[...]},                                 // 立法院、行政院、重要政策，最多 6 則
-  {"title":"其他重要新聞", "items":[...]}                                    // 最多 5 則
+  {"title":"各縣市大事", "items":[{"tag":"","text":"","detail":"","refs":[0]}]},
+  {"title":"立法院各委員會", "items":[]},
+  {"title":"行政院各部會", "items":[]},
+  {"title":"學術與知識界", "items":[]}
  ]
 }
 
@@ -119,22 +215,25 @@ PROMPT = """你是每日新聞簡報編輯。讀者是台灣的公務員，每�
 """
 
 
-def summarize(items):
-    lines = "\n".join(
-        f"[{i['id']}] {i['src']}" + (f"（主題:{i['topic']}）" if i.get("topic") else "")
-        + f" | {i['title']}" for i in items)
+def line(i):
+    topic = f"（主題:{i['topic']}）" if i.get("topic") else ""
+    return f"[{i['id']}] {i['src']}{topic} | {i['title']}"
+
+
+def call_gemini(prompt):
     url = ("https://generativelanguage.googleapis.com/v1beta/models/"
            f"{MODEL}:generateContent")
     body = json.dumps({
-        "contents": [{"parts": [{"text": PROMPT + lines}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2},
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {"responseMimeType": "application/json",
+                             "temperature": 0.2, "maxOutputTokens": 16384},
     }).encode("utf-8")
     last_err = None
     for attempt in range(4):  # 遇到忙碌(429/503)最多重試 4 次
         try:
             req = urllib.request.Request(url, data=body, headers={
                 "Content-Type": "application/json", "x-goog-api-key": API_KEY})
-            with urllib.request.urlopen(req, timeout=120) as r:
+            with urllib.request.urlopen(req, timeout=180) as r:
                 resp = json.loads(r.read())
             text = resp["candidates"][0]["content"]["parts"][0]["text"]
             start, end = text.find("{"), text.rfind("}")
@@ -154,12 +253,27 @@ def summarize(items):
     raise RuntimeError("Gemini 呼叫失敗：" + str(last_err))
 
 
-def headlines_only(items):
-    """備用模式：不用 AI。每個關鍵字各取固定幾則，避免被單一主題（如川普）佔滿。"""
-    def mk(it, tag=""):
-        return {"tag": tag, "text": it["title"], "detail": "",
-                "links": [{"src": it["src"], "url": it["link"]}]}
+def attach_links(block, by_id):
+    """把 refs 編號換成真正的來源連結（由程式處理，避免 AI 亂編網址）。"""
+    for item in block:
+        links = []
+        for r in item.pop("refs", [])[:2]:
+            src = by_id.get(r) if isinstance(r, int) else None
+            if src:
+                links.append({"src": src["src"], "url": src["link"]})
+        item["links"] = links
+        if not isinstance(item.get("tag", ""), str):
+            item["tag"] = ""
 
+
+# ---------- 5. 備用模式（不用 AI）----------
+def mk(it, tag=""):
+    return {"tag": tag, "text": it["title"], "detail": "",
+            "links": [{"src": it["src"], "url": it["link"]}]}
+
+
+def core_headlines(items):
+    """每個關鍵字各取固定幾則，避免被單一主題（如川普）佔滿。"""
     def by_topic(label):
         return [i for i in items if i.get("topic") == label]
 
@@ -171,9 +285,9 @@ def headlines_only(items):
     sections = []
     for title, g, n in groups:
         its = []
-        for label, _, grp in TOPICS:
-            if grp == g:
-                its += [mk(i, label) for i in by_topic(label)[:n]]
+        for t in TOPICS:
+            if t["group"] == g:
+                its += [mk(i, t["label"]) for i in by_topic(t["label"])[:n]]
         if g == "台灣":
             its += [mk(i, "政治") for i in by_src("中央社-政治")[:3]]
         sections.append({"title": title, "items": its})
@@ -185,46 +299,71 @@ def headlines_only(items):
     return {"top": [], "sections": sections}
 
 
-def attach_links(block, by_id):
-    """把 refs 編號換成真正的來源連結（由程式處理，避免 AI 亂編網址）。"""
-    for item in block:
-        links = []
-        for r in item.pop("refs", [])[:2]:
-            src = by_id.get(r) if isinstance(r, int) else None
-            if src:
-                links.append({"src": src["src"], "url": src["link"]})
-        item["links"] = links
+def dir_headlines(items):
+    """目錄式：每個主題 1 則標題（學術類最多 1 則，其餘同）。"""
+    titles = [("各縣市大事", "縣市"), ("立法院各委員會", "委員會"),
+              ("行政院各部會", "部會"), ("學術與知識界", "學術")]
+    sections = []
+    for title, g in titles:
+        its = []
+        for t in TOPICS:
+            if t["group"] == g:
+                got = [i for i in items if i.get("topic") == t["label"]]
+                if got:
+                    its.append(mk(got[0], t["label"]))
+        sections.append({"title": title, "items": its})
+    return {"sections": sections}
 
 
+# ---------- 6. 主程式 ----------
 def main():
     items = collect()
     if not items:
         raise SystemExit("沒有抓到任何新聞，保留舊的 data.json。")
     by_id = {i["id"]: i for i in items}
-    ai_used = False
-    data = None
+    core_items = [i for i in items if i.get("group") in (None,) + CORE_GROUPS]
+    dir_items = [i for i in items if i.get("group") in DIR_GROUPS]
+
+    core, dirs, ai_core, ai_dir = None, None, False, False
     if API_KEY:
         try:
-            data = summarize(items)
-            ai_used = True
+            core = call_gemini(PROMPT_CORE + "\n".join(line(i) for i in core_items))
+            attach_links(core.get("top", []), by_id)
+            for s in core.get("sections", []):
+                attach_links(s.get("items", []), by_id)
+            ai_core = True
         except Exception as e:
-            print("[AI 失敗，改用只列標題模式]", e)
+            print("[核心 AI 失敗，改用標題模式]", e)
+        if dir_items:
+            try:
+                dirs = call_gemini(PROMPT_DIR + "\n".join(line(i) for i in dir_items))
+                for s in dirs.get("sections", []):
+                    attach_links(s.get("items", []), by_id)
+                ai_dir = True
+            except Exception as e:
+                print("[目錄 AI 失敗，改用標題模式]", e)
     else:
         print("[沒有 GEMINI_API_KEY，使用只列標題模式]")
-    if data is None:
-        data = headlines_only(items)
-    else:
-        attach_links(data.get("top", []), by_id)
-        for sec in data.get("sections", []):
-            attach_links(sec.get("items", []), by_id)
-    data["calendar"] = CALENDAR
-    data["weekly"] = [{"dow": 4, "tag": "行政院", "t": "行政院院會（每週四上午）"}]
-    data["updated"] = datetime.now(TW).strftime("%Y-%m-%d %H:%M")
-    data["source_count"] = len(items)
-    data["ai"] = ai_used
+    if core is None:
+        core = core_headlines(core_items)
+    if dirs is None:
+        dirs = dir_headlines(dir_items)
+
+    for s in dirs.get("sections", []):
+        s["collapsed"] = True  # 目錄式區塊預設收合，維持 1 分鐘可讀
+    data = {
+        "top": core.get("top", []),
+        "sections": core.get("sections", []) + dirs.get("sections", []),
+        "calendar": CALENDAR,
+        "weekly": [{"dow": 4, "tag": "行政院", "t": "行政院院會（每週四上午）"}],
+        "updated": datetime.now(TW).strftime("%Y-%m-%d %H:%M"),
+        "source_count": len(items),
+        "ai": ai_core,
+        "ai_dir": ai_dir,
+    }
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
-    print("data.json 已更新：", data["updated"], "| AI 摘要：", ai_used)
+    print("data.json 已更新：", data["updated"], "| 核心AI:", ai_core, "| 目錄AI:", ai_dir)
 
 
 if __name__ == "__main__":
