@@ -13,8 +13,13 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 
 TW = timezone(timedelta(hours=8))
-MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")  # 想換模型改這裡或 workflow
-API_KEY = os.environ.get("GEMINI_API_KEY", "")
+# 模型清單：依序嘗試，前一個不可用（下架、免費版不開放）就自動換下一個。
+# Google 汰換模型很快，所以寫成清單；想指定模型可在 workflow 設環境變數 GEMINI_MODEL。
+MODELS = ([os.environ["GEMINI_MODEL"]] if os.environ.get("GEMINI_MODEL") else []) + [
+    "gemini-3.8-flash", "gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash",
+    "gemini-3-flash-preview", "gemini-2.5-flash"]
+API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+GOOD_MODEL = None  # 第一次成功的模型，之後直接沿用
 
 # ---------- 1. 固定行程（你可以自己新增／修改）----------
 # date 與 end 格式：YYYY-MM-DD；end 可省略
@@ -220,16 +225,27 @@ def line(i):
     return f"[{i['id']}] {i['src']}{topic} | {i['title']}"
 
 
-def call_gemini(prompt):
-    url = ("https://generativelanguage.googleapis.com/v1beta/models/"
-           f"{MODEL}:generateContent")
+def list_models():
+    """全部失敗時，列出這把金鑰實際能用的 flash 模型，方便你回報給我。"""
+    try:
+        req = urllib.request.Request(
+            "https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
+            headers={"x-goog-api-key": API_KEY})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            names = [m["name"].split("/")[-1] for m in json.loads(r.read()).get("models", [])]
+        print("[可用模型]", [n for n in names if "flash" in n or "pro" in n])
+    except Exception as e:
+        print("[無法列出模型]", e)
+
+
+def call_model(model, prompt):
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     body = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"responseMimeType": "application/json",
                              "temperature": 0.2, "maxOutputTokens": 16384},
     }).encode("utf-8")
-    last_err = None
-    for attempt in range(4):  # 遇到忙碌(429/503)最多重試 4 次
+    for attempt in range(3):  # 忙碌(429/500/503)時重試
         try:
             req = urllib.request.Request(url, data=body, headers={
                 "Content-Type": "application/json", "x-goog-api-key": API_KEY})
@@ -238,19 +254,38 @@ def call_gemini(prompt):
             text = resp["candidates"][0]["content"]["parts"][0]["text"]
             start, end = text.find("{"), text.rfind("}")
             if start < 0 or end < 0:
-                raise RuntimeError("回傳內容中找不到 JSON：" + text[:200])
+                raise ValueError("回傳內容中找不到 JSON：" + text[:200])
             return json.loads(text[start:end + 1])
         except urllib.error.HTTPError as e:
-            last_err = f"HTTP {e.code}: {e.read()[:300]!r}"
-            print("[retry]", last_err)
-            if e.code not in (429, 500, 503):
-                break
-            time.sleep(20 * (attempt + 1))
+            msg = e.read()[:300]
+            print(f"[{model}] HTTP {e.code}: {msg!r}")
+            if e.code in (429, 500, 503) and attempt < 2:
+                time.sleep(20 * (attempt + 1))
+                continue
+            raise
+        except (ValueError, KeyError, IndexError) as e:  # 內容格式不對，重試一次
+            print(f"[{model}] 內容異常：{e}")
+            if attempt < 1:
+                continue
+            raise
+
+
+def call_gemini(prompt):
+    global GOOD_MODEL
+    order = [GOOD_MODEL] if GOOD_MODEL else MODELS
+    last = None
+    for m in order:
+        try:
+            out = call_model(m, prompt)
+            if GOOD_MODEL != m:
+                print("[使用模型]", m)
+            GOOD_MODEL = m
+            return out
         except Exception as e:
-            last_err = str(e)
-            print("[retry]", last_err)
-            time.sleep(5)
-    raise RuntimeError("Gemini 呼叫失敗：" + str(last_err))
+            last = e
+            print(f"[{m} 不可用，嘗試下一個] {e}")
+    list_models()
+    raise RuntimeError(f"所有模型都失敗：{last}")
 
 
 def attach_links(block, by_id):
@@ -325,6 +360,7 @@ def main():
     dir_items = [i for i in items if i.get("group") in DIR_GROUPS]
 
     core, dirs, ai_core, ai_dir = None, None, False, False
+    print("GEMINI_API_KEY：", f"已設定（長度 {len(API_KEY)}）" if API_KEY else "【未設定】")
     if API_KEY:
         try:
             core = call_gemini(PROMPT_CORE + "\n".join(line(i) for i in core_items))
