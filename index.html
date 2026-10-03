@@ -13,6 +13,7 @@ header{display:flex;justify-content:space-between;align-items:baseline}
 h1{font-size:20px;margin:0}
 .date,.stamp,.sub,footer{color:var(--mute);font-size:13px}
 .stamp{margin:2px 0 12px}
+.stamp b{color:var(--ink);font-weight:600}
 .warn{background:var(--tag);color:var(--acc);border-radius:8px;padding:6px 10px;font-size:13px;margin-bottom:12px}
 section,.fold{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px}
 .fold{padding:10px 14px}
@@ -27,7 +28,6 @@ h2{font-size:13px;letter-spacing:.08em;color:var(--acc);margin:0 0 8px}
 .item b{font-weight:600}
 .item.none b{font-weight:400;color:var(--mute)}
 .tag{display:inline-block;background:var(--tag);color:var(--mute);font-size:11px;border-radius:5px;padding:0 6px;margin-right:6px}
-.new{display:inline-block;background:var(--acc);color:#fff;font-size:11px;border-radius:5px;padding:0 5px;margin-right:6px}
 .when{float:right;color:var(--acc);font-size:13px;font-weight:600;margin-left:8px}
 .src a{color:var(--mute);font-size:12px;margin-right:8px}
 .empty{color:var(--mute);font-size:14px}
@@ -35,18 +35,12 @@ h2{font-size:13px;letter-spacing:.08em;color:var(--acc);margin:0 0 8px}
 .ov p{margin:0 0 9px;font-size:15px}
 .ov p:last-child{margin-bottom:0}
 .ov p b{color:var(--acc);margin-right:4px}
-.tabs{display:flex;gap:6px;margin:0 0 12px}
-.tabs button{flex:1;padding:7px 0 6px;border:1px solid var(--line);background:var(--card);color:var(--mute);border-radius:10px;font:inherit;font-size:15px;cursor:pointer;line-height:1.25}
-.tabs button small{display:block;font-size:11px;opacity:.85}
-.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
-.tabs button.off{opacity:.55}
 </style>
 </head>
 <body>
 <main>
 <header><h1>每日大事簡報</h1><span class="date" id="today"></span></header>
 <div class="stamp" id="stamp">載入中…</div>
-<div class="tabs" id="tabs" hidden></div>
 <div id="warn"></div>
 <div id="ov"></div>
 <div id="body"></div>
@@ -55,17 +49,13 @@ h2{font-size:13px;letter-spacing:.08em;color:var(--acc);margin:0 0 8px}
 <script>
 var $=function(i){return document.getElementById(i)};
 var DAY=864e5,W="日一二三四五六";
-var EDS=[["morning","早報"],["noon","午報"],["evening","晚報"]];
 function d0(s){var p=s.split("-");return new Date(+p[0],+p[1]-1,+p[2])}
 var now=new Date(),today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
-function pad(n){return (n<10?"0":"")+n}
-var todayStr=today.getFullYear()+"-"+pad(today.getMonth()+1)+"-"+pad(today.getDate());
 $("today").textContent=(today.getMonth()+1)+"/"+today.getDate()+"（"+W[today.getDay()]+"）";
 function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
 function item(it,when){
   var d=el("div","item"+(it.empty?" none":""));
   if(when)d.appendChild(el("span","when",when));
-  if(it.new)d.appendChild(el("span","new","新"));
   if(it.tag)d.appendChild(el("span","tag",it.tag));
   d.appendChild(el("b",null,it.text));
   if(it.detail)d.appendChild(el("div","sub",it.detail));
@@ -73,23 +63,25 @@ function item(it,when){
     if(!/^https?:\/\//.test(l.url))return;
     var a=el("a",null,"↗ "+l.src);a.href=l.url;a.target="_blank";a.rel="noopener noreferrer";s.appendChild(a)});d.appendChild(s)}
   return d}
-function sec(title,rows,collapsed,emptyMsg){
+function sec(title,rows,collapsed){
   var s=el(collapsed?"details":"section");if(collapsed)s.className="fold";
   var real=rows.filter(function(r){return !r.empty}).length;
-  var label=collapsed?title+"（"+real+"/"+rows.length+"）":title;
-  s.appendChild(el(collapsed?"summary":"h2",null,label));
-  if(rows.length)rows.forEach(function(r){s.appendChild(item(r))});else s.appendChild(el("div","empty",emptyMsg||"本期無相關重點"));
+  s.appendChild(el(collapsed?"summary":"h2",null,collapsed?title+"（"+real+"/"+rows.length+"）":title));
+  if(rows.length)rows.forEach(function(r){s.appendChild(item(r))});else s.appendChild(el("div","empty","本次無相關重點"));
   return s}
 function rel(n){return n<=0?"今天":n===1?"明天":n+" 天後"}
-function render(d){
-  $("ov").innerHTML="";$("body").innerHTML="";$("warn").innerHTML="";
-  if(d.date!==todayStr)$("warn").appendChild(el("div","warn","這是 "+d.date+" 的"+(d.edition_label||"")+"，今日這一報尚未產生。"));
-  $("stamp").textContent="更新於 "+d.updated+"（台灣時間）"+(d.ai===false?"｜標題模式（AI 摘要未啟用）":"")+"｜程式 "+(d.version||"舊版")+(d.model?"｜"+d.model:"");
+fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+  // 更新時間（資料裡的時間是台灣時間）
+  var t=new Date(d.updated.replace(" ","T")+":00+08:00"),hrs=Math.round((now-t)/36e5);
+  var ago=hrs<1?"不到 1 小時前":hrs<24?hrs+" 小時前":Math.floor(hrs/24)+" 天前";
+  var st=$("stamp");st.textContent="";st.appendChild(document.createTextNode("更新於 "));st.appendChild(el("b",null,d.updated));
+  st.appendChild(document.createTextNode("（台灣時間，"+ago+"）｜每天約 06:00、12:00、18:00 更新"+(d.ai===false?"｜標題模式（AI 摘要未啟用）":"")));
+  if(hrs>=14)$("warn").appendChild(el("div","warn","⚠ 已超過 "+hrs+" 小時沒有更新，可能錯過了一次自動更新。"));
   // AI 今日總摘要
   if(d.overview&&d.overview.length){
-    var o=el("section","ov");o.appendChild(el("h2",null,"AI 今日總摘要（"+(d.edition_label||"")+"）"));
-    d.overview.forEach(function(t){var p=el("p");var m=/^【([^】]+)】([\s\S]*)$/.exec(t);
-      if(m){p.appendChild(el("b",null,m[1]));p.appendChild(document.createTextNode(m[2]))}else p.textContent=t;o.appendChild(p)});
+    var o=el("section","ov");o.appendChild(el("h2",null,"AI 今日總摘要"));
+    d.overview.forEach(function(x){var p=el("p");var m=/^【([^】]+)】([\s\S]*)$/.exec(x);
+      if(m){p.appendChild(el("b",null,m[1]));p.appendChild(document.createTextNode(m[2]))}else p.textContent=x;o.appendChild(p)});
     $("ov").appendChild(o)}
   var b=$("body");
   // 行程倒數
@@ -105,30 +97,8 @@ function render(d){
   (d.sections||[]).forEach(function(s){
     var rows=s.items||[];
     if(!s.collapsed&&!rows.length)return;
-    b.appendChild(sec(s.title,rows,!!s.collapsed))})}
-var data={};
-Promise.all(EDS.map(function(e){
-  return fetch("data/"+e[0]+".json?t="+Date.now()).then(function(r){return r.ok?r.json():null}).catch(function(){return null})
-})).then(function(res){
-  EDS.forEach(function(e,i){data[e[0]]=res[i]});
-  if(!res.some(function(x){return x})){$("stamp").textContent="尚無資料：請先到 GitHub 的 Actions 手動執行一次「Daily Brief」。";return}
-  var tabs=$("tabs");tabs.hidden=false;
-  EDS.forEach(function(e){
-    var d=data[e[0]],b=el("button",null,e[1]);b.type="button";b.id="tab-"+e[0];
-    var sm=el("small",null,!d?"尚未產生":d.date===todayStr?d.updated.slice(11):"昨日以前");b.appendChild(sm);
-    if(!d||d.date!==todayStr)b.className="off";
-    b.onclick=function(){pick(e[0])};tabs.appendChild(b)});
-  var h=now.getHours(),pref=h<11?"morning":h<17?"noon":"evening";
-  var ok=function(k){return data[k]&&data[k].date===todayStr};
-  var start=ok(pref)?pref:ok("evening")?"evening":ok("noon")?"noon":ok("morning")?"morning":null;
-  if(!start){var best=null;EDS.forEach(function(e){var d=data[e[0]];if(d&&(!best||d.updated>data[best].updated))best=e[0]});start=best}
-  pick(start)});
-function pick(k){
-  EDS.forEach(function(e){var b=$("tab-"+e[0]);if(!b)return;
-    var d=data[e[0]];b.className=(e[0]===k?"on":"")+((!d||d.date!==todayStr)&&e[0]!==k?" off":"")});
-  if(!data[k]){$("ov").innerHTML="";$("body").innerHTML="";$("warn").innerHTML="";
-    $("warn").appendChild(el("div","warn","這一報還沒有產生。可到 GitHub 的 Actions 手動執行，或等排程時間。"));return}
-  render(data[k])}
+    b.appendChild(sec(s.title,rows,!!s.collapsed))})
+}).catch(function(){$("stamp").textContent="尚無資料：請先到 GitHub 的 Actions 手動執行一次「Daily Brief」。"});
 </script>
 </body>
 </html>
