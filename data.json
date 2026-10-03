@@ -1,126 +1,241 @@
 {
- "top": [
-  {
-   "text": "雙十國慶酒會 愛沙尼亞政要肯定台愛合作盼擴大挺台陣營",
-   "detail": "",
-   "links": [
-    {
-     "src": "中央社-政治",
-     "url": "https://www.cna.com.tw/news/aipl/202610030017.aspx"
-    }
-   ]
-  },
-  {
-   "text": "美賓州眾議會通過友台決議　祝賀國慶深化交流",
-   "detail": "",
-   "links": [
-    {
-     "src": "中央社-政治",
-     "url": "https://www.cna.com.tw/news/aipl/202610030013.aspx"
-    }
-   ]
-  },
-  {
-   "text": "賴總統訪史瓦帝尼風波　美外交官：損及馬達加斯加主權",
-   "detail": "",
-   "links": [
-    {
-     "src": "中央社-政治",
-     "url": "https://www.cna.com.tw/news/aipl/202610030012.aspx"
-    }
-   ]
-  },
-  {
-   "text": "藍指沈伯洋教育政策四大皆空　綠：歡迎提出不同方案",
-   "detail": "",
-   "links": [
-    {
-     "src": "中央社-政治",
-     "url": "https://www.cna.com.tw/news/aipl/202610020352.aspx"
-    }
-   ]
-  },
-  {
-   "text": "外交部發布國慶影片「國家的相簿」　呈現台灣民主歷程[影]",
-   "detail": "",
-   "links": [
-    {
-     "src": "中央社-政治",
-     "url": "https://www.cna.com.tw/news/aipl/202610020346.aspx"
-    }
-   ]
-  }
- ],
+ "top": [],
  "sections": [
   {
-   "title": "中央社 · 國際與兩岸",
+   "title": "國際領袖動態",
    "items": [
     {
-     "text": "巴西大選辯論喊卡　政壇媒體怒斥司法干預破壞民主",
+     "tag": "川普",
+     "text": "川習會後對台軍售仍懸而未決 川普盟友戴恩斯：可能只有他知道答案 | 國際焦點 | 國際",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610030010.aspx"
+       "src": "經濟日報",
+       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBsSzRPNjNsT0w3WHNDY1RaWnFIeDlOZng4cG1xTFhNbnJoTjZFLVdoZHVVekJUMUVyTHNUNHh3dkV0S0tFZnhEU2VmU2dlZkozemV2SmVYS1dxQQ?oc=5"
       }
      ]
     },
     {
-     "text": "南韓軍方：北韓朝東岸外海發射飛行物",
+     "tag": "川普",
+     "text": "習川二度峰會G2格局儼然成型｜海外通訊",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610030009.aspx"
+       "src": "兩岸犇報",
+       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQV25SYkJEZXRNT1JZbmY5Y2RKRk1OSmJYZXJfZEhDNXRBMFlLYnFxUWJramw5ckZpOW5LVHo5dWRhMzN2VVF5WjJWRmQ4WklGdmZrX29FM21FUlFULWRYTUdYcEd2V0tVYWxJckR2UjNhempWZzBRa3VQcUliaW96Mk5DRG5Pa3ZpZmN3U0FQX0h1VTRUVTBVNUlEWUNscEt1QXFXQklWSzVEN1FETmJvREJFd3BMTElLSXdnVENWb3hPUTM0ZUh3Xzk2S2Z4T2FvWkwtRlprc05SZWFBamU4LU1CbVJ4VnlQdXpha056c1ItdTBHZHZxVUNHRXk0dUEwN1Z3bHFsNmpnSHA4cjFFTnduM2RwRExvOTlseXkwM1g?oc=5"
       }
      ]
     },
     {
-     "text": "沙烏地擬擴大攻勢護紅海航運　青年運動稱遭94次空襲",
+     "tag": "習近平",
+     "text": "【佳音時刻】習為何緊握彭麗媛？前CIA官員曝內情",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610030008.aspx"
+       "src": "大紀元",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBKcU5JWWtJQndhcVc3TGFCSkUxSElMczJkMzhlTTBwWUx1VE85NzhhZjdvdTd1VmFOQzZ4WFY0anlEckI3WkxTQmJxcTQwdGRTVnNKTTlGbTE4V05ESlppS3hXN1NiZ9IBZkFVX3lxTFBKcU5JWWtJQndhcVc3TGFCSkUxSElMczJkMzhlTTBwWUx1VE85NzhhZjdvdTd1VmFOQzZ4WFY0anlEckI3WkxTQmJxcTQwdGRTVnNKTTlGbTE4V05ESlppS3hXN1NiZw?oc=5"
       }
      ]
     },
     {
-     "text": "美媒：川普擬任命國家情報總監克雷頓擔任「AI沙皇」",
+     "tag": "習近平",
+     "text": "圖輯》白宮發布花絮照習近平送「金色太和殿」川普回送他這個- 國際",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610030005.aspx"
+       "src": "工商時報",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE94M0dOeTlkSFdvb19VYUUzQWdHdGpPLUg5UTA2WGxaWE82VG0zYVY3QkREWk5KUWRiZThOS0dvSlZMTVFzcjRLSmd2c25RQ2tvcGRHRW02cVZuUlgtbEtJ?oc=5"
       }
      ]
     },
     {
-     "text": "特斯拉全球電動車銷售量優於預期　股價勁揚",
+     "tag": "日本",
+     "text": "特朗普勸習近平與高市早苗直接對話 高市稱與中國保持溝通",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610030004.aspx"
+       "src": "RFI",
+       "url": "https://news.google.com/rss/articles/CBMimANBVV95cUxNckNZT2ZQN1ZCeXJVV3lReldxMXRuVlFFa0RDdDFsaHJiYUpsYV9KeUl5RzJ2M1Z2TzhvRDBDQnhlbG4zcC1EOVNjdlVXZm81ZTg4OXM4a0VoekF1SzJadXppbGFzR3gwM3ZMM0VVeTU0M1h6Rjc1LWZKbXRlWHg0YWVBX05HVlNFelhGTUdJbnRkV1NtVGs0TGJ3RzgwWGh0c2NVNnNvZlExaFZsaVZydkY5NXVFQVVCRVZjX1JJZE5mRE5yUlZCaHFOeTJOOC1qOVZRWHJoanFvbThuNmZRSF91d0p5a2JqNG1XSDNYTzJabGRDUk1sejl3Q2UzQVJHNlBOZnlKdFZYeTdzMkJDeW9PTjg4UXZsMGFNcGpWSUp4ZnVOSXlVdXZBQ01ub0ZOR1hkQ1cwQjAweS1DdGMtQjRndzMzZGlqTDRqRHh3NXB1Sm1hVXpfZGdNaWRzdEphOHhXSlhNNVFWLUMtWGd4TGt4XzhkS0JOVlVhTGdPYWR1TVN6X1RnLTBFUHBsQnAtRHJxY0F5NGI?oc=5"
       }
      ]
     },
     {
-     "text": "美國施壓遏制燃料價格　G7同意釋出1億桶柴油及原油儲備",
+     "tag": "日本",
+     "text": "日本與卡達確認加強能源合作",
      "detail": "",
      "links": [
       {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610020356.aspx"
+       "src": "共同網",
+       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5TWnJjLXo2aXhmcjZNcnNIMGo5QUdRTWFmb04ydF9nN1ZIVGgteGpvY0VEXzAxRjhMbHA4SXlQOWN5UUdnVFVYQVFfUi01ZmpCb0dTQ3cwaTU?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "韓國",
+     "text": "披露轉移朝鮮戰俘：韓國總統警告烏克蘭若不道歉將採取相應措施",
+     "detail": "",
+     "links": [
+      {
+       "src": "RFI",
+       "url": "https://news.google.com/rss/articles/CBMisANBVV95cUxNOFF1dWQ5VldYR2YtV1hJdUlrYmp5MUlYMkhPdDFxWHBYcVR4aVlwbmtXRXFFM2Jwb1FfQ2szVThhV2lPLTN5SF9nR0FKOTZsMkRPdTdlTXZuMGlEWENBemhWaFRNZC15cnZEY1BySEVaanN4UGJHcFpXUUg3NHpXbTJGTWxhNzREbkVsUmVEZ3kzWDlVazBGNFNrdjNzU0d1TDBmOUNpQzVfMGoxNlBYb1hUSmNVYlZ5QjMwUmZTWFJTczI0YmxoNlR0UzNIRDBZRGxHTHpYTzkzamswNzRwYUxEemxybk95dlBPaF9DamFDeXBhQ3JjdXZPbHdmVU9ZN194eEFTYVVLLWcwQTNrV1I3R3JxcHNzcGxIS1BWeDFNNmpLU0RiNWRWT212RGRkQ0FuRGhVLUpkbkNYbGw0dElTWXVyTmVMSzE1aGMzNWVDWjd0c3FHTVV6VG41b0dLYXE3R2wzbjUyNmM3T2pNc25Na1NiVU1WMmpCS2djSFFpdVlVNi1DRWpTb0ZPTHlTVFR4X3RWOTIwRkhjMkVRZUJqd3k5YkR4NEhDN1pkX0E?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "韓國",
+     "text": "北韓戰俘移交曝光 韓烏發生外交爭執",
+     "detail": "",
+     "links": [
+      {
+       "src": "DW.com",
+       "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxOR3hwQmRPbU9xX2NlZFZaZVNleEJ2cHNoNGV5M3RrVHdRb2RDVzJuWjBWWDRuRngtSlVFenpLRDBDNzlNRHVOREtxQWFGaGRzVkN1d1hMV2w1Ml84ZWxrYWduTFdNWjdSSnJrbkNLeG9fS3o2SWpVa1h3S2Y5THdUanJqX2hNTTlmd1RxMDdzZmUzR09hM3JFQTVna3ZzUXNEMDhWcG5QaXpWcXN1YXYxX3otSWlMNk9YSnVUbFYyQlEzSElMd1RGSkUwV19abjNFdEQxOFdvWENpSXVHclN3OUlVU3NTM1RFbHY5WERJODBrbEgtZDZqX0NYTFVuRmlpRDVmNDduaUZYblVEbWVDetIBkAJBVV95cUxPVUpNUUtsVDZmbXpIcURzc2hCZ2tXYVJHRVlFRmFrMXhTMDR6UkdWUzM5WjQyUTlXSUJrMHkyb1lacks0QXo1U0lqQ3Z0NWVGc1QySUpWdmI0WWcxVVNWV1FPOVFDTnZjZjJoQlo1V1RSOTdkYS1nSmkyTmNVaEprczlHYUNuNmp6R0JaNUhkckFMal9fYkxWUE1NeVdWYnpSaXljWVdEaGtxWmVocTFfa3dOT3BBRGRSTjZWQXRnb0Z3RnpFZ1lCMWtDLUQzcXpnOU01V0tlR1FNaldNRkl2T1VGUW1uZDc0VVV6WWhHODdTVlZLclB0d1RSM096UkVlVDc2ZDByV0RjLUlPNXhhcQ?oc=5"
       }
      ]
     }
    ]
   },
   {
-   "title": "台灣政治與財經",
+   "title": "國際會議與機構",
    "items": [
     {
+     "tag": "國際會議",
+     "text": "港媒：川普擬11月先訪菲律賓再去深圳APEC 彰顯亞洲行非只訪中國| 國際焦點| 全球",
+     "detail": "",
+     "links": [
+      {
+       "src": "UDN",
+       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBwSkRqVTJfeVdETlA4N1U0WjNEdHhJS3E5c0VIeWgwWmIwSTFpc1FIOGlueU8xU3g1RWlsZF9TWlJDNTQzTG1TNVdTRXViSGJV?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "國際會議",
+     "text": "普丁表態美中俄三巨頭峰會有譜- 國際",
+     "detail": "",
+     "links": [
+      {
+       "src": "旺得富理財網",
+       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5HWERPeDM4REhkN3hueWRaSlpjNmxFZllpS0pZem9sR2VrazhkRzlzek1jTzlQZm11Uk5oX0xZOXhyc2R0ZW4teGpDX0FMY0RCYmlzdHEwZ1ktOGxnVEZ4endDQnlpa3hnOEE?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "國際會議",
+     "text": "G20譴責糧食貿易脅迫產能過剩未達共識| 國際",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社 CNA",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5QbXN6aDJ1UmdkdjVpUkFoTlhvZDQwVTFrQmEzWlEwZEsyamVHU3R0TlpmMUl1T0Q5QUgxZE40enBxYWhSOGxmTkY4bjMzQzUzRTVjdlNfVHhNMFZ6emdZ?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "IMF/世銀",
+     "text": "IMF發言人：美伊戰事對脆弱國家經濟影響令人擔憂",
+     "detail": "",
+     "links": [
+      {
+       "src": "Plataforma Media",
+       "url": "https://news.google.com/rss/articles/CBMi4gJBVV95cUxPbXdWVTlCUDR1Z2NPWmhVbjU2b3k2TTBLUGNVRi1PYUxqWTRqYlNUa29zRS1NZXFOUGFaWFVWUHI4Zlp3YkJYcm8waXhVaFRscll3akRwV01aQXdZaHVBQms3SGxZN2RuOTFFY0NrMXA0UThSQTVpYmMtd0NFbXRIRWdkSjFCckgyNzJhbkt2a3lScTB3ZzdROU9nUFZsRmxOMVlkUHRvc2c1dUN6dEQteUhrZWV3bGFYRlRYQmRlWmotTldCbEwwbFVCZEI4RWNKdUl1Z1I5UXh5SkJRQkNPLXBTcm9mbXpiRk5QOGJJR1FwYXZwcUFMQW5vVXJjbDFGcDFZWHN5dXdDR2VsU3AyMDgtS0h2alNEVGFhT1d2alFLNW9HSVdtSUwzcGVSZDN0dWVSV19YaU1tbFU0YWVIWk5iby1LQS1zY1NMZllWMUFoQUwzc3FjYzRPYWc1Wmd5ZGc?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "IMF/世銀",
+     "text": "國際貨幣基金組織呼籲墨西哥採取更多措施降低債務軌跡 作者 Investing.com",
+     "detail": "",
+     "links": [
+      {
+       "src": "Investing.com 香港 - 股市報價& 財經新聞",
+       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ZdG5wLWozczhYVUc1cURZajFHZmVnTk9WV1JoMmREMGRyZDd4QTA1ZDVxbUJfbl9leFlkdU4xbDRlNFZEdVVhN0F0a1dzTlJ4VXBpX1hPYXBxa3pFc0NYSml5RXNoZlducDZ4bXBfaW4?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "IMF/世銀",
+     "text": "IMF歡迎美中貿易協議，同時對全球經濟衝擊表達疑慮",
+     "detail": "",
+     "links": [
+      {
+       "src": "BigGo 財經",
+       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5fYkg1N3h6SU5wbktxaHlFN2dOMTdWV1RtcU80Smg2S2VhcnlqRk9fbGowV20zQ0FfbXFIMVpVSnVzXzhocVpieEc5bDlYeWR6ZWJGSklnSFllMEhxYXpSQ05CY0NkMVlVM1ltRlhOVExuT2FicENycVZn?oc=5"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "台灣政府與立法",
+   "items": [
+    {
+     "tag": "立法院",
+     "text": "全台普發2萬要來了？立法院、行政院最新進度　拼11/28選舉前三讀",
+     "detail": "",
+     "links": [
+      {
+       "src": "NOWnews今日新聞",
+       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5zY2dhcDdiSklnbTg0ZlRWRkdOYVU2U0RmZnBPa0JDcTQ2VVBzV214RGh6MWFlNURuSHc2TkRfbDhTOGlRZWsxbTNhYUzSAVJBVV95cUxQYWxCZ3Zna2FLRXg5bk52UEVQZmw1anhjRm1OdDc3V29rUHhyanlOMkZ6Y3gzYkw1Q3E5VlNyMDR5OTJoRURzMU12c0d4ZEtOSzdR?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "立法院",
+     "text": "普發現金2萬 啟動審查",
+     "detail": "",
+     "links": [
+      {
+       "src": "UDN",
+       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9Nc1UxVnVxc1BsMEc5SXpQdlUteXZFWHlJLXlJOXJxWUlMdGZvbFYxaEpTLUNGWEp6bThrTXd5bTNDRFp6VVdoRndLVEtaMi1u0gFWQVVfeXFMT3Q2QlpRT0phZGlIN2VPaEd2b3h6aEUwYXRLUmtTb3JFS282UmRBaE9BdHJER2NyYXR0QU0tQjAyTV9mZVYwYlZWZnJTMDhsS01venBFLXc?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "立法院",
+     "text": "不只轟民進黨、連自己人也開炮！趙少康：國民黨團、立法院長都讓我失望 | 自由電子報",
+     "detail": "",
+     "links": [
+      {
+       "src": "LINE TODAY",
+       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9fWXFSd0ZrX2FEVVVZVFQxNlNIME94S0VzaGJKTUdPWmlTcFVjTEhRc3R4QWlTWlV2YTNFbDJRYjRSTHg2UmMzMy1ydXV4MnBjY2xJR3JR?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "行政院",
+     "text": "普發一萬何時領？2027普發最新進度、登記方式與資格，國民支援金、鄉鎮加碼一次看",
+     "detail": "",
+     "links": [
+      {
+       "src": "未來商務",
+       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFAxTzloWVJEWVdpRnRuVWZPUlFaUl9mMVg3b3BkUGxRbWlkQkl0YmFLY280M0dJeGJoREk2VjJsaFUxYUZvcTdwR1BxWlhWVTJTblZaTA?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "行政院",
+     "text": "藍版特別條例推普發2萬 立院付委",
+     "detail": "",
+     "links": [
+      {
+       "src": "自由時報",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1XaTV4VzVtVWZRX1lSQS1GdElWbmZLYzJibW1uT3l6emVXX3lhamNtYVZCVFh0bEVwcjhSMHduT1JabDNTMF9VT1plZWRxV3l6bFZBbUpscjFvbkdYcDdHWXJIUDh4Z9IBZkFVX3lxTE1XaTV4VzVtVWZRX1lSQS1GdElWbmZLYzJibW1uT3l6emVXX3lhamNtYVZCVFh0bEVwcjhSMHduT1JabDNTMF9VT1plZWRxV3l6bFZBbUpscjFvbkdYcDdHWXJIUDh4Zw?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "行政院",
+     "text": "普發現金1萬元時間點來了！行政院擬「這時」發放",
+     "detail": "",
+     "links": [
+      {
+       "src": "財訊",
+       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE02bEVpaHdHNkhBNmVHMU9EU1FUN3hDTUQwdUFJYlNPT05XcTlfcnRsbTFWSTdkQWVSWE1NR3ZiWFlGZkEydUhQSk54c192RUV5Wk1QYm5welh4eFFUazdmaU1VdmNVU0EzQ0taSUo1aWZoSWZuNHkyelNBVQ?oc=5"
+      }
+     ]
+    },
+    {
+     "tag": "政治",
      "text": "雙十國慶酒會 愛沙尼亞政要肯定台愛合作盼擴大挺台陣營",
      "detail": "",
      "links": [
@@ -131,6 +246,7 @@
      ]
     },
     {
+     "tag": "政治",
      "text": "美賓州眾議會通過友台決議　祝賀國慶深化交流",
      "detail": "",
      "links": [
@@ -141,6 +257,7 @@
      ]
     },
     {
+     "tag": "政治",
      "text": "賴總統訪史瓦帝尼風波　美外交官：損及馬達加斯加主權",
      "detail": "",
      "links": [
@@ -149,43 +266,69 @@
        "url": "https://www.cna.com.tw/news/aipl/202610030012.aspx"
       }
      ]
-    },
-    {
-     "text": "藍指沈伯洋教育政策四大皆空　綠：歡迎提出不同方案",
-     "detail": "",
-     "links": [
-      {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610020352.aspx"
-      }
-     ]
-    },
-    {
-     "text": "外交部發布國慶影片「國家的相簿」　呈現台灣民主歷程[影]",
-     "detail": "",
-     "links": [
-      {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610020346.aspx"
-      }
-     ]
-    },
-    {
-     "text": "台灣贈菲律賓「金門艦」正式服役　維護菲南航運安全",
-     "detail": "",
-     "links": [
-      {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610020345.aspx"
-      }
-     ]
     }
    ]
   },
   {
-   "title": "BBC 國際",
+   "title": "其他重要新聞",
    "items": [
     {
+     "tag": "國際",
+     "text": "巴西大選辯論喊卡　政壇媒體怒斥司法干預破壞民主",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610030010.aspx"
+      }
+     ]
+    },
+    {
+     "tag": "國際",
+     "text": "南韓軍方：北韓朝東岸外海發射飛行物",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610030009.aspx"
+      }
+     ]
+    },
+    {
+     "tag": "國際",
+     "text": "沙烏地擬擴大攻勢護紅海航運　青年運動稱遭94次空襲",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610030008.aspx"
+      }
+     ]
+    },
+    {
+     "tag": "兩岸",
+     "text": "港澳人士台適生活講座10場落幕  共同提升台灣社會韌性",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-兩岸",
+       "url": "https://www.cna.com.tw/news/acn/202610020306.aspx"
+      }
+     ]
+    },
+    {
+     "tag": "兩岸",
+     "text": "中國駐美大使：中美應為AI安護欄而非搞競賽",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-兩岸",
+       "url": "https://www.cna.com.tw/news/acn/202610020263.aspx"
+      }
+     ]
+    },
+    {
+     "tag": "BBC",
      "text": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
      "detail": "",
      "links": [
@@ -196,6 +339,7 @@
      ]
     },
     {
+     "tag": "BBC",
      "text": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
      "detail": "",
      "links": [
@@ -206,6 +350,7 @@
      ]
     },
     {
+     "tag": "BBC",
      "text": "Cornell frat house rape accuser 'under siege' online, says lawyer",
      "detail": "",
      "links": [
@@ -216,97 +361,24 @@
      ]
     },
     {
-     "text": "Riot police clash with students as education protests rage in France",
+     "tag": "財經",
+     "text": "G7計劃釋出戰略儲備　柴油價格大跌",
      "detail": "",
      "links": [
       {
-       "src": "BBC World",
-       "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss"
+       "src": "中央社-財經",
+       "url": "https://www.cna.com.tw/news/afe/202610030007.aspx"
       }
      ]
     },
     {
-     "text": "Spanish PM Sánchez loses key housing crisis vote after eviction of woman, 87",
+     "tag": "財經",
+     "text": "就業數據欠佳降低聯準會升息機率　美股收紅",
      "detail": "",
      "links": [
       {
-       "src": "BBC World",
-       "url": "https://www.bbc.co.uk/news/articles/c623dlk4y75mo?at_medium=RSS&at_campaign=rss"
-      }
-     ]
-    },
-    {
-     "text": "US road rage killer's sentence quashed because AI video of victim was shown in court",
-     "detail": "",
-     "links": [
-      {
-       "src": "BBC World",
-       "url": "https://www.bbc.co.uk/news/articles/cwgkvygg5nzvo?at_medium=RSS&at_campaign=rss"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "title": "主題追蹤（領袖、會議、立法院）",
-   "items": [
-    {
-     "text": "川習會後對台軍售仍懸而未決 川普盟友戴恩斯：可能只有他知道答案 - UDN",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5wQXd3R0gwM25EQW9KVkVBLVBRTFUwVjV4OER1LU5nQS00TEZiakxFcTl6eHlxdFZOeVpBWVFXMTVhNkJva0toa2gta3N6OG850gFWQVVfeXFMTnV2OEFvclNaM3lKa0tYb3VGSS1zTkRpdzRIZTIxTGhudmM2c3VTR3RScnJlSzQ1SnpNZEFsUzgwNXBsa1gydk1KWjNPRW9OdFp6cDJWZXc?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "習川二度峰會G2格局儼然成型｜海外通訊 - chaiwanbenpost.net",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxQV25SYkJEZXRNT1JZbmY5Y2RKRk1OSmJYZXJfZEhDNXRBMFlLYnFxUWJramw5ckZpOW5LVHo5dWRhMzN2VVF5WjJWRmQ4WklGdmZrX29FM21FUlFULWRYTUdYcEd2V0tVYWxJckR2UjNhempWZzBRa3VQcUliaW96Mk5DRG5Pa3ZpZmN3U0FQX0h1VTRUVTBVNUlEWUNscEt1QXFXQklWSzVEN1FETmJvREJFd3BMTElLSXdnVENWb3hPUTM0ZUh3Xzk2S2Z4T2FvWkwtRlprc05SZWFBamU4LU1CbVJ4VnlQdXpha056c1ItdTBHZHZxVUNHRXk0dUEwN1Z3bHFsNmpnSHA4cjFFTnduM2RwRExvOTlseXkwM1g?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "台企業底氣大增！川普稱台積電投資5千億美元 謝金河讚：走向世界舞台 - 三立新聞網SETN.com",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1VRXFWYU1sS080MHU5M1pxRkRrQVRhamVlVl9PTHgyWEFJOWk4bHNCak5aRHBpT1diTkxjUldLQnZvV3E0OEdTNkFwbw?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "川普啟動全國期中助選32天巡迴! 40歲男密謀攻擊德州議會遭逮| 國際 - Newtalk新聞",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zUzRWUFN5ZUhkT292LUtibXhYNk8zVVpvM1B6TkxTRjF1TGpYVkZHaWlCdWQ1MVFEcFNFUXcyVXUyM1ZZRkRadU1uaUd4TUQ1azNTWnIwbVgzcjA?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "習近平傳健康亮紅燈？川普駁斥傳言：相處兩天「狀態非常完美」 - gvm.com.tw",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA4bEpaU3N3akU5T0N3clQ0Rzc2TzhtUWtHc242MlJvREs4amtoQ01jOUJtaHN6VTE4OVdvWkxGcTV4N3ExeHpQZE5MajFmUQ?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "川普想見金正恩遇冷 球星羅德曼能否搭橋 - DW.com",
-     "detail": "",
-     "links": [
-      {
-       "src": "搜尋:川普 行程 OR 會晤 OR 訪問",
-       "url": "https://news.google.com/rss/articles/CBMiqAJBVV95cUxOZXRldVVzcjhxVGhHeXZnRi1xWmd0SnU1cWt2dHBuV2xzdFM5ZTJfQjNIU0VEa0V5Z3hleWhWX2U1ZGR2MGtIY3k1eEtReld5THNvcDBRTnE3dHBKX0xZUS1nN1ZLQUZpQlJKSWhUY2p6RGxUeVUwaEdzYWFsM2VBUF9hVnpEd0IzX3FicnVqN1RmQ19BRG5EQ2xWak51cFBFeTl2ZldOQlhPazdIeUZKSzdOT1kyT2wyT3R2NElpeDNKeVB6Q0s4T1JPU3JCQUpnanlTR0ctLWU2RVkwb1BVMGJ1VnBvN0twYU5PalEyTUowcURCQ1NzUFVhTFVBZV9ub3JsQnJELXpfN2Y0NC0tQmFqMlhHWFIzaDRoVXJuZlotTVBtUk9qcdIBqAJBVV95cUxONUVQUnUzRHF4Q1pRMjU0Ym5Icm1DRkY5MzlGb3dxV0FEQXM0Ym5lZkhRdnlLdUF4QVUtVURmTlFFaS1leFc4X3h0eFc0SUFaM2xlaE5ENU5wNUUxcklhbmg5WlNMWlJfTnZnTFFLQnhack5Gb3pfOFFSQ0hhaXh0TkY3UUpvOWFtdUdtY2VpLTgtcWtqUUNsd3lLNWhGQVM3ai1WQ2FOclh2enpONl9NQ1gtaHVTQy1lV2JOeFBXb1d4WC15MUl5UTdtbEVYbnpBSDA0ZTQ0RXZ4eTRVNV9CcnQ4dG5aaExPd1lsT2JXakw0UVhkY1JmSUhQb2N1MjNwTXNSNVBGdWdqRlF4VS16MUdkcXpDd2Y4X0YxMFhZVW1UcmFBNFNZdQ?oc=5"
+       "src": "中央社-財經",
+       "url": "https://www.cna.com.tw/news/afe/202610030006.aspx"
       }
      ]
     }
@@ -334,7 +406,7 @@
    "t": "行政院院會（每週四上午）"
   }
  ],
- "updated": "2026-10-03 09:48",
+ "updated": "2026-10-03 10:04",
  "source_count": 95,
  "ai": false
 }
