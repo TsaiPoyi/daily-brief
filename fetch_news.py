@@ -184,6 +184,7 @@ PROMPT_CORE = """你是每日新聞簡報編輯。讀者是台灣的公務員，
 """ + RULES + """
 請只輸出一個 JSON 物件，不要任何其他文字，格式：
 {
+ "overview": "",
  "top": [ {"text":"", "detail":"", "refs":[0]} ],
  "sections": [
   {"title":"國際領袖動態", "items":[{"text":"","detail":"","refs":[0]}]},
@@ -192,7 +193,7 @@ PROMPT_CORE = """你是每日新聞簡報編輯。讀者是台灣的公務員，
   {"title":"其他重要新聞", "items":[]}
  ]
 }
-說明：top 為今日最重要 3~5 則；「國際領袖動態」最多 6 則，每位人物最多 2 則，讓美、中、日、韓盡量都有機會出現；
+說明：overview 用 2~3 句話（不超過 100 字）總結今天最重要的事，同樣只能依據標題；top 為今日最重要 3~5 則；「國際領袖動態」最多 6 則，每位人物最多 2 則，讓美、中、日、韓盡量都有機會出現；
 「國際會議與機構」（聯合國、G20、APEC、金磚、IMF、世銀等）最多 5 則；「台灣政府與立法」（立法院、行政院、重要政策）最多 6 則；
 「其他重要新聞」最多 5 則。
 
@@ -203,7 +204,7 @@ PROMPT_DIR = """你是每日新聞簡報編輯。以下標題已依「主題」�
 請為每個有實質新聞的主題各寫 1 則最值得一看的重點（重要的主題可寫到 2 則）。
 
 """ + RULES + """6. 每則另加 tag 欄位，內容就是該標題的「主題」名稱（例如 臺北市、內政委員會、衛福部、物理學）。
-7. 縣市／部會／委員會若只是例行活動或沒有實質消息，就略過，不要湊數。
+7. 只要某主題有標題，就為它寫 1 則（即使是例行消息也要寫）；只有該主題完全沒有標題，或標題與主題無關時才略過。
 8. 學術類（哲學、文學、藝術、社會學、經濟學、心理學、法律、數學、物理學、生物學、工程、醫學）優先挑「新發現、重要獎項、重大研究或政策」。
 
 請只輸出一個 JSON 物件，不要任何其他文字，格式：
@@ -301,6 +302,35 @@ def attach_links(block, by_id):
             item["tag"] = ""
 
 
+DIR_TITLES = {"縣市": "各縣市大事", "委員會": "立法院各委員會",
+              "部會": "行政院各部會", "學術": "學術與知識界"}
+
+
+def backfill(dirs, dir_items):
+    """AI 若漏掉某些主題，就用該主題的第一則標題補上，確保每個有新聞的主題都出現。"""
+    secs = {x.get("title"): x for x in dirs.get("sections", [])}
+    order = {t["label"]: n for n, t in enumerate(TOPICS)}
+    for g, title in DIR_TITLES.items():
+        sec = secs.get(title)
+        if sec is None:
+            sec = {"title": title, "items": []}
+            dirs.setdefault("sections", []).append(sec)
+            secs[title] = sec
+        for t in TOPICS:
+            if t["group"] != g:
+                continue
+            lab, matched = t["label"], False
+            for it in sec["items"]:
+                h = str(it.get("tag", ""))
+                if h and (h == lab or h in lab or lab in h):
+                    it["tag"], matched = lab, True
+            if not matched:
+                got = [i for i in dir_items if i.get("topic") == lab]
+                if got:
+                    sec["items"].append(mk(got[0], lab))
+        sec["items"].sort(key=lambda i: order.get(i.get("tag"), 999))
+
+
 # ---------- 5. 備用模式（不用 AI）----------
 def mk(it, tag=""):
     return {"tag": tag, "text": it["title"], "detail": "",
@@ -375,6 +405,7 @@ def main():
                 dirs = call_gemini(PROMPT_DIR + "\n".join(line(i) for i in dir_items))
                 for s in dirs.get("sections", []):
                     attach_links(s.get("items", []), by_id)
+                backfill(dirs, dir_items)
                 ai_dir = True
             except Exception as e:
                 print("[目錄 AI 失敗，改用標題模式]", e)
@@ -388,6 +419,7 @@ def main():
     for s in dirs.get("sections", []):
         s["collapsed"] = True  # 目錄式區塊預設收合，維持 1 分鐘可讀
     data = {
+        "overview": core.get("overview", "") if isinstance(core.get("overview", ""), str) else "",
         "top": core.get("top", []),
         "sections": core.get("sections", []) + dirs.get("sections", []),
         "calendar": CALENDAR,
