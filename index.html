@@ -21,6 +21,12 @@ h2{font-size:13px;letter-spacing:.08em;color:var(--acc);margin:0 0 8px}
 .tag{display:inline-block;background:var(--tag);color:var(--mute);font-size:11px;border-radius:5px;padding:0 6px;margin-right:6px}
 .when{float:right;color:var(--acc);font-size:13px;font-weight:600;margin-left:8px}
 .src a{color:var(--mute);font-size:12px;margin-right:8px}
+.fold{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:12px}
+.fold summary{cursor:pointer;font-size:13px;letter-spacing:.08em;color:var(--acc);font-weight:600;list-style:none}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::before{content:"▸ ";}
+.fold[open] summary::before{content:"▾ ";}
+.fold[open] summary{margin-bottom:8px}
 .empty{color:var(--mute);font-size:14px}
 </style>
 </head>
@@ -48,8 +54,11 @@ function item(tag,text,detail,links,when){
     if(!/^https?:\/\//.test(l.url))return;
     var a=el("a",null,"↗ "+l.src);a.href=l.url;a.target="_blank";a.rel="noopener noreferrer";s.appendChild(a)});d.appendChild(s)}
   return d}
-function sec(title,items,emptyMsg){
-  var s=el("section");s.appendChild(el("h2",null,title));
+function sec(title,items,emptyMsg,collapsed){
+  var s=el(collapsed?"details":"section"); if(collapsed)s.className="fold";
+  var head=el(collapsed?"summary":"h2",null,collapsed?title+"（"+items.length+"）":title);
+  if(!collapsed)head.className="";
+  s.appendChild(head);
   if(items.length)items.forEach(function(i){s.appendChild(i)});else s.appendChild(el("div","empty",emptyMsg||"今日無相關重點"));
   return s}
 function rel(n){return n<=0?"今天":n===1?"明天":n+" 天後"}
@@ -66,7 +75,7 @@ fetch("data.json?t="+Date.now()).then(function(r){if(!r.ok)throw 0;return r.json
   ev.sort(function(a,b){return a.k-b.k});
   app.appendChild(sec("未來行程與會議",ev.map(function(x){return item(x.c.tag,x.c.t,x.c.s,null,x.w)}),"近期無已登錄行程"));
   (d.sections||[]).forEach(function(s){
-    app.appendChild(sec(s.title,(s.items||[]).map(function(i){return item(i.tag||"",i.text,i.detail,i.links)})))});
+    app.appendChild(sec(s.title,(s.items||[]).map(function(i){return item(i.tag||"",i.text,i.detail,i.links)}),null,!!s.collapsed))});
 }).catch(function(){$("stamp").textContent="尚無資料：請先到 GitHub 的 Actions 手動執行一次「Daily Brief」。"});
 </script>
 </body>
