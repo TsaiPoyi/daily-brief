@@ -25,10 +25,24 @@ CALENDAR = [
 ]
 
 # ---------- 2. 新聞來源 ----------
-def google_news(query, limit=8):
+# (顯示標籤, 搜尋關鍵字, 分組)　分組：領袖／會議／台灣
+TOPICS = [
+    ("川普", "川普 行程 OR 會晤 OR 訪問", "領袖"),
+    ("習近平", "習近平 會見 OR 訪問 OR 會議", "領袖"),
+    ("日本", "日本首相 會談 OR 訪問", "領袖"),
+    ("韓國", "韓國總統 會談 OR 訪問", "領袖"),
+    ("國際會議", "聯合國 OR G20 OR APEC OR 金磚 OR 東協 峰會", "會議"),
+    ("IMF/世銀", "IMF OR 世界銀行 報告 OR 預測", "會議"),
+    ("立法院", "立法院 院會 OR 三讀 OR 委員會", "台灣"),
+    ("行政院", "行政院會 政策 OR 通過", "台灣"),
+]
+
+
+def google_news(label, query, limit=8):
     q = urllib.parse.quote(query + " when:1d")
     url = f"https://news.google.com/rss/search?q={q}&hl=zh-TW&gl=TW&ceid=TW:zh-Hant"
-    return (f"搜尋:{query}", url, limit)
+    return ("主題:" + label, url, limit)
+
 
 FEEDS = [
     ("中央社-政治", "https://feeds.feedburner.com/rsscna/politics", 10),
@@ -36,18 +50,11 @@ FEEDS = [
     ("中央社-兩岸", "https://feeds.feedburner.com/rsscna/mainland", 8),
     ("中央社-財經", "https://feeds.feedburner.com/rsscna/finance", 8),
     ("BBC World", "https://feeds.bbci.co.uk/news/world/rss.xml", 10),
-    google_news("川普 行程 OR 會晤 OR 訪問"),
-    google_news("習近平 會見 OR 訪問 OR 會議"),
-    google_news("日本首相 會談 OR 訪問"),
-    google_news("韓國總統 會談 OR 訪問"),
-    google_news("聯合國 OR G20 OR APEC OR 金磚 OR 東協 峰會"),
-    google_news("IMF OR 世界銀行 報告 OR 預測"),
-    google_news("立法院 院會 OR 三讀 OR 委員會"),
-    google_news("行政院會 政策 OR 通過"),
-]
+] + [google_news(label, q) for label, q, _ in TOPICS]
 
 
 def fetch_items(name, url, limit):
+    topic = name[3:] if name.startswith("主題:") else None
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 daily-brief"})
     with urllib.request.urlopen(req, timeout=20) as r:
         root = ET.fromstring(r.read())
@@ -55,8 +62,13 @@ def fetch_items(name, url, limit):
     for it in root.iter("item"):
         title = html.unescape((it.findtext("title") or "").strip())
         link = (it.findtext("link") or "").strip()
+        outlet = html.unescape((it.findtext("source") or "").strip())
+        # Google 新聞標題尾巴會附「 - 媒體名」，拆開來讓標題更乾淨
+        if outlet and title.endswith(" - " + outlet):
+            title = title[: -(len(outlet) + 3)].strip()
         if title and link:
-            out.append({"src": name, "title": title, "link": link})
+            out.append({"src": outlet or (name if not topic else "Google 新聞"),
+                        "topic": topic, "title": title, "link": link})
         if len(out) >= limit:
             break
     return out
@@ -78,7 +90,7 @@ def collect():
             seen.add(key)
             it["id"] = len(items)
             items.append(it)
-    return items[:160]
+    return items[:200]
 
 
 # ---------- 3. 請 Gemini 整理 ----------
@@ -96,10 +108,10 @@ PROMPT = """你是每日新聞簡報編輯。讀者是台灣的公務員，每�
 {
  "top": [ {"text":"", "detail":"", "refs":[0]} ],            // 今日最重要 3~5 則
  "sections": [
-  {"title":"國際領袖動態", "items":[{"text":"","detail":"","refs":[0]}]},   // 美國、中國、日本、韓國等領袖行程與會談，最多 5 則
-  {"title":"國際會議與機構", "items":[...]},                                 // 聯合國、G20、APEC、金磚、IMF、世銀等，最多 4 則
-  {"title":"台灣政府與立法", "items":[...]},                                 // 立法院、行政院、重要政策，最多 5 則
-  {"title":"其他重要新聞", "items":[...]}                                    // 最多 4 則
+  {"title":"國際領袖動態", "items":[{"text":"","detail":"","refs":[0]}]},   // 美國、中國、日本、韓國等領袖行程與會談，最多 6 則，每位人物最多 2 則，讓美、中、日、韓盡量都有機會出現
+  {"title":"國際會議與機構", "items":[...]},                                 // 聯合國、G20、APEC、金磚、IMF、世銀等，最多 5 則
+  {"title":"台灣政府與立法", "items":[...]},                                 // 立法院、行政院、重要政策，最多 6 則
+  {"title":"其他重要新聞", "items":[...]}                                    // 最多 5 則
  ]
 }
 
@@ -108,7 +120,9 @@ PROMPT = """你是每日新聞簡報編輯。讀者是台灣的公務員，每�
 
 
 def summarize(items):
-    lines = "\n".join(f"[{i['id']}] {i['src']} | {i['title']}" for i in items)
+    lines = "\n".join(
+        f"[{i['id']}] {i['src']}" + (f"（主題:{i['topic']}）" if i.get("topic") else "")
+        + f" | {i['title']}" for i in items)
     url = ("https://generativelanguage.googleapis.com/v1beta/models/"
            f"{MODEL}:generateContent")
     body = json.dumps({
@@ -141,22 +155,34 @@ def summarize(items):
 
 
 def headlines_only(items):
-    """備用模式：不用 AI，直接依來源列出標題。"""
-    def mk(it):
-        return {"text": it["title"], "detail": "",
+    """備用模式：不用 AI。每個關鍵字各取固定幾則，避免被單一主題（如川普）佔滿。"""
+    def mk(it, tag=""):
+        return {"tag": tag, "text": it["title"], "detail": "",
                 "links": [{"src": it["src"], "url": it["link"]}]}
-    groups = [("中央社 · 國際與兩岸", ("中央社-國際", "中央社-兩岸")),
-              ("台灣政治與財經", ("中央社-政治", "中央社-財經")),
-              ("BBC 國際", ("BBC World",)),
-              ("主題追蹤（領袖、會議、立法院）", None)]
+
+    def by_topic(label):
+        return [i for i in items if i.get("topic") == label]
+
+    def by_src(name):
+        return [i for i in items if i["src"] == name and not i.get("topic")]
+
+    groups = [("國際領袖動態", "領袖", 2), ("國際會議與機構", "會議", 3),
+              ("台灣政府與立法", "台灣", 3)]
     sections = []
-    for title, srcs in groups:
-        if srcs is None:
-            sel = [i for i in items if i["src"].startswith("搜尋:")]
-        else:
-            sel = [i for i in items if i["src"] in srcs]
-        sections.append({"title": title, "items": [mk(i) for i in sel[:6]]})
-    return {"top": [mk(i) for i in items[:5]], "sections": sections}
+    for title, g, n in groups:
+        its = []
+        for label, _, grp in TOPICS:
+            if grp == g:
+                its += [mk(i, label) for i in by_topic(label)[:n]]
+        if g == "台灣":
+            its += [mk(i, "政治") for i in by_src("中央社-政治")[:3]]
+        sections.append({"title": title, "items": its})
+    other = ([mk(i, "國際") for i in by_src("中央社-國際")[:3]]
+             + [mk(i, "兩岸") for i in by_src("中央社-兩岸")[:2]]
+             + [mk(i, "BBC") for i in by_src("BBC World")[:3]]
+             + [mk(i, "財經") for i in by_src("中央社-財經")[:2]])
+    sections.append({"title": "其他重要新聞", "items": other})
+    return {"top": [], "sections": sections}
 
 
 def attach_links(block, by_id):
