@@ -1,52 +1,56 @@
 {
  "date": "2026-10-23",
- "updated": "2026-10-23 08:36",
+ "updated": "2026-10-23 17:25",
  "top": [
   {
-   "text": "西藏發生規模7強震 已造成至少16死32傷",
-   "detail": "震源深度僅10公里，導致逾300棟房屋倒塌。",
+   "text": "颱風薔琵襲台，府院與國軍全面動員防範災情",
+   "detail": "總統呼籲避免觀浪登山，國軍各作戰區預置兵力應變，經濟部與地方協作防災。",
+   "links": [
+    {
+     "src": "中央社-政治",
+     "url": "https://www.cna.com.tw/news/aipl/202610230116.aspx"
+    },
+    {
+     "src": "中央社-政治",
+     "url": "https://www.cna.com.tw/news/aipl/202610230040.aspx"
+    }
+   ]
+  },
+  {
+   "text": "西藏那曲發生規模7淺層地震，已釀16死32傷",
+   "detail": "震源深度僅10公里且逾300間房屋倒塌，習近平指示搜救，陸委會表達慰問。",
    "links": [
     {
      "src": "中央社-兩岸",
+     "url": "https://www.cna.com.tw/news/acn/202610230038.aspx"
+    },
+    {
+     "src": "中央社-兩岸",
      "url": "https://www.cna.com.tw/news/acn/202610230013.aspx"
+    }
+   ]
+  },
+  {
+   "text": "APEC峰會聚焦科技與地緣政治，川習會牽動供應鏈",
+   "detail": "會議即將召開，各界高度關注科技AI地緣政治，但美韓官員評估川金會機率極低。",
+   "links": [
+    {
+     "src": "Newtalk新聞",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HOG1tM0FLcHVGUm83blNqLXY3X19NeGdMblFEWC1MMUZhNlNnX0s2MlE0ak52UFZoTFlxbnpuQlp5cW9vTlpuQmNySUJaN0t4U2tRQUFZTEp5VWc?oc=5"
     },
     {
-     "src": "BBC World",
-     "url": "https://www.bbc.co.uk/news/articles/ck5ynd1z6e83o?at_medium=RSS&at_campaign=rss"
+     "src": "商傳媒",
+     "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPemtaQXZPeFlndHRDY0xDQWU2RWJrS2JTMGcyOHBRa2J3YllhbkZnaTRkTFpOcnI2QWFFQWRzRVJGbmJEbnJzRkpCbG16SzZVQlRTalR5V3QyRm9EaF8wQ3Z1SENQb29lc0E1Ujctc2RjTWNVYkpiclo0cDB4OW54VUFMOEIwRWEtbVNaZ3ZHcTBxTmhLU3hxNFh3XzJQQXZxa1NpMkNCRFYwMVpReU5nenpuTTZSbGw0Z3JLY1RhMHZjczk0dUlkRVRnMDJmMUc4R25lNmVOWW1yeXZlLU1qMi1Jb21HaDY2U3ZPNUpTZlpGbGF2OUhLSUdsSGRuX3pTMktHX2Z4S2VvcExwSWVBTkRIV3VqNTNzc0wydDFteEFVaGJ1N3BWYm1IRzdhdFpFS3dlZjltTldBWEpxQXhJSU9uelo2VXJHRUc4QlRIMWRKT0RfeVFVc3o2RQ?oc=5"
     }
    ]
   },
   {
-   "text": "IMF報告指出台灣今年GDP成長率居亞太之冠",
-   "detail": "AI熱潮成為驅動台灣經濟成長的關鍵推手。",
+   "text": "中俄簽署公報重申一中原則，外交部嚴正駁斥",
+   "detail": "外交部批評中俄公報內容悖離事實，發布錯誤言論。",
    "links": [
     {
-     "src": "聚財網",
-     "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1N1NEZXA2blhqOW9RRXdWNTZjQ0EzNDNQUVVmR01pVl9PN2Q4VjltRjVqaFJTWklUZDRGNXlEd1Rfa3BGTzdveVJsV0Y?oc=5"
-    }
-   ]
-  },
-  {
-   "text": "俄羅斯證實籌備下月美中俄三方會談",
-   "detail": "美烏俄談判可望重啟，澤倫斯基稱接受凍結現狀。",
-   "links": [
-    {
-     "src": "信傳媒",
-     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwZHNPRm1sNVFnaXNXTXpRMU96dldMcFpEdnNrVU9PZ3RDQzh1OWQ0dlpqN21iRlBGQkllNk5ON0liMnQyYUtBMm1zWld4YnFvM3FKbkQyX1Yydw?oc=5"
-    },
-    {
-     "src": "輕新聞",
-     "url": "https://news.google.com/rss/articles/CBMihANBVV95cUxOcVFLS1lHNjlvWEwtRHN5b1JidnlJTC1EcG5uS3MzWmFnUTBrXzQxZGVRMTl6cGluNmV1aDR3ejc0V05OaTRoSEFrdnhYYThzZTl1LWthd3FVV01CRHFKY0k0NVNHSUhRSFNZSVNBRVBvd0tJOGg5S0RSQi1HWmh2QnZKWTN4RzRGSndGWVY3VkVIMjhMeXJZcXVZakt2dl9sTUFTSTB5aS1NRHNJa1c5WDFCeEJvUnFoeDJVbjJzZlo2SXlDUGs4c2x3NmVWblQzdFM4d21ENzhwLTdobnhVMEIxSE5lVzJCMk9oZEI4VDVNUlFvZDJVWGc1b3kzbjg1eWVleHdpSHV0bGJNS21Ydi1TNWZ1TEQ4eml6bGpnMXBwaUtDelFqSWRTWkZzWHFMdm9jc3J3LURGQVF5RW1IZlh2T0xqRjlQT0doeHFCMGZzUXB2NFVUdUpIRGI0aXVWZm56MVpJeWtwekJ6M2licTF0THo0enVXUzgtMkh4SXlpdjZu?oc=5"
-    }
-   ]
-  },
-  {
-   "text": "行政院拍板4年投入152億元推動農業轉型",
-   "detail": "旨在強化農業防災並改善產業缺工問題。",
-   "links": [
-    {
-     "src": "Rti 中央廣播電臺",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5pMlM1UGU4NlVXQ1NuTUpVc0dyeHA3UFIxVG1PTm43YlMzQWM2NGlmNldpVDhuLXFPcnFYSVVsdnZFRlIxVE82bU9aRmhHQnAzZWRJd0szNA?oc=5"
+     "src": "中央社-政治",
+     "url": "https://www.cna.com.tw/news/aipl/202610230058.aspx"
     }
    ]
   }
@@ -56,50 +60,60 @@
    "title": "國際領袖動態",
    "items": [
     {
-     "text": "川普表示星鏈已恢復運作 促馬斯克解除限制",
-     "detail": "川普拒絕證實細節，強調重點在於烏克蘭網路已恢復。",
+     "text": "川普稱烏克蘭星鏈已恢復，烏方表示仍受限制",
+     "detail": "川普稱馬斯克已恢復服務，但烏克蘭指出星鏈目前仍受限。",
      "links": [
-      {
-       "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610230021.aspx"
-      },
       {
        "src": "BBC World",
        "url": "https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&at_campaign=rss"
-      }
-     ]
-    },
-    {
-     "text": "習近平出席紀念長征大會 強調黨對軍隊領導",
-     "detail": "北京舉行紅軍長征勝利90周年大會，習近平發表講話。",
-     "links": [
-      {
-       "src": "中共中央党史和文献研究院",
-       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE80Y21wNndULXFlcGlZRlR0OHV1TC14ZXoxZVFtNl9fUEJrbk5icy1kd19PcTBGY1otemtaa2lMbkdYc3h1X3Nxei04R2Qtb2xEak02cXBUNGk0QU8yWGNvSXB1cW1CZ2c?oc=5"
       },
       {
-       "src": "梅花新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE55ajNOdEx4T1otYkhpR21yVWpIaDRITlp0UXFpWjd3cmhRdFQ5di1QMGNycy1fZThzZ28zX1d1QkhEVEZQUWFsSjhEMWRpVmNnQllpRzc0ZTU?oc=5"
+       "src": "鉅亨號",
+       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE50UllMZXpXT252S3R0ZkNSTF9JVV9LRF9BeTUyaV8wVzkzUmZmV0RwSHV5eXVjbmZTRExRRGh3RGV3OUdLTm1Raw?oc=5"
       }
      ]
     },
     {
-     "text": "金與正視察邊境 宣布月底重啟對韓喊話",
-     "detail": "警告若受到威脅，朝鮮將採取無情反擊。",
+     "text": "習近平主持中共政治局會議，要求持續懲治腐敗",
+     "detail": "會議審議巡視綜合報告，強調全面從嚴治黨並保持高壓態勢。",
+     "links": [
+      {
+       "src": "Now 新聞",
+       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1NVXFRTlJRS05pbDliQnhDV0lpUFBBUmtpWlN0VVlOeVMtakVaakVUODBBblVrRlA0TUZTcGQtTmdMNjRPZmY1cVFOaGQ0REFOQ2R2YVpvMHc0bVRiVWVSaGZ6Rlh1NmgwRU9PcVFIYkVwNWZ2S0E?oc=5"
+      },
+      {
+       "src": "星島頭條",
+       "url": "https://news.google.com/rss/articles/CBMi6AJBVV95cUxQV1NzUldqRmhqSGpLcW94ZXlJbGVvcElsQS05ZEU3NjlVUjVOU2hDRnlvSTIyVU5ORkJuOVFUeWZEU2RHNlVtbWNWUjFEOE5tMWJoY19DZmpBeXRETFFlOVlpMjhiRWdSMmRSNjRCcGZ0NFBMTXMzS2tZaXhFY2kyNU5YOVVfX2ZLbE82X29xVXBhYmdrTjBXNmptZkZNcXljbFFZSjNtMWRiX2c1UEQ0MC05dXhyNFIzVDFRbmRneHhlUVVkWF9GNVk0ZS1fNEM1VGFSVVFEUGRWanp5OXNuUW8wOENLdjVUTm4wbFpUeGlUWTBDbGswSTVKSllFaHJaUDJ3ODFiZV9QTnhqSDg1WjB3WC1TSFVmcFlKWHNPZnp6eXNTY0FNQ185SE11T1g0NEl3SC1JMzNDRzdJcmZjMk9KSzZseEJqNG9YRzNtbF9WYlVCOVRwaHNSZjFkMEdOREFhS3JWdEs?oc=5"
+      }
+     ]
+    },
+    {
+     "text": "德國總統應習近平邀請，下周起國事訪問中國5天",
+     "detail": "",
      "links": [
       {
        "src": "堅料網",
-       "url": "https://news.google.com/rss/articles/CBMihwRBVV95cUxNV2Fnb1o2U0hTNUpNYWpPY3prUFZ2MTlpT21IREowR1BXWDN6MHA1UERYWlVUVy1rTkZQVmZrWUREM1ZOamVyUDN2VVVmOWc5OERCQ3NXM05qdFgxYlZpSDJUc2dMN1Z1ZGhTQ2phekJuY3F6c2t2Qkp4aU83c3FrWWVuREhhbjFOcGNDMUwwWml1Wnp5Vk9tQWh0MGozRXBHMFgxc2FNM21UTnFlTldhUE13WGJhNlBvdWZUYUE4WDd6Q3ZGQnl3SXhSVWNXcWRZSDVXenQxYW5vNHo1R1RaWWw1M3VFbGxjdUtiNTBLZml4MEdVcWR4ZHlZd0dKSktwUWJYQ1hTa1BULWFYLUtCVTdUS0o5aXAzajZQa1V6UTdOcXVwOXpzclg0cUNzaFJoM3g3cTlpa2V3OXNDRmpYZGZuZHdhbkNIZDRsUDdLdTRUOU9IWEJOY2VxRmEtQ0V6V2ZKd053OGF2aUpxRUNVQzIteUU3dkttMGNSNjYzcjk1ZmpKektHZDludkowSmwyWUFUZFowYnpodldJODZpTXo5eFREeDNVLWRhVTZLVW9NVTJfeDBVUlpLOHl1MTA0MTJQeGhJUTFkTTZiVWdlTDY4SzZsV0VVS1FIaUg1V3NFVjBjRnZ5QjYzcENLejRjOTVYQVhncGthRmNXYkpwZnhYcVIxV3c?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMi2gNBVV95cUxOSk8zMWRLVlJaWUZyZlZkQWd5ZUxTZUZOYU5DSDhyZEJ2SF9uQ2E5alctdjlqc3FUT19BN2hxVWMzWENiS28wUTYzSVRWWVJ0aUkxbHUzQXd0ZDBmcE0tbWNHMjh2V2RZVFdpOTd6aWVxOUNkVHdsOTZ2TjFtZ3FGQzY1T1FvS3dUT09XaG9DNUVyQndDbDVYZTN2bXFOQ19oUC1TWXkwejQ1eDBSWHVvRk1nSFFYNFJYcHlHc085OXoxaGVMQjZuUmVRbU5BckplaFBHVE4teWFVazdqMlllc05qc3Z1MjV2aU1YZ0t2Y2JHUG1wdk56bUF2UGY5Z1hmSGw0Z1RtMVZZdklYM2pLQmNEOHgyVzAyZkRJcF93c250Sm5rcG1saDZzOGpQZnNoV1RmSTlaNlB1SjVCR2x2S3Vwd0RpQndzOHZEZGNuUzhURFBYS2NIZWM3dm8yWkt4RU9vTGtWeldkLUR2WU1qNEctLWc3TFNJMEZBNHk1cWd2VjZHdTdLME9fN3hrYmJjcmI1bV92SmhsZzczLUhvU3Z4eE9tazJHSE5MM0d5YS1FRC1QTXZhVUlydXN4YTRZVTFBbXVmWGd5T095TXQwVm1jWDZjTkh0Tnc?oc=5"
       }
      ]
     },
     {
-     "text": "日經報導高市早苗執政首年將全力經營對美關係",
-     "detail": "分析指日中關係可能持續惡化。",
+     "text": "因應非軍事區地雷爆炸案，南韓提議與北韓軍事會談",
+     "detail": "南韓針對邊境地雷事件提議展開對話，維持邊界穩定。",
      "links": [
       {
-       "src": "經濟日報",
-       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwY21neGFVRFBvb1pDd1Bkd1dObVd6RGJLLW1IekNXSnRVRFFzOGhwRmplTlFWY2s2Y0t0aG1Pa3Rub3JkWE5KbW5wUm10WlI5RHhfLUdCTk4xUdIBX0FVX3lxTE1DZjNFZUNKWlFES19WeHpqUU5uRDg4R3owOG1XLThNbTRKbWF4WDFnNnFRZHBfdWpKTFhBUjFGX2VNS0NEcFctX1htTXFoT3dyUGdBTVJVeVZLMUh0VFFJ?oc=5"
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610230132.aspx"
+      }
+     ]
+    },
+    {
+     "text": "抗衡中國擴張，日印規劃11月舉行防長外長2+2會談",
+     "detail": "",
+     "links": [
+      {
+       "src": "自由時報",
+       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5iUExpLVVoMzZZRkJ0OU9zaGVWdy1LMGhrR2dYNVFZbmJxMXJLZ3d3d0p6d0g1Xy1TU1ZpZy1iczFwc3VhTS1zVmMtdlpWb2dPZHE2V0l6dmQ2QXVS0gFiQVVfeXFMTnhQOW1BNVRMRGFUSXk4NmJNMTRVeUlzTklBVE9uTlN3RDkyOWltVktJbHZBblU1d0xTWkd1SWJDMTdROE5DUXlsNDBZZEdKRF9ZdG44SGNjOUtKdDlpemtjU2c?oc=5"
       }
      ]
     }
@@ -109,56 +123,32 @@
    "title": "國際會議與機構",
    "items": [
     {
-     "text": "IMF報告指台灣今年GDP成長率高居亞太之冠",
-     "detail": "受益於全球AI熱潮推動經濟強勁發展。",
+     "text": "菲律賓將主辦東協防長會議，聚焦南海與海底基建",
+     "detail": "",
      "links": [
       {
-       "src": "聚財網",
-       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFA1N1NEZXA2blhqOW9RRXdWNTZjQ0EzNDNQUVVmR01pVl9PN2Q4VjltRjVqaFJTWklUZDRGNXlEd1Rfa3BGTzdveVJsV0Y?oc=5"
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610230146.aspx"
       }
      ]
     },
     {
-     "text": "韓國潛在成長率獲IMF連續兩年上修",
-     "detail": "李在明表示這是40年來首見的反轉現象。",
+     "text": "IMF預測今年中東地區經濟將萎縮1.3%",
+     "detail": "",
      "links": [
       {
-       "src": "BigGo 財經",
-       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBySjNJZGtuMjU0Nk5xWEY5emZVT3JNWFBJQzNueWZvUFJBdjRwa0ItZjBtZ3QzNlJsdXpvZ29tb2xQbFY4OG5keDAwOV80bC1LZHZ2dWRxMzZGRnkyTWdGY1pUWFk3VXZiM2pZdmlTX2RNNHptLV9KNW5R?oc=5"
+       "src": "中國評論新聞",
+       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1odXNKNTZ1QjczQUdCME9oSG1VWGxXb29aM3RGVkxYYm1obnBKX3B6cDlmRVdZdXd4eVdKNGlBRWJ4ZW5zVjBsaGJRRDlWd2E3R2EtMi1PdlFjaG5oeU9nd2tvQnR2czQ?oc=5"
       }
      ]
     },
     {
-     "text": "印度舉辦金磚國家議會論壇 聚焦以人為本",
-     "detail": "會議探討以人為本的發展與區域合作。",
+     "text": "印度舉辦金磚國家議會論壇，聚焦以人為本發展",
+     "detail": "",
      "links": [
       {
        "src": "中央社 CNA",
        "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1GT3RIRlM5bTBOa2xaY1ZEY1VGT014MnlMZXpzWlItS1lTYmlNWUNEMGdyR1I5c1FhTDV3d3RwVXRpUzNBUTdoa2ZxWTB2ekVqdndFRE84TUNrQkdCS1Q0?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "深圳迎接APEC峰會 企業祭出連休帶薪假",
-     "detail": "大批外國客商湧入華強北採購進貨。",
-     "links": [
-      {
-       "src": "香港文匯報",
-       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9UTVdvT3ZETGtJaXg5bS1rNEZzTmpGNFdtTFJGZ0VGcUpEV0JVLWNLN3RsbXNCemJDVG1qU0Rkcm1QN2ZWMUdZSjNHUVl1WjVHNGpvcndHZ3Y2ckJXaC14dWM3WUozSXUySEJGTkVyOEhWLWlybXFz?oc=5"
-      },
-      {
-       "src": "中時新聞網",
-       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1rczk4NzRKaXJVcHpjOUxDb2EzNHFxcGxoTndDNTBocHp0dVY5ZFhuaFBjZG51eUh1cC1oN0pvazQwSUNzbkNPd2ZLTkkzdUFWNGhJZGtnRTR2MEJXNlpmZ2JFeUZMTm5ZU1MxTndB?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "IMF警告受中東衝突影響 今年經濟預估萎縮",
-     "detail": "中東、北非及巴基斯坦地區預計萎縮1.3%。",
-     "links": [
-      {
-       "src": "富聯網",
-       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNdUQyZnU0YkJZZW41Tk95Si1abUJKWkdFeGtvbENINy1SaVc5Um4zajJEY2ZhWUQzVXk2aE5iUjVPcHY3RU5fb1p6djFMV1VNUnNsMU54MkJ6cXg0S2F2OXFMQnEzVUpXSkRKV3ZKcmRDR0ZQM0VUcE9aS0tDV1pONUlYU2ttUllH?oc=5"
       }
      ]
     }
@@ -168,74 +158,60 @@
    "title": "台灣政府與立法",
    "items": [
     {
-     "text": "65歲長者免健保費修法惹議 政院呼籲立院補正",
-     "detail": "政院憂心修法將衝擊中低收入長輩就醫權益。",
-     "links": [
-      {
-       "src": "LINE TODAY",
-       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jMEw2emY4THVpVHNfd28xeFBqQ1E3WG9Ld1FCWGpiUXVDUVZfYU4yMHI2bXBEdjR2N0VBNUN3OXlIV254VWlOSHVpc2VKdDZfTDdoRUFn?oc=5"
-      },
-      {
-       "src": "翻爆",
-       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5pa2ZueVBFNmlPZlZKYkxYbGhidkItaGhDSDRfTmJzZjB0d0NaanhZaEdqc25Fdm03RjZMcEp2QXRid0N5TmR4d1F4Z09sbUs3TEZIWVlLTHNpWnotd29acnFVaTVjOUZ5ZGN2SnRqQ1RnY2c?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "行政院拍板4年投入152億元推動農業轉型",
-     "detail": "用於強化防災應變能力並有效改善缺工問題。",
-     "links": [
-      {
-       "src": "Rti 中央廣播電臺",
-       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5pMlM1UGU4NlVXQ1NuTUpVc0dyeHA3UFIxVG1PTm43YlMzQWM2NGlmNldpVDhuLXFPcnFYSVVsdnZFRlIxVE82bU9aRmhHQnAzZWRJd0szNA?oc=5"
-      }
-     ]
-    },
-    {
-     "text": "政院通過專利法修正草案 促進設計產業布局",
-     "detail": "因應數位科技發展趨勢，推動設計產業專利發展。",
+     "text": "行政院拍板TISA租稅優惠，每人免稅額2.4萬元",
+     "detail": "政院祭出綜所稅減除誘因，公會盼早日完成修法並加速優化商品。",
      "links": [
       {
        "src": "自由財經",
-       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5Fc1BvYnFwQTFHYW1EbXg2RGJ5a1ZoMjBENHdnWVlOdWlZRWZpM0lNbXBRcGl4YmJEY2xvTEpNdUVOSlIyXzVTdmt5dUpFM0ktbGhwMW1CQUMyQXo4N0lJ0gFkQVVfeXFMUHk1ZGw3UjUydTZwaXRVX3pYWW40TXhqdGtHYV9zZ2o0UlRfUWtFcXFjRnRqV1R0OGRHNGNheGN3UWpWRGF5RGpxWEx6QlFMVUh3NFJHaHVIZ09MbGpBQmlCM2lsRg?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1WRkNpanlqWk1UVTYtWkwzQzJ5aTVWWWo0dFdIS2ZkcXVWOHkwTXM2Sk9yRWVRdHVIQk5TRDNtTDJDSngzbTdfRWZRekdYdkl0ek1GYjlHSFp6WlnSAVtBVV95cUxNVkZDaWp5alpNVFU2LVpMM0MyeWk1VllqNHRXSEtmZHF1Vjh5ME1zNkpPckVlUXR1SEJOU0QzbUwyQ0p4M203X0VmUXpHWHZJdHpNRmI5R0haelpZ?oc=5"
       },
       {
-       "src": "僑新聞",
-       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBpVDl2U090TFV2WjRsRGpEU3BiT2Y2cUFESnBTSGdhV3N5VWZsOTUtQjlYOVdWQWVZMkZrZFRjWmRpNEx6OFBfQ0FSWQ?oc=5"
+       "src": "LINE TODAY",
+       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WWkZlMmtZSmp4V2ZmZDJ6QWVSd1loLW5HUGRMeWFTVHZ2MHB3LVhzSkV2dXI2bFJHUDgxc1J2NW84cThKbTVOcDhUeFdaYlFXeElqRVZn?oc=5"
       }
      ]
     },
     {
-     "text": "高溫保險擬擴及全台 總統促公共工程納規範",
-     "detail": "期盼將防護規範納入公共工程，落實勞工照顧。",
+     "text": "卓榮泰主持政院永續會，修訂綱領並增設循環經濟組",
+     "detail": "",
      "links": [
       {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610220418.aspx"
+       "src": "蕃新聞",
+       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GcE4tcFUtYWZNUkg2Qk1pcUQ3M3JMR3ZYUk1KU2lvY1NyYTdBVVU3MlpnemIxdzZIRHF4emJtOGJSUzZxMVNvNVdHVzhDUVo3SGc?oc=5"
       }
      ]
     },
     {
-     "text": "廢除非核家園公投將登場 府重申重啟3條件",
-     "detail": "總統府強調重啟核能必須符合相關法定條件。",
+     "text": "老福法修法擬免長者健保費，引發財源與世代爭議",
+     "detail": "在野提案估年耗近400億元，外界質疑未交代財源恐加重世代負擔。",
      "links": [
       {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610220409.aspx"
-      }
-     ]
-    },
-    {
-     "text": "颱風薔琵逼近 卓榮泰籲民眾勿赴山區水域",
-     "detail": "國軍已整備2萬兵力待命，嚴防風災威脅。",
-     "links": [
-      {
-       "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610220356.aspx"
+       "src": "三立新聞",
+       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE95VV90UXpEU1VCQmdzRE1HM3VKT2RrdVlRSVdSYWYtR09Ba2t0UWdwM2NMVXhFTGlQbzVvcURhOWJfdlA5eHhzd2JFUmk?oc=5"
       },
       {
+       "src": "引新聞",
+       "url": "https://news.google.com/rss/articles/CBMiuwJBVV95cUxPcXRSRlB5ZlFCQjRtb3NseHZMSHN4ZU81LTlBME1fVmhvODR1NTJfd3F4YmJQMTJKYXRvMld1TW94SngtVHJIYVM1aDkyZkxrQ3ZxNGdNOHQwWTV3dk5qTm9UZWx2aUVJSERYdjdLd1VhZ0tzdkhNd1VfVkxDcmVoNXZubkxEYTl4c1pid1l0QnVOREl6OWhuTnVVN2ZfalJtdHNMeVY5NDJDdjRDRDlpSnVna0RvVXkwVk93cnZBZ2UzTEpFaFpNcUx1dzJhMWxZMmZ1OGhPNWwyQmxMdkU1ZW5oVWNrbW8zbXFPdTh0d2FQQlVSWUdNY1luaktjWmhITjZZaV9ZdTl0STlkbzg3bExmYmw5MHJ0NWdGa3JkN2NBWVBVblpiQk5nam93YS12Q1dFYm1VeEZ5bjA?oc=5"
+      }
+     ]
+    },
+    {
+     "text": "林佳龍接見英國駐台代表，盼深化半導體與量子科技合作",
+     "detail": "",
+     "links": [
+      {
        "src": "中央社-政治",
-       "url": "https://www.cna.com.tw/news/aipl/202610220351.aspx"
+       "url": "https://www.cna.com.tw/news/aipl/202610230097.aspx"
+      }
+     ]
+    },
+    {
+     "text": "顧立雄主持國軍災防會議，指示評估風險支援防災",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-政治",
+       "url": "https://www.cna.com.tw/news/aipl/202610230077.aspx"
       }
      ]
     }
@@ -245,60 +221,52 @@
    "title": "其他重要新聞",
    "items": [
     {
-     "text": "西藏發生規模7極淺層強震 已致16死32傷",
-     "detail": "震源深度10公里，造成超過300間房屋倒塌。",
-     "links": [
-      {
-       "src": "中央社-兩岸",
-       "url": "https://www.cna.com.tw/news/acn/202610230013.aspx"
-      },
-      {
-       "src": "中央社-兩岸",
-       "url": "https://www.cna.com.tw/news/acn/202610220435.aspx"
-      }
-     ]
-    },
-    {
-     "text": "AI支出疑慮與油價大漲 引發美歐股市收黑",
-     "detail": "科技巨頭財報未能平息市場疑慮，那指下挫逾2%。",
-     "links": [
-      {
-       "src": "中央社-財經",
-       "url": "https://www.cna.com.tw/news/afe/202610230010.aspx"
-      },
-      {
-       "src": "中央社-財經",
-       "url": "https://www.cna.com.tw/news/afe/202610230003.aspx"
-      }
-     ]
-    },
-    {
-     "text": "葉門叛軍襲擊沙烏地 加劇中東原油供應疑慮",
-     "detail": "地緣政治風險升高導致國際原油價格大漲。",
-     "links": [
-      {
-       "src": "中央社-財經",
-       "url": "https://www.cna.com.tw/news/afe/202610230007.aspx"
-      }
-     ]
-    },
-    {
-     "text": "反制中共跨境鎮壓 陸委會研議修法爭取支持",
-     "detail": "盼朝野支持相關修法，以保護國人權益。",
-     "links": [
-      {
-       "src": "中央社-兩岸",
-       "url": "https://www.cna.com.tw/news/acn/202610220326.aspx"
-      }
-     ]
-    },
-    {
-     "text": "法國速審暴動案件 司法部長證實217人入獄",
-     "detail": "針對上週末暴動迅速展開審理並判處服刑。",
+     "text": "菲律賓防長警示，中國若在南海動武恐觸發美菲防約",
+     "detail": "",
      "links": [
       {
        "src": "中央社-國際",
-       "url": "https://www.cna.com.tw/news/aopl/202610230006.aspx"
+       "url": "https://www.cna.com.tw/news/aopl/202610230127.aspx"
+      }
+     ]
+    },
+    {
+     "text": "日本免稅新制11/1上路，改為出境後退稅機制",
+     "detail": "赴日旅客將先支付含稅價，於出境時再辦理退稅。",
+     "links": [
+      {
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610230147.aspx"
+      }
+     ]
+    },
+    {
+     "text": "希臘立法通過15歲以下兒童社群禁令，2027生效",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-國際",
+       "url": "https://www.cna.com.tw/news/aopl/202610230130.aspx"
+      }
+     ]
+    },
+    {
+     "text": "AI投資疑慮重挫美科技股，油價上漲拖累日股收低",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-財經",
+       "url": "https://www.cna.com.tw/news/afe/202610230128.aspx"
+      }
+     ]
+    },
+    {
+     "text": "傳馬斯克投資天舞10億美元，助攻媒體版圖整合",
+     "detail": "",
+     "links": [
+      {
+       "src": "中央社-財經",
+       "url": "https://www.cna.com.tw/news/aopl/202610230073.aspx"
       }
      ]
     }
@@ -309,263 +277,243 @@
    "items": [
     {
      "tag": "臺北市",
-     "text": "台北市長民調沈伯洋領先蔣萬安",
-     "detail": "震傳媒民調顯示沈伯洋獲得42.8%支持度勝過蔣萬安。",
+     "text": "沈伯洋高民調是虛胖？作家列揭藍白不表態2大原因：恐上演史上最驚嚇民意伏擊 | 李瑋萱 | 新聞",
+     "detail": "",
      "links": [
       {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1ZTmhnVGMzSG9Pb3dfY1UxUmdicGE4ajRUYWs1TEVOU19qUGptaG1jTWxuOGtnaWNqSS1jcV9VQ1R3ZGlXaTctNkloVTJEZVFTcXh5MDNGM21UZXdCVVpYN2hwOUltYUtGSVHSAW9BVV95cUxQbXVOM0tJV056b2tYTHRsS3AtbnJ6WF9OX1ZNd05lVG9fZkVRQnZVZ21HR1VZQWNvR0hzV3NXSGw3RFBwMzlTVXR1N0VkM3J6Mm9mcTBSZXEwZXJLeDBnNUwza2RNRy1CU3M1T3V2SnM?oc=5"
+       "src": "風傳媒",
+       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBXb1djb1NFd3hQOWF0UXZ4cXlZclZiNE52Y2xiWXZCcUppNkFFeWV2bzRselMxOTBjT2ZrMi1jWkZlRC1rQWh0T0VOZ2lzZw?oc=5"
       }
      ]
     },
     {
      "tag": "新北市",
-     "text": "2026新北選情蘇巧慧追平李四川",
-     "detail": "民進黨於新北已五連敗，蘇巧慧急起直追平盤，李四川端牛肉回防。",
+     "text": "【若當選新北市長支持長者免健保費？ 蘇巧慧：全國一致當然接受】 大家都有不同意見。 （#起啵）",
+     "detail": "",
      "links": [
       {
-       "src": "財訊",
-       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBldURaREQtcVJHNWVHbmhfek9NTUxjdkFwby02TzRnYXA3M2VMOVdHU25SNmljX3ZFb2ZiT3JXQzIzalRQdDRsZnF1b1lXWkYyLXJEOGl3YkJvZFVXTEVTblNJUWZPcVpPalVSbFVkLWZPTEY4Rm44cjhIQQ?oc=5"
+       "src": "Facebook",
+       "url": "https://news.google.com/rss/articles/CBMimwRBVV95cUxNYTlhWTlZTzRPRk1BaG5fZVJMVktjb0xaTHZtd0pEdS1GVV9jTVhwMnRJdVJickdjc09iM3ZYZnhETk1rYnc3WFhlVXpLY3EtLTl4MVY2bG9tNVozZXJtQWI3YVFGUWJmdWxiNDExS0E5RmZpVFNlY3RET2FpSlFIVnRfeEdzTDJ5Y19hNUEyVXZRYUg0dkVCOXh6QmtxNjQxQzh1ckdVY2FFVHAxRkpHUW1fQWFjTFJqeElnRG1VX29oS1BVbkVpVVBwZ2xWVzhqbV9ZRlZuRmctVkMtMjYxVGZMVHJ5WEltanhoeW52a19pVUdkNEJ1T1F3NE8yUWl6Tk9oWTdCeEl2RkZzbTBwVzMyanN2dVl6UWtMM3lmUjJHT0JfaUI4NnlFMVUyMEFZdDNYYkRLQ3VjSE5CY0p3dVNiUl9Ua2xNWVllbzZyXzlLT2xEQ0oxSXB6MXgxdFhPWTZkdlRybjJHdm4zWEQzaHFFNkhHOW1Gd2pxOVNLcW5SRjRmVk01eHVkX1lWYUt3QVFvUWN5dW9nLWFQWENyMmlSM0tUMG1aM2V1N3hRUTBTb00tejl4bzdmTWI4LW1GVjhvMU5wcUFqVENFTVdNT1FGWFhXTEhaa3F3VXdCLVdPNGhPLXRUYjBJZVlqcE5sU0FPOHByZ0tMX2pSM3o3clI3QmVWNWpwYjZhbGs5QlBDdVpFcDg1R3pRMA?oc=5"
       }
      ]
     },
     {
      "tag": "桃園市",
-     "text": "基北北桃第4次市長會議登場",
-     "detail": "桃園市長張善政盼深化區域軌道合作，共築區域韌性。",
+     "text": "基北北桃第4次市長會議登場 張市長：深化軌道合作、共築區域韌性",
+     "detail": "",
      "links": [
       {
-       "src": "台灣好新聞",
-       "url": "https://news.google.com/rss/articles/CBMiowNBVV95cUxNM0JFVDNYclNLNUsxMkY1WHJvZG8xYWRRcnY0TktpREZjdW1CbTVnenZUeFB1aVVsUWsyUGc3SHNxeFJMV0NhaXlfSDM1OTNYTkJJS04wTkVvWWl2QnJNd2dCZV8zSFVLNzhsS05rM202WDhBelJwLUJWdnZSWVBmbFU3aHV6MUcwSW9HQkMxdVFZV011TkdpSWc0U3lrR2xyTmlMNjd1MnNfelJHdkFpSUdHT2pSNHM4MERsQ09rcnp0OURGOEJ3SUJiUW9GbmRaRzVnbUZJdjU0LWNHM0JiV1YySnFQQ1ZrRE9xcGdPR05zbFp5cUlnN0FRVXo0cHAwRl9OaFNwdEU3VVdHWm54eTNoSWdROWdXMWlNYlJuM3hpOFBqcXRkZXRZSkU0OVJZWFl0aXdqb2hBMy1Tak96U3hXenpVYkZsRjRHNlJBOEZ0dF9PQWN4MVJpZ2czQ3B5ZkpsUkJKQV80bElYeF8yN2NKOWhobnBJN083SE1ySGJFLVlGb24tTk1ENklRTXJVcG9OSF9xN0ZFUXdHMTAzZUh4cw?oc=5"
+       "src": "桃園市政府新聞處",
+       "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5UV0E5cHFNZThnazQ4T2dEdW1NTnVOM0VQU2h0eVNlZXVKSEVHTER1bnRxcjQ2cU1jd1BhRUpXam96ZHFqOE5vbmVzOG5JWnA0ajhmLW9FOWRhQmhDNHhNaW9rVTAxUFVVSVlZaE04T2JJLTZ0aXow?oc=5"
       }
      ]
     },
     {
      "tag": "臺中市",
-     "text": "盧秀燕率團拜會日本沖繩縣政府",
-     "detail": "期望深化第一島鏈城市夥伴關係。",
+     "text": "台中市長選戰因為電視辯論退回政治算計一場「AI翻譯」讓臺中市長選戰誠信被熱議| 王秀禾 | 地方新聞",
+     "detail": "",
      "links": [
       {
-       "src": "蕃新聞",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9nRkx4UmhPdHdRZlRwWW5hOVVCSUxnOHRtbUFLMk5xMFctMlRtUmY2RW9DdFptZXA5eFRZdlNTdXM4VGp0VGxZdWRVVnJQcDY4alE?oc=5"
+       "src": "風傳媒",
+       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5Ba1hscGc1U3ZZQ0QtM2htOGRmQmVRMlRoY0lWOHNTSlprcmJEMzdLWmJDemg3QXJMUWxnSWpJTzFnenRCd0h0clJvQ1hsdw?oc=5"
       }
      ]
     },
     {
      "tag": "臺南市",
-     "text": "薔琵颱風襲台南抽籤延至27日",
-     "detail": "因應颱風來襲，市長與市議員候選人號次抽籤延期舉行。",
+     "text": "高哲翰講座教授：2026台南市長選情翻轉？「接地氣」、「另類網紅」!",
+     "detail": "",
      "links": [
       {
-       "src": "Yahoo新聞",
-       "url": "https://news.google.com/rss/articles/CBMi_AJBVV95cUxPZjBTaHVIRzJZSGNHbHpxd0FGRlp5NHRjRVVfLWFiZnVCZTRLVE80eW91eUJ2MERzWk5YLUFWU195YlFxaTNocmVxZUJFc3JEem5DbEZTTmc2WEp2dk9BQ1JMRk1pZmZ4Z0xyTXdlN1BJTVpVelNzVE9XMGJycEpnOWcwcDJybEJNN08ta3BhMk1ZOVRYOUp1ZGFlSjJybHU4eEo0NkpaVnZRRzBZcVhxSjR1bEZ3aU15UkpLWmFBeWdhZzVzS0k4UXE2TmFqTUVOZHg4cVR6YUFpZVhIZ25raEVKdXR2NjNoVTlldUR5eTFacS1UZnFYUDlEbHplTHhVazkyVGpsbk9Xa09KU3JRY010YnBZN0hoTElxbG5oeGxkcWtULWRKdDBKQ3F3RjdEWk9kY2xKaHRKZG16Q3VDX3JmeGhkaHF4bmIzSURRMV85UjZQUGhBZW9KM05Ud1R1MHpZdU8xLUV1XzhZVHBwbHhINUxRdXVoVXJzcw?oc=5"
+       "src": "台灣華報",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5UMFpSb2ZNMnN3Skp6cS1Vamg1dm1XcjZuanczZkg1TmFBZGxVLUJYQ29wUl9FVTNGcEp3MFJGdEJGNUlQakpCRkN1eEVybElGQXJTYTlkZmEtU3BFb3U2aUpBenJwRUYxd1hF?oc=5"
       }
      ]
     },
     {
      "tag": "高雄市",
-     "text": "高雄市23日停班課抽籤延期",
-     "detail": "市長及議員候選人號次抽籤延至下週二進行。",
+     "text": "高雄市長、市議員候選人明抽號次！市長5人、市議員101人參選 里長選務同步受關注",
+     "detail": "",
      "links": [
       {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0xSGl0Z1Vva0pjUXgtSTF0SmhGSTZOQkppcVhYMlhLUmhtenA2VWNUU01tclgxMWg3bF9mWXVIMGtJRkN5b09QblhBQy13R3R2NHlZNC1FbFpwSmU2N2dHanRBbDFSRG53TVHSAW9BVV95cUxOcTRQUTkwZ0JvLU01UEtDQnlNU1J6UThkTko0WTZwMjJwT0VPSU1PbzNNLTRfZVhZMXJzeWZJVmVxN3lqeWdwOUlQTjcwVlRZb1N6SW5mdFFDNHRlZzdVTlVlZDNBclRtWnAxa0lCVTQ?oc=5"
-      },
-      {
-       "src": "Newtalk新聞",
-       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9taFZ4anNxaG52alVya043TFpJUWJheERhUHpuWGtaVzdpTUZzbjRWM2JmekVLQUdGc2lvYkktTzdZT1lWOW0zTkVUX2U3UjIzTC1zLTJkeXV5VUk?oc=5"
+       "src": "南蓮社區發展協會",
+       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE45Z1VzSGdrc2w3WVpCOUp1dmNYUzRDbkhZeFBzZTN6cGxZdHhYUkt2WkFiRXFmT1lOSnJidmZISUJnaXpzUTJXNngtNjIxTks2RWhDNkJYaVhTWHFFY0M0M3V4UWdkbUplMjlnRVZ3?oc=5"
       }
      ]
     },
     {
      "tag": "基隆市",
-     "text": "宋楚瑜與基隆參選人同台添變數",
-     "detail": "童子瑋展現後勁，謝國樑忙於護盤。",
+     "text": "謝國樑主持新住民事務委員會 感謝新住民豐富基隆多元文化 承諾強化政策推廣",
+     "detail": "",
      "links": [
       {
-       "src": "財訊",
-       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9GWFNDSl9kNXZKSnVlajlUR09HeTA1M3RxczJscXA0dlE0Z1lNcWZFTUpOMERTdUZWNnBUdE9TWnl0a1ZldXVZSmt6SEdWeWlISDJBQnJxeXVyUVFKV0RfYXFCYnJIQ2Y4dHhtZ0p6WFpUaFBWUXM1VWlzbw?oc=5"
+       "src": "基隆市政府",
+       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9MLVdtbG05SjNTeURua2ZxX0ZuTGtMTTNUcThYMkVRNDAzVElVaE1fQ0RMaGtZNEI1QlVRU2RFaENEUWJ2eWZ5ZTRnNXZjdy1tM3lha09GQ0s1cm1MaDI5M1ZaNA?oc=5"
       }
      ]
     },
     {
      "tag": "新竹市",
-     "text": "新竹市頒發首屆文化風鼎獎",
-     "detail": "表揚四位文化工作者，致敬守護竹塹文化的幕後推手。",
+     "text": "洋流號10/25來新竹 莊競程、沈伯洋合體掃街",
+     "detail": "",
      "links": [
       {
-       "src": "非池中藝術網",
-       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8tN1hTUm9FU0MtQWJZZnNtMnZwUGh1UzR3QVhEcFV2Z29Pai12TUhFSnBkdG16aGprdmpWdUtZd0ljdTg2bTlF?oc=5"
+       "src": "自由時報",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFB3ck9xaTJQS21hVnRUekRlZkxWWVBoSnloRXFETEY2Wkt1cFU4MlE5VTdVUDh4WldNQndNYUtLTjNJUm5hSTVBdzgwVlNBMDFBVUdvU1J6VVhYdExxdlF3MUVYdTcxUdIBZkFVX3lxTFB3ck9xaTJQS21hVnRUekRlZkxWWVBoSnloRXFETEY2Wkt1cFU4MlE5VTdVUDh4WldNQndNYUtLTjNJUm5hSTVBdzgwVlNBMDFBVUdvU1J6VVhYdExxdlF3MUVYdTcxUQ?oc=5"
       }
      ]
     },
     {
      "tag": "嘉義市",
-     "text": "嘉義市推動新永續淨零跨域串聯",
-     "detail": "打造全齡共享宜居城。",
+     "text": "嘉義市公辦都更民族國小西側二期簽約- 政府消息新聞",
+     "detail": "",
      "links": [
       {
-       "src": "焦點時報",
-       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE85N3ptZE1MRDQxallOazBldWpvUnZvZzQ2YzhDMGl1UmtGVU41VXpZR09lWVpmbkFFbHpGQjloUUlNcjlKNDk2djRaOGRRYk1OLXdqbl93RQ?oc=5"
+       "src": "PChome Online 新聞",
+       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNRGhQOU1XbTdPWS1nT2xzaGVNVmpHZE5qR2daZVI2Uk9xZ29uMUI1V09BaUowek5KT1VpSmJXSTh0SnlfcTdKVFdIQml3TEZnWkVaMzhodDdTdERQTkZxZWNIQnFVU3AxaUpUTV9sWkY3aU8xVWhpZ0E1cXJDVkdLeG5Sa3c?oc=5"
       }
      ]
     },
     {
      "tag": "新竹縣",
-     "text": "吳子嘉涉黑函攻擊鄭朝方遭檢警偵訊",
-     "detail": "新竹縣長選戰掀波，檢警發動搜索偵訊。",
+     "text": "楊文科視察新竹縣防颱整備 應變中心一級開設撤離居民",
+     "detail": "",
      "links": [
       {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0tYkdSSDZUbC1rekJyUTR5dFVCLUNjZERVLXhYbl8xSjVJSWkwYU9rUWdIdmZNbTJieFhUSFdPOGp2TGduNnN6cUd0VUYzcXlWRjl0SmtOMm9obVVxczhDQdIBZkFVX3lxTE8yZm1PZWZ6WHVERTRhWUFTSFlvdFRjeHJyMG9fNGUwd280dEphNHBXTlpteTI5c3YyOVFtNDg1SGhFMHFiaGxrTGtIeFN5RzdUQnFialVLbndnaXVaY0hEa09JNGRQZw?oc=5"
+       "src": "中華新聞雲／中華日報",
+       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5obFNGdjhUZG4yb2FKSGNIdUFiOUtRM2RzYUpjUGZ4d1pOaHN1eHNmcFNGbkNCX0tHTEZ4eHRDOWpmdFZQQUJxSUVHRGlmX2dBWEE?oc=5"
       }
      ]
     },
     {
      "tag": "苗栗縣",
-     "text": "苗栗縣府與台水簽MOU建淨水場",
-     "detail": "攜手打造泰安淨水場，強化山區供水韌性。",
+     "text": "鍾縣長主持薔琵颱風工作會報 請各單位確實做好相關災害防救及應變工作",
+     "detail": "",
      "links": [
       {
-       "src": "視傳媒",
-       "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOUjVYa2ZoWFRKcjV4QnA0RUE2S09aNzBiMHBWejU5aDh0eG9ESGhybURrRlJFdVpKdnhNSGZyMFNTd3FGSmJnN1FPWUR6eUJzN3JhYkpQTGI1aVhlMU5FYkFDcFFWRHNQQjZOYzFCcjUzSFd5ZERQTkVfQTdzMWEzNGtTVHBVTVZwSVlkZzd4QUdLU1VjVTZr?oc=5"
+       "src": "苗栗縣政府",
+       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1maFFlNlNLandRZEo5U0JyMEh1a25qX0l0RWgycGFGTTE5V3JZdk1xZVM0SWFZNXIyUmUyYjBLU2k0UnBOS1JyaUp4U0xoa1didDVRWEN4djBKVndCOF92SVphdEY0ZEFCMGRTRg?oc=5"
       }
      ]
     },
     {
      "tag": "彰化縣",
-     "text": "彰化溪州河濱公園正式啟用",
-     "detail": "融入濁水溪畔故事，展現在地文化。",
+     "text": "不畏中颱薔琵！彰化1縣議員照常成立競總同黨立委都出席| 2026九合一選舉",
+     "detail": "",
      "links": [
       {
-       "src": "僑新聞",
-       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE4yYjBLWm1jMTZjTHpKaktTejFVeVREZnBYeE02aENDR2xodWVMdUYzZ2hFVldJS2tDQ1RDZDBGc25MeTEwRDFIQ3RFaw?oc=5"
+       "src": "UDN",
+       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5wMEREUU9keEp5Z2RYdnExVlo3YTRwekhGNDZvYTM1UmJoaXRnQl9EazZ1NTdlUWVZSS13aksyLXJ0RVRub05abEhxazR5RG9KM0tPbE1kUDc?oc=5"
       }
      ]
     },
     {
      "tag": "南投縣",
-     "text": "南投實現零負債推動全齡照顧",
-     "detail": "將財政餘裕轉化為宜居幸福感。",
+     "text": "薔琵颱風來襲 許淑華呼籲民眾慎防夜間風雨應避免外出",
+     "detail": "",
      "links": [
       {
-       "src": "未來城市＠天下",
-       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4zZmtMa3dndDFGS05xQVBsSG1LWV83bzgxUGJmcVBlR2kzcjBnbGdPWWpfaGpFN1kwQ0JkVl9MYi1HWTExbUpMdFdfXy10NExjeThJ?oc=5"
+       "src": "台灣好新聞",
+       "url": "https://news.google.com/rss/articles/CBMi8gJBVV95cUxQTG40cGpZblktNER6MWVOekFxTU1vTWZtNE5PV3pJM2ZOem5wWUQ4dnhEUzBJMHFkbFVYQmtVeXMzNXE3S0I5R1FhNkZrdTJ1bEg3OEJNVE9ILWFWRl93eGw5LUZSSXNGV3NzZXo3TThuZXVQcjl4VXozX2RfUklMVDJoS1hKeFo5bnQyQndqcXdTcGJKMmxFcTF6YXUyWU9XTXl3MGpUZzVqMU50Z3F1Zk9CLWVpLXFKaURWbGlqOFFkSGVONFJpYVU5eG8xZHFVeXhYakxReXVCMld0YXJhRFAwZkFFcE5JTm5TcmJPaE5wa3VDNTE3ZEN0WXFIQXh1d1VpWjNDNkMyd0FKTzZoYXA1dDV4eDFlNUtqR254bkpqTG9wYWllSXQ1aUs5U3c1dUpZdy1HWk9sMXYzNGlzOVZjeDZqWFlEU2FwWVV0dFBUSVlCN2VaLUFTVGt0c0hXZlI2RXdFcEZ0YjVuNkVsTUpR?oc=5"
       }
      ]
     },
     {
      "tag": "雲林縣",
-     "text": "雲林縣榮獲環境保護組優選",
-     "detail": "以永續治理回應氣候變遷與農業議題。",
+     "text": "民進黨雲林縣黨部「新雲林 咱的聲」節目開播 對雲林縣政府過去8年執政團隊「直球提問」！",
+     "detail": "",
      "links": [
       {
-       "src": "未來城市＠天下",
-       "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE92TEQxWDdBblNjMmxDOVppaG9hamlwcGcxYUxfNDhRUlo2LV9GTUY1eEQ4aGZVWGo2UjlNNDMta3Myenh1Zkc0X2h3anRfUjZSVnNn?oc=5"
+       "src": "台灣華報",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5QY2lJUE0zdDlhb2puZ21FdkdPR3ZKdE5PdlZiMnI2RGxhb1ZvV1FWZ012dVVUbG1kOU1fQm0wOEtqUHMtaWlfT0Exc3ZZWDdQM284WTByazliTHo4RDd1dllTQU1zMm1IZkJv?oc=5"
       }
      ]
     },
     {
      "tag": "嘉義縣",
-     "text": "嘉義縣因應薔琵颱風啟動整備會議",
-     "detail": "嚴陣以待守護民眾安全，提醒防範強風豪雨。",
+     "text": "嘉義縣召開薔琵颱風第一次工作會報 加強防範強風及災害應變",
+     "detail": "",
      "links": [
       {
-       "src": "三星傳媒",
-       "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5iekRORENXRGlxR3d2RzNaTTVuZVJLeTY0WEpYbVphNFozUElTV3dHbVJaelp1bTBraVF6dXZPR08yY18xbmtoYlVlN1lYYVdla29kR29DOGtRQ01SRFk0Rk1R?oc=5"
-      },
-      {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBCcXZqRU1VOHBKdVdETW1WVlo2aldEMjkxdmhBbGcyU2dfN2RYYloxX2Fsa3ZfZmxXcmMyTjl6cHV3YjJhZmdsczQ3WFlGZ0lWSDQwVmNsRUlka3c5QVZBQWlkdFTSAWpBVV95cUxNOGo3YkZVSHkwRmtRNzVMUnRIRjZmblE0RmdfZU1iVkpVUjF1dHJVM0tKVmhBajZvM0lLTGFqREdzUG5halQtYkd4enNRc2o5WU0wNjNlQVFLeHNNMEY1ZlNsYm84TTRrVnhR?oc=5"
+       "src": "墨新聞-MORE News",
+       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBzU1UtQnpURFFkUWRBRVJvTHRDall5TENqc1U4LTV6dnVVNUk5MzFlbUZqZENWMzRUM01Iek1kYzlzQQ?oc=5"
       }
      ]
     },
     {
      "tag": "屏東縣",
-     "text": "琉興號客船擱淺屏東救援40人",
-     "detail": "屏東縣府啟動應變機制，船上40人全數獲救。",
+     "text": "颱風薔琵來勢洶洶 屏東縣災害應變中心提升一級開設",
+     "detail": "",
      "links": [
       {
-       "src": "蕃新聞",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvdzI2YjNXMGxrUktXZFJmQmNHdk42blVhYVZsRnJDU1JVbjJwbm1icGlpZXRLbUhITmh6MkFyVTVOYWtoSHU4ZDZtdkVfamVxVnc?oc=5"
+       "src": "【飛揚新聞】",
+       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsa2haVlhDdDUxYWRXeTdmQmhURHVRNWszNXBCcGNDUFg2TTA4YVJwbUlnNUVXTUJLVlBPVXhBV1ltT1hGS1ZuZzQ1NVd2eVFQbFE?oc=5"
       }
      ]
     },
     {
      "tag": "宜蘭縣",
-     "text": "柯文哲赴宜蘭合體吳宗憲掃街",
-     "detail": "風雨中掃市場推動藍白合作拚縣長選戰。",
+     "text": "薔琵颱風來襲 林茂盛代理縣長主持宜蘭縣災害應變中心第三次工作會議",
+     "detail": "",
      "links": [
       {
-       "src": "葛瑪蘭新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBPRXFpMFpfSGk2ajFXUkdZcTJXOEVzMTgtZU8wajg3a1R0MU1mck1ESzlIaUdrcjhkUTY3bzk2cU54WndwU0Vzb3BzQUtxWl9ZUlhMLTNMWmg1WXM?oc=5"
-      },
-      {
-       "src": "風傳媒",
-       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9abDFaUGJjUms1c2VueVZabGk4QkRlaGlmbm9PNmFfOGNpUDl6am55cG55XzFOdUlCQS1SdkxfM2RYSUtUSEpnYkN5WlNZQQ?oc=5"
+       "src": "Yahoo新聞",
+       "url": "https://news.google.com/rss/articles/CBMiyANBVV95cUxNNGxxdUxONWRaU2Q3SklPME9zVzBnbEc1RjNfS2lHQllHaWpmT3JSTmNoRXN5UGRNTmZTNUFVTlJYQnFlZGZFWnRGbVRVbWxIamQzeVNvV0liRnZ5d0NzYk9Eb3F1UXlzczZPYi1kdUFKTjhENHFjbDh4REpPM1VOVWJCOHRRaG9DVGZZVHE2cF9kbGd6NHpSb1ZhYk1GcUJrMDZmQm1jMnFrdmRib01FYXItZ3pQcmxrVXJWb21oa1o2dWN1NWlXUzZUYktpVzQ5bGg5dFBNSjdTSnhqNWFjZWd6d3dja0ZSUUEyLTYtN3g3RkxkWk16bTRNczBWVnpLWWVZa05adThfTXlBWV9kYXI0bFh6aEczQXRZWTlaOUg2SmdmRkNiVlE4SEZnX2NheVlSTDU5SVR6OExuTVdOTjNkYURPcTVrMGduRUNUVXRJcGRuOGV5V2U2VDRyR0owRWkyLXdNUlVIZ3dBejNtUzB1YUU3MFVBQUZPNkJsRDNmUDd4ejM1NTlLcjUwb1lnTE90UU5ZMDY1S0lfNmpsQ3RNWVJPZWxkVmZRa1pjbFJ3aUFzdXhqZng4YWpGTGFhb2Z2emRORmU?oc=5"
       }
      ]
     },
     {
      "tag": "花蓮縣",
-     "text": "花蓮縣府將安設2千戶瓦斯關閉器",
-     "detail": "預計年底前安裝完成，優先照顧獨居長者。",
+     "text": "花蓮縣議會第20屆第8次定期大會 10月21日縣政總質詢直播",
+     "detail": "",
      "links": [
       {
-       "src": "蕃新聞",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBodzVPOURiODV5Nmt5RHBRUG9IbGx6X1g2dXl1aEh5TnRzaHhQYnp4ZzZ6QnJDeDVELXpmRVBNcm0xRS1RN2tuaGlxRGpWcGdmVEE?oc=5"
+       "src": "更生新聞網",
+       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE5hVHVBS2h5NjBfU3V2bWhTSlFvbm5HNld4ak9xUFdYcUZTRTJGSVdudXRYcDh3VktEWG93bk1vUkRwZm9vb2RpNHRR?oc=5"
       }
      ]
     },
     {
      "tag": "臺東縣",
-     "text": "薔琵颱風襲台東清晨急轉彎停班課",
-     "detail": "縣府突改宣布今日停止上班上課引發關注。",
+     "text": "颱風假政策急轉彎被罵爆 台東縣府：科學判斷",
+     "detail": "",
      "links": [
       {
-       "src": "三立新聞",
-       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE1Odjd2Qkg1Q1hwTWNRY2ZPcHhfbHBReHdmdi1UcERQclE1cmpaN1ZjQWJyMDZtYTBCY0o5OHBBQV9CaXJyVTRDadIBTEFVX3lxTE52dmJRcDZ2d2ZoTUUzbGRiVERWRXMtNERMMFFHdkd1bG1JdDhfYUFCcko1a0R1NXFXbFZUbFNobUdKUmgyTno5SlJWVHg?oc=5"
-      },
-      {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4wNTFQYkYzdTc1RnoyWGlIOU14eDJUUy10RmxDVGdKXzBNaE0xWmRRY05QTjR6dzh4ZC1Icmp5SG1BT2EyeUYwcDN1M3JHOGtBZGp3MURGdF94RDNjS1RSbDZrSDHSAWpBVV95cUxOSkc3TGJ6eGlMeWQ1YzFnZGNXZ3ZrWHpxbDIzVVMyeFE1bWdiMXhxRkUzbUtZU2tSeFpwWmNJR2oxX0NtbVByVTdoS1IzNWlhYVZtUEpyVlF1blFOYkxtajdsQlVJaG9uRjhB?oc=5"
+       "src": "台視新聞網",
+       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9FLVNJRnJMc29SdXZ0d2V5UC0xLVE4bkZON1FaMDJ6UGtRNmNTd2QzVVlBMWUxcmxNOHFFVFZGTUdHcUxudnBMS1pvc2sxbUxCQjBCcmZtcw?oc=5"
       }
      ]
     },
     {
      "tag": "澎湖縣",
-     "text": "澎湖道路工程採分階段施工",
-     "detail": "兼顧觀光交通與公共建設，降低對通行影響。",
+     "text": "澎湖近年預售屋產權糾紛不斷 縣長候選人許智富提安心成家政策",
+     "detail": "",
      "links": [
       {
-       "src": "澎湖e傳媒",
-       "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxOeGFTVzNLX3FzYXdPak1tR2hzZ1p0bGtfbi1wWkxxUG91SDRGVkptSjVOYnByTE44Y21iMFJORUlvSTJaYkladUxGYjA5aWRzVzZwZnMxWlVBMkx6WnJSMTVZRldDd1VoU2RTMkxpanptVlk1MUNXYjVYRVdETVJWWjlad3lWTUFwUkMzcnhsRTdDX0lkVHNwR3liSFI3NTd1bVpxYUpJSkZhN3hkRDVyWnRLcEhwcEwtOUlWY1hFSmZ3WDlvdUtNY0R3andVRXhFd3VTVTMyeUc1U05La2ZBWjd3RzJxOTZSLTBRVEFJcjJRRjBWUEdvcFNlMTlKZTRsLXlvVzhpSDVPOHpIRlpkb1oyWExRZXE3RkJucmd2R25td2otN0ZvczFnbjB6VGN4SVo5X0x4UlBpVHZxVjZLR3M3OA?oc=5"
+       "src": "自由時報",
+       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9CUXIzRUtZLUttazd0VjAwa2dtX3RqdHZsR05hUi1BUWNVSmdMTGpiRkI2WVlXOGRqeDNPUFNMTE81aEw3dXNKNzFsNTRGbmM0bjBwbXFUQV9YNUZrZ0MyUUhFODhjRXhsSXfSAW9BVV95cUxPRlFwM3pkYTl0U3AxS25MV0VoZzdXN1V2OXkwQktwOHZqZEhBQWNHMjBQR2QwYW9JazZHcGd6TUJrdHM0cVN6eno3al9TdFJrdEZLYzd2dWlRZE9zdm9faDQtcXhucHpmMXAzWHg0MnM?oc=5"
       }
      ]
     },
     {
      "tag": "金門縣",
-     "text": "金門縣長陳福海堅決反對松機遷移",
-     "detail": "憂心衝擊離島急救與交通，強調茲事體大。",
+     "text": "今日全國唯一地方大選抽籤出爐 金門縣長、議員候選人號次報你知",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBiWVZoN1FrS2FFWVYwa2MxT3Q0UDE1ODN5Sl9scmZpNlQ4VktzZXZGSXcxZEFIM1dRUDhXdnFLbkQxNkdmTTh6T0dRbERfeF9QQTlleG5B?oc=5"
-      },
-      {
-       "src": "中央社 CNA",
-       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1XclA3WTNHQ1dCUWxmZUdpR0FHbnU4Uzk4OWlGRGZKZUZLUmlMbnUzc0dpWWV0VlprX3JBa2ZVeWVyVzc4RjNCTmF3VEQ3cXRPWlUtcVJkVzJ2ZGVTZlJv?oc=5"
+       "src": "台灣好新聞",
+       "url": "https://news.google.com/rss/articles/CBMirgNBVV95cUxQREt6Zks5S0NicmJ3ZDhROEdoaUtRSlVtRlE4bmlyTWwzMXlqblMtX25JRXVLcE9xTmJjeERwZ1M1RlBrUVF0VVhyclN4d2x5cFQxVk5iRGxQaWxaajR6cmhZYkNmd2QxLTctZW9fT2p2b0pTS3JCeDRuWVI5ZUFsMXRSV244MHBzUXNNRGc5VkQxZWJnZkppeU5aYWNRc0lWOE1fQzdqM2kzUUx6STlqSGwzbzM0UEdRaThuRF9URUM0X0U2YWpiX296cU53NG9IU1Z2c0tseUw1aldHQllLR04tVlRsMkZvQW1GMHBsQm5RZ3drbzlLZmRoV2pXMEQycGl6OVVGTTFfVXZiSGU3Q1FhSGs2ek10WjlqZlRwWjNrbzZlQ29TR0UtREc1NlFQa05lemhGdnA2SzhkZEM5Q0FDN3RmdDhCb296aUNXSTlxMkhXM3dMQ2p6RUtKLUpsR0R1U2xTYXpHWHZSNnZHdXdEVENCSVV6Z2l0M0t0U0pxT1M5aUdNeUkyQzlGX0U1a3ZDZHR4RTJPWEFMNVZrV0g0R1ZxMC1aXzZHTlFR?oc=5"
       }
      ]
     },
     {
      "tag": "連江縣",
-     "text": "連江縣聯手檢調防範幽靈人口介選",
-     "detail": "強化查察戶政，嚴防不法行為影響選舉。",
+     "text": "連江縣災害應變中心一級開設 王忠銘率隊巡視防颱整備",
+     "detail": "",
      "links": [
       {
-       "src": "台灣新聞雲",
-       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE54X3JDcHNodWhhQTFUVWk1WnZtR1NUTWRlWkh6QTczVlhKcHVLeDZGalJMOHNfWlRzMU1oRGp1RGI5cFJrWFdB?oc=5"
+       "src": "馬祖日報",
+       "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9GOWUzVkdqTVE3NkJpbUpxZDZtYXRrYjBBMHVSR2s5WEZldXNpMTFHc01MT3ByVnBMa0NvNVptbHhlNzREdUxrZ1c0TXZsMU5CVnNtX3dZRFNyM0JIR2c?oc=5"
       }
      ]
     }
@@ -577,105 +525,89 @@
    "items": [
     {
      "tag": "內政委員會",
-     "text": "警消操作無人機有望納專業加給",
-     "detail": "內政部長劉世芳表示列入專業加給可以考慮。",
+     "text": "立院LIVE》內政委員會現場直播中| 政治",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1mNFRjaUloX1VZMDdsOGl0a3B0SEk1OGN3MlVqTm5SaW5TaXZZYkdHMnFPajRhaHk2aEo5dmtDTnNLQTNHNFR3dmN4REQ0em9ITHFfaWx1Y3g?oc=5"
+       "src": "Newtalk新聞",
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1tQU13OS1XZnpXTlVsUDBPSEVTU1BaZzQ2cVZqR3V6NHc0UDE2ZE5iLU54REtIdUg3bnhsYXpMdVlhNk1zaXk1a0xIT0gxRlJCX0x1d0t1V19Wam8?oc=5"
       }
      ]
     },
     {
      "tag": "外交及國防委員會",
-     "text": "陳冠廷赴美談防衛與嚇阻中國",
-     "detail": "強調防衛不能只盯2027年，應對中國漸進破壞現狀。",
+     "text": "1151021 考察僑務委員會議",
+     "detail": "",
      "links": [
       {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5BQjZvS1QzOTlWUzgwa1lpTlhMTnExazhfRzB0bzJkUXJjZGh5LVpPNkhCbnBMQnh5OEtwejBlYjB4NW8wb2xVZlFqelpTcVRObmFFMDdMU3NpNzQ1ZlJzSVA1aDBhQ203cmfSAW9BVV95cUxQOFltWTNLM1NwSXRhN1VPUkhWVGYxaGlsYWEtOHNfNmtacGluYl9SRU84d0xIZzNXbm9TMm00Nl9SQ2huUVZqNUpJa053QjZYX3lrdG9saS00eEdvR291TmhpMXJzVDhRT3Yzb01qWkk?oc=5"
+       "src": "立法院全球資訊網",
+       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE05RTZ2dWhka2RGck5ncWx6bVg5Tk5mSTZ2UzVyVUxvZGtYcVJGWDIwdWtpd2NpU2ZuZzU1NjhqMzFZZEhlM2VzZU9rOVJ5WHpZZjB6eHdLTmRtRnh6TUhGbTVROVQzZ2tOWElHSDVfcw?oc=5"
       }
      ]
     },
     {
      "tag": "經濟委員會",
-     "text": "經濟部盼支持預算撥補與中油增資",
-     "detail": "以穩物價、顧民生，解決中油資金困境。",
+     "text": "穩物價、顧民生 期盼各界支持預算撥補與增資台灣中油",
+     "detail": "",
      "links": [
       {
        "src": "經濟部",
        "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNeHlodlZHdXk3WUFOM1lWd3ZOMUkySEZfZk5RZWxvRk9ZSXI3Z0dzb1BMMWlHVDFQT21KbGROcm4zNzdkWFl1SmthMHEtTVN3cnVUOUtoRjZKeTdjdVhfRFp2cWh5STZkZzNaWHVDQUFCbnlKaUVobWJXWGpXclc3dWZnYUhtay1kUWhxWQ?oc=5"
-      },
-      {
-       "src": "經濟日報",
-       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5VMWtFTWEwWHAyMXdESE0xdWppdWZRcTd4cV9QbHdYbjRFdm9WRnlYM3Baa0NsTHhiQlVsS1V2aENydDBqOExrcVBQRWp6REVLa3dRa3ZGVEJRQdIBX0FVX3lxTE80Y19zZmdjQ01nd0hMcERfZnhfcGNtVzZHZnpTd09FWDlJMHFUZzJUZ2lfc3JiVU8waUZzOFdYM0Z4RVNrS1NTeGlsLWdOZ3hXWGxEdUFGYWlGZFgxMDJr?oc=5"
       }
      ]
     },
     {
      "tag": "財政委員會",
-     "text": "公股投信四合一整併最快本周拍板",
-     "detail": "金管會主委彭金隆預估審查將在半年內完成。",
+     "text": "30年前買進這些股票 主計長被立委說「買錯股了」",
+     "detail": "",
      "links": [
       {
-       "src": "NOWnews今日新聞",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9HLUM1b2xZWG4yamhLZDJ0MUU0ZWwxUHB2bnliVllLWm1QX3RTM1VWWXdmamNYLVh3QXM2VGdVb05zQWRVNVlfRDV6c1lSSTVVVnfSAVJBVV95cUxPRy1DNW9sWVhuMmpoS2QydDFFNGVsMVBwdm55YlZZS1ptUF90UzNVVll3ZmpjWC1Yd0FzNlRnVW9Oc0FkVTVZX0Q1enNZUkk1VVZ3?oc=5"
-      },
-      {
-       "src": "東森電視",
-       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBWVElfT1d4QnBaa19wcXdBMXdyNjVmbEIyd3ZxXzdFR09lUzVRSjMwZkw0VjZUVFF6Q0xzZlhRSW5DY0R4NkpxUDR0eVM1SU5teWEwVGZsM1hOZw?oc=5"
+       "src": "自由財經",
+       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5LeElzb01jRm5xVXdNaDE1cGxDRkdKdGZYU2YtZXBjSDNoMDQ1bGZhX3VpdFBfZXlUZ2FnYXBTM0ViaWVrbF9ZRllNUzd4S2JPdjVhanhiQnBlMkJ4NE1j0gFkQVVfeXFMTzV5YWlLZXNRZ1BBelhackZ4dGtkRVQxcnJnMWdLbnprRG1aNWNhQlhRcTNxQnlzUkVTcjZVMTBDc011anlicGJjWlVxcENIeGY4blUwdlVZMHVtVUJ5Z1ZQSjdqNw?oc=5"
       }
      ]
     },
     {
      "tag": "教育及文化委員會",
-     "text": "特教助理員納正式編制教育部稱可討論",
-     "detail": "每年補助地方10億元，未來可考慮納入編制。",
+     "text": "立院教育及文化委員會考察中市校園 (圖)",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBjVFplT1lENHJUYWpjTkphYUVpMzZFX25DZl9laS1JNWhYQlprQ083RDE4TlFwX1NMLU9sNmEtRkJhRHdVSjhIczZtUGFaZ3BG0gFWQVVfeXFMTlFYMHJHMm94UnVmMmM3WFh6cTJ3M184YzlwVlNOS3czajhNa18ydUhzdHlEN3UyTU9MYVdkTl9NaXk5VWVRdGZzeTlSZzJ3YmxWb212eVE?oc=5"
-      },
-      {
-       "src": "自由時報",
-       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5ac3pPLTN6QVlITktkcTk4S25WNnA0RDh2ZUwyTFpfR29XWFBfbms3U1Z6a29DS2FvSnJTV0NlT1k1S0FRWjJlYzB6LXdXMEE5Z1dwRTdOQkQzbFhGOGVscG9NaDHSAWpBVV95cUxNVVpTdi1Wcm9SMDB5bG9saHNJVWpBZDhxYnk2VFJZNUVONVNMc3Rxa1pOamZmLWtZSnRmOVV0NVA0T1ZHaDhPWjdBbWhiV1JoZS1vLWZqZ1RHb0lDVUY0d3J0SDFjaXc4QURn?oc=5"
+       "src": "Yahoo新聞",
+       "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxPZG5NalZMQWdYeFBpZmpZR2tsam1uRkhLNU50XzEzTFktSUgzVWxBeWxGVVlCaEFNNzFWRS1ZdFdqaU9FczJwUVpTZmdudlJCTTVjcGo3X1dWVGcwQUQ2Ukt5TlhXQVV0eFFGc3ZETUdnLUhyV3JRZzQwcUtpSWJZbkc4NUdVRWZpeTcxalNzU3QxcG5nU0pjQzB5TXJIS3VnSTlSRHgwUExpZWR2RnU4ZUVKRWhmSnN3enJTRnc4TEx6N2JVVEdmVm1fdC15Q251OExvdFJXMEktcFM2RGQ5QnMxMW85UjhxZnpxeFZfTjRFeFpRekYzU3R2SVZ5bjFLSjVPSzJZdWdfbU1RRWhVSjhManFXejRrNnNUczczWkQ?oc=5"
       }
      ]
     },
     {
      "tag": "交通委員會",
-     "text": "NCC主委提名人袁秀慧表態維持中立",
-     "detail": "面對黨籍質疑承諾不退黨，上任不以民進黨立場為先。",
+     "text": "立院LIVE》交通委員會現場直播中| 政治",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE56bmdCVGhTUndUUkw5U211NVNvM2txYUtfTlc0NjVFSnpGR2hqYXFLTUs2VnFYX2UwT3dBd3NfeUdTSWJhQUlveHlPY0R4a3M10gFWQVVfeXFMTTB2QnVLWVdHQm90eXJQcW5FRUJzcjZlejF6T3FzOEVMVzRoOVFQMS1lNWQ1enVxTWVFamptcEx0VkVKZXY2aEVOUmVNQzlWQXpycWd4YXc?oc=5"
-      },
-      {
-       "src": "Rti 中央廣播電臺",
-       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5VUDdoVDNxalpYZ2QyRDJ6Y0pHQUVjUFhhVUc2QnVjRUJtd09YMU5hNEtSWDlzMjFnNk01Z1M0clZCNDdBTXRLa3czNkM5ajdpVmpoQTZVcw?oc=5"
+       "src": "Newtalk新聞",
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE0wOHNBMXBjM1JmUXlhTWIyVDY2UWs2VHp3dkdiUEhzb0JGYlpqaVBLMnpGWEt5ampvbHRpemFvT2hwY0hZZG1FOVJDX1QyVElWZUR3V2FETFBUQ1U?oc=5"
       }
      ]
     },
     {
      "tag": "司法及法制委員會",
-     "text": "立院司委會邀部會報告行政中立",
-     "detail": "因行政不中立事件頻傳，要求相關單位說明備詢。",
+     "text": "立院LIVE》司法及法制委員會現場直播中| 政治",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1wQWdOVkkyMTEtcUdqTlQzaXVYZVIzamRPbzR1bGd1cFdDRm9ZTkM5T09OMTFIUlFJUmpxZnlCZ2tSLXlXVmtiVVV6c2NlTGND0gFWQVVfeXFMTUFYRzctc0wtaEUwNm5aZ1dfYjRtUkEzMndhLWlyNkxXSzBiZS1URWxhSV9xLXFMMjlhYTFUQkdHdFdFekRZYmpCNG5QTzZCRjR0djR3dEE?oc=5"
+       "src": "Newtalk新聞",
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9SOGF4NDdJcHJKRHJ5bmhqUHVPYjhMRlYxck5DblJ3cDBQWEZabm42U1k5Rm5LSi1EUzZ6U0dneTlidzF0S2pDQ2J1Nk5USjFwNEFFM1doZnlXR1U?oc=5"
       }
      ]
     },
     {
      "tag": "社會福利及衛生環境委員會",
-     "text": "衛福部反對食安報告限期2個月內提交",
-     "detail": "認為過度限縮時間可能影響調查報告的正確性。",
+     "text": "立院LIVE》社會福利及衛生環境委員會現場直播中| 政治",
+     "detail": "",
      "links": [
       {
-       "src": "UDN",
-       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5Gdmo2TGtqZTNyd01QeXoxWXBnMjd2aVRtc045WE1feFZ1ZnNXclNDN1lKdXNkMWk5dExpWDFyeGdkbkJGa3ZBU19mM0RtVEhZeEZtd00wVnZmai1tcnNhZktOVnNvc3ZWbjhrSm41OWJkOVk?oc=5"
+       "src": "Newtalk新聞",
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBXRmFjQTJLdWQ0bFJtclEycnJkOWlMQ1MxWnJ3MEFudUZSLVdaOUxkVFZfZnVqc29kbkZ4ZUgtdUJLbVNBZmxJZElJdnhCT0xpaFdtUGVQbmktQXM?oc=5"
       }
      ]
     }
@@ -687,246 +619,210 @@
    "items": [
     {
      "tag": "內政部",
-     "text": "老宅延壽第二梯次預計2027年公告",
-     "detail": "修繕與評估業者將先行查核評估名冊。",
+     "text": "內政部役政司科員職缺外補公告",
+     "detail": "",
      "links": [
       {
-       "src": "索引新聞",
-       "url": "https://news.google.com/rss/articles/CBMivgJBVV95cUxNTUYtWVRXczNyQ0RteGtnSW90dEFvanlwMkhZTmpoeUU5U2d4Sl9Lb2g4YXlyNkgxSmlSSzlIZjNpYWdUWVY3SUFrZGozeTZ2aWZ0NW5lMzMwS3J3eGxoWGgxSkV6RHZDLWl2dU43eU5LSkE4X19OdS03Tk9oZy0wSlg0VTFrQTBaNFdXWlpqak1PUkdxbHEzOTJ4OGZKVE1KQ0hnQ01DSnV6UkxqN3d1aDR2bS1PY0tqUmdBSjBoRDFSQThNQ3hkcGg1N3NrdXo3RFQ4MnRNc1lGWUNXeG9fMk9vWkxURVM5UVA5ZlR1bTJhN3Juc1gyV19XQlZHejBNSW13ZWhsLXdCbjlwckxRN05Oc1dYZVNNRDBUeXpJc25UMkxsdDRRTWx3R1dETDhhU0dybE1NbHZvWXV3QXc?oc=5"
+       "src": "內政部全球資訊網",
+       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE0tSEx0cEstY2xDRjY1eW1NTllRcTBIaGJ6VE9wVGFWdUhFQVFMUFM1ZHlGOUdNejg4TmFTNUFmRFJ1dnhBaFpMSTFoYVRLUkpVUWxRcEhvNTBuckpCTFNwZ0FnRQ?oc=5"
       }
      ]
     },
     {
      "tag": "外交部",
-     "text": "外交部因應颱風宣布提前發放護照",
-     "detail": "提醒申辦民眾注意領取時間，避免延誤。",
+     "text": "菲擬深化與台灣合作保護海纜中外交部要求恪守一中原則| 中國即時| 中國 | 世界新聞網",
+     "detail": "",
      "links": [
       {
-       "src": "三立新聞",
-       "url": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE5sb1lwYTJfekhfaWcyS21zcVZvS3BwcTdzZWZvbnl4bVhhRTRwRFhadmNxU3hoRnRHVDFsa1BoZUhmS2wyUDJfMNIBTEFVX3lxTE45VWhZaUlDMFp0Tlo2X0hfMi12SEUtY3pUU184NjFWOXgzdzRPeU5JV0lMdGQ4WkR3aVEwNWY3VGUyd1l4MVlCUzl0VGk?oc=5"
-      },
-      {
-       "src": "TVBS新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE45VWJuV3BjMXVuOWJ5RjkxUENObFRqdDJGZERBWDAzWUlLeTJzZUJyRE5YNndCbVNWa0FtZk0ta1VWdzIySm03MkNBSGtqQQ?oc=5"
+       "src": "世界新聞網",
+       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE01aXBpY1dZelZ1QzQ1Y01jUjBHRlFIMFNpT1RWUWVFLWZWQ3NzeE54Xy1ZOU9JWlVfamtSTVBudnRZVm5nZk9hOGVSSlliS21NdDhSVHlOMmlrTTNuakVQaUFIY1E3a0JZZUlNdU9uZWJ3cEJ3ajA4LTZFR0NHZw?oc=5"
       }
      ]
     },
     {
      "tag": "國防部",
-     "text": "國防部斥資3607萬掌握西南水下地形",
-     "detail": "執行水深測量與空載光達整備。",
+     "text": "全球資訊網 - 新聞與公告 - 新聞稿 - 本部 - 國防部長顧立雄主持災防應變中心管制會議",
+     "detail": "",
      "links": [
       {
-       "src": "自由軍武頻道",
-       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9IMFRaTUxreGF5V3pqUXRiWDNobmI0N3ZrVzk5RnNpX0RnRDFCc2hoY2hUdFBGZ3RXRzZiX2pWVlhkcENad1NvNU4wbk0yT2U1NU1qaEM1TDJUVl9HNFBfSNIBZkFVX3lxTFBUdlRPZ29SN3VTX3FMSU5ZMmdPTl9PTDU4N3JSb190ZVVwWEFSYUpJNVVoeUZ4a1UxazJBQWZnTFRqd3VxNEQwTWxQZGdLS1NMU0swdHRxQUlLTlRBWWlpZTBqdnlndw?oc=5"
+       "src": "中華民國國防部- 全球資訊網",
+       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90akF5TDdianpyb19GbHhvSDQ3WnZ3RWZCUFlXc0pDUUU5ZEVlTlN1aDZKSEhTeWdyOWdfaXFUbG82RlRvUFBZcmlkWEVLTWlPTHc?oc=5"
       }
      ]
     },
     {
      "tag": "財政部",
-     "text": "115年地價稅11月開徵預計達1046億",
-     "detail": "全國公告地價調漲5.24%，開徵期為一個月。",
+     "text": "越南冷軋不銹鋼反傾銷案初判損害成立 財政部70日內決定是否臨時課稅",
+     "detail": "",
      "links": [
       {
-       "src": "TVBS新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5fVXVMcU1MTkhMb0RvaGJaeDA1VEg2SnNIbFd2T3JkR3RqcTZzQ3lXbWRtLWdYUzVDNmZPMWlYTGZqRUc4MUl5X0haa0Iydw?oc=5"
-      },
-      {
-       "src": "自由財經",
-       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1GbGN6VF9kdU5OT2Q2S1RvM0dOWjdDa0xKNE1iblUtUV9pQUNFWm9fQkpsTnlfT3ZadFRRLXluVl8zdEJyaERlU2h5eWZ0WDB5QVlQV1RqRElDejl1SVc40gFkQVVfeXFMTW4teHBXWi1vNUhiemJjdmxzQmhuczBRcmI4cWRTRURtVDJFQ1RLaVNqTUV1VmlHY1pOVFUweDlSY1JXQjNIZmYtbWU0MUtSejdDd3ZISGVFVm85QnhIcEVoQ0kydg?oc=5"
+       "src": "墨新聞-MORE News",
+       "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFA3ZlExOTQ3UTdqMVozOUViaDNSSDJLRkFkVHRyU180UDVXcmJldUJrWXNDSlFfbmRXZndIMklpUDYzUQ?oc=5"
       }
      ]
     },
     {
      "tag": "教育部",
-     "text": "師培大學主管會議探討AI驅動教育轉型",
-     "detail": "以智匯師培與韌性領航為主題共商策略。",
+     "text": "國教署攜手臺北流行音樂中心辦理「流行音樂種子教師創作營」",
+     "detail": "",
      "links": [
       {
        "src": "教育部全球資訊網",
-       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSjhZVFRhbGJpTVVIbk1VVkU4TkhSMUxIVGF2VlI5eERDZXd0RDNhZGxWa21yZ3lZTS1oSk1FWXJTdUtfUzRoQlpwOElRVFpuRGgzZDZPbUNtbkN5dlFNS282M0Yxa2syYUh6d1l4QjRCRTE3YVpuR1FwNWg5cFFtN2RxUHhsNXRrNXhhOFNZRlRDU1Q0aTBaVHRFbw?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBEbVh0TURoSVhhWkY0YVBGMFAyT3VsMDNhVy1vVFJGcTZ6U1hoY0JMMWFROU9VaVVySFR5R0V4YVV4RWllT1A4NTJvcElRcXhETDRfYkJwUW5uNDBRd0NZRG8tLVNFOGtVT0JTdUpFeVY5NkRVRmN3TVB3Y1FFT00?oc=5"
       }
      ]
     },
     {
      "tag": "法務部",
-     "text": "法務部回應賄選金額難設固定標準",
-     "detail": "指出賄選手法多元，固定金額恐遭不法份子鑽漏洞。",
+     "text": "立委籲訂賄選金額標準 法務部：手法多元隱匿難量化",
+     "detail": "",
      "links": [
       {
        "src": "經濟日報",
        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE44X0JLM1EzM0hQMmljM0hoenE3eU1WN3dPZS0yOHVZV2ZBeTM5VVdEMllWSnVBWERmVDMyZnVsajYtZ1I2U0c1VWxFRklCQWlYcE1wYU1ZX3A3UdIBX0FVX3lxTE04VGtLWDZieGV0b0pGT0tSTDJJM2pnY1ZFSkFCMVdmeUhubTQ5MXBpeHBUcm1xWm5wbVJHQ3lwNlVjOFlyY3BEcnZzMEVBTTNZckI1a2VyZ0tnY3ozWWFj?oc=5"
-      },
-      {
-       "src": "你的公共電視",
-       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFA5TUIzMExPeTJvTDdpc0YwQnl4LVVtOFVldmZ4dWlNUDdZQVhadTVyc0FKX05GUXhqZ2xnOVFibk9WZVhycTZEaXRzTHFiZTQ?oc=5"
       }
      ]
     },
     {
      "tag": "經濟部",
-     "text": "全球招商論壇獲13家外商投資意向書",
-     "detail": "成果亮眼，並簽署臺美棒球產業合作MOU。",
+     "text": "經濟部舉辦APEC資通訊與AI公私對話 深化區域合作強化供應鏈韌性",
+     "detail": "",
      "links": [
       {
        "src": "經濟部",
-       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOTHRuWkNuNGNUeE5EbWI0UFp5RjJnM0h1dGxXUlBuamw4cThwLXVVb0l6cjNlajhySTg0bHRFNUVjdjhiY3h5X21nMGhsX214ejdkZFVZUUhfcnk1WTZoc3hWZk1wSFJsbnF1d2syWkxtQUpuZmZuMWRTTGlkbVBYM3VlUDlYbEQ5LVJfaw?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOOGpiUFZYSGdRMDhnTTd3VnU2S3JlVGUwM0NjOHRxUTY0LXpZSlRWYU1WYXJlQjJmNkZsdnBCclB2VEtEdGhPOFBJX0NIbHprWTNIMTg0VWduaFhWTDZVdXNZV2tQMHRONnhST0JXdDBPS3RuX095Yjhtb0xMd3ExSW9ERzMzNWN6Y3plMA?oc=5"
       }
      ]
     },
     {
      "tag": "交通部",
-     "text": "交通部預告修法將叫車平台納入管理",
-     "detail": "放寬計程車可一車多車隊，引發業界關注。",
+     "text": "交通部突預告修法「管叫車」！一車多隊＋管服務費　Uber急喊：太倉促",
+     "detail": "",
      "links": [
       {
-       "src": "Yahoo新聞",
-       "url": "https://news.google.com/rss/articles/CBMi1gNBVV95cUxNZTNqdzB2bF9KSHNIZm1WX2w3WlkySjhDSXFIZlJYQ2xDRFp0d3RmcVl4dkpQVGlhQjlBUE90QW1ncDBucWtyLVBQTXB3clMtOUxfZWl6LU1oS2gyNmRMbzJjeTd6M1RyY0hEZENZUTFlVUl3QmFYbzZQeG1fTTNmeGdPQUhnSjBLVy1SOS1VeEtMbUFVYnRrOVhkcVUtbVUwbURGZUgteUZyRFphenJ2eWltRklxS0ZVRGVpdlVuZlZhNGhTbXd2UHdTdUFYUGNzNkV4SXotWmdUTjdXQkRQTDVseElDQXN2dzJjalpSYWYteHAyTHBUQTQwbWZQWFVxY3JzbE53SXVDYkFKRERNQ1EtQ3ZCY3ZFWjJ2UUR4TTc5TUZSc3ZFS2lBU1VETTZVNU45b3BPVzh2QzRKLS1GS2xmV0lUZlhQWkgwb05fSURwQjV0WnQydnV1dThXdTVUSFdrU182dmhIQ1RnUnQxNjM4WVNBdDVESVZ2V29La2ZWa3Z2MkpqSFBlbEEzeV9TaWxTNjdhZjhEUXlzeXNjUnhtZUE4XzRyUkFkM19lUWdXMW9oSHNzYS1IR0RDUFdWekhCY1hRMkFINnh0TmwySmo0cHBWQQ?oc=5"
-      },
-      {
-       "src": "鉅亨網",
-       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1hak90WGFKM3BGN2hScGpzbFhKZXE2dng3eXpvbDNVaFN0UVlqbUZUQXRGS0Nxc2RuTDhZN1F3YlhKaTNpMUoxaWlDWHdQazg?oc=5"
+       "src": "三立新聞",
+       "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5odEZQM2toOHpCelVnZUxoTDRtT2N4b20wZHVVNWpPV1VmZWZ3dG1FclRlYnJYZldXbmNhX3hFMGYtMXFHa2JWXzdfcUnSAUxBVV95cUxOaHRGUDNraDh6QnpVZ2VMaEw0bU9jeG9tMGR1VTVqT1dVZmVmd3RtRXJUZWJyWGZXV25jYV94RTBmLTFxR2tiVl83X3FJ?oc=5"
       }
      ]
     },
     {
      "tag": "勞動部",
-     "text": "颱風天雇主要求出勤應負通勤協助責任",
-     "detail": "停班停課勞工可不出勤，雇主不得強迫請假。",
+     "text": "強颱薔琵逼近，勞動部強調，雇主若要求勞工出勤，應負通勤協助責任，且針對戶外工作、搶修等外勤作業，勞動部有六大提醒",
+     "detail": "",
      "links": [
       {
        "src": "勞動部全球資訊網",
        "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5jb0FzY0xsR0R5WFJVMUhrQ05EWmtiRTlNdHlaN0JvUVktcGxUTzE1d3loQmhaLWFwdXFiRUtDZmdCVE8xbmp6VW10d29hRGVpVEloejdHaw?oc=5"
-      },
-      {
-       "src": "自由財經",
-       "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBQWFR0eWhpdTA3Q3h2cjg1eWtWUk1zSGdPYmd2eHR6MjVvZ25hZ0FHZkw4SXdSdXVzeXkyVG1jUWRUbU9qNFNhLUtDX0JCR09hQUlEVmpMazlWeTNDbS000gFkQVVfeXFMTXBVcjVVV0FPUHFIUDhneG4yb214SjdEczBiaHJpWkZBQURUdFJvd0F3NF9iUGNJcktJNkRQY3kyT3d3UFVLR0lvb2VJRVIyZ25FSC1XWXk1TU1HVGd1bk9uUm92TA?oc=5"
       }
      ]
     },
     {
      "tag": "農業部",
-     "text": "新社花海31日登場預估突破400萬人次",
-     "detail": "農業部期待吸引廣大民眾參與盛會。",
+     "text": "違規搬運廚餘、餵豬罰鍰提高 農業部：首次合計開罰100萬",
+     "detail": "",
      "links": [
       {
-       "src": "客新聞",
-       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIUlVKUExiRHhtWWNyVU9sZjZpcW9NZGlCZ3FKWDlmUzNaeDhTSTl6UmswU2RpQlV4VGNpX3lSa0xaTmpvdW51bkpYYjc2VWZN?oc=5"
+       "src": "你的公共電視",
+       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFAxdlRvdXNub2ltQmJ0bnNxeEpKZkdqTXpwSlFQWXRZeGJyWVA1YWZXcExORDBlOEc3akVHYUVIckxqSExpaWdoZnpHUDRVZlE?oc=5"
       }
      ]
     },
     {
      "tag": "衛福部",
-     "text": "衛福部攜手環境部成立醫療永續聯盟",
-     "detail": "跨部會推動六大藍圖，邁向醫療系統性淨零轉型。",
+     "text": "黑心醫師涉嫌轉賣管制藥品！ 衛福部令全台藥師把關- 健康新聞",
+     "detail": "",
      "links": [
       {
-       "src": "CSRone 永續智庫",
-       "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTFBsNm5DZ2Q3aHA0M1M0Qi1UQTI2X280WGxJNUpnS1VCWUhKRS1MRUx4dkVpMW9sZWZ4UjZGdE1uZDh0Szg?oc=5"
-      },
-      {
-       "src": "國立教育廣播電台",
-       "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9PT3JEZGFweUNVN1hweHlVN0lFSFYtMnhVYjdfeWk4U2VOMHQ1UkFNd0dmTWxnZmtYNVpBOW9YVVZCRnNNMkF1UWxwdVoyUS11Vk1kRS1rTl9wckduaHJwNmhLOXhURjJULWRNRW1n?oc=5"
+       "src": "PChome Online 新聞",
+       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNYk44SF93SkJvUldydGRoanZnb3l2SnVtZk5pYl9wYjU3N09LdVhxaFo3aGkwZVRqTmxpMG1uNEtxcXNYZi1WcjVITEp2U1Y0S181S1FMUE41d083QWxtaXFDMTFqYXFRdkdBT0NQM3ptd1Zoa05tSHl1azl5U1A2RER1YkNUVnhHcGlJOGF3bw?oc=5"
       }
      ]
     },
     {
      "tag": "環境部",
-     "text": "環境部提醒網購小型焚化爐恐受重罰",
-     "detail": "呼籲民眾勿私自購買以免觸法吃罰單。",
+     "text": "雙部長領航淨零與氣候韌性！衛福部與環境部攜手成立「醫療永續共創聯盟」 打造永續健康臺灣",
+     "detail": "",
      "links": [
       {
        "src": "環境部新聞專區",
-       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB0cEh4LUxqZDNzUndOb2ZxZk5JenQwOV9WYW5OeWQxTV9aZFR5NUVnd1pROTk4cXVkNHdxSDJFdmlraFo5VTdSMTFmTDFoTDJNY094V3J1Ui01SFNGMzhDNHhHMHY?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5CUXVhb3gzZFJoZ2taeW5WcWE0b0dMdXU2dEVlcjA0eVBDUjZPYzNlTUp4M25QS1luMUV4cWRwWUhEWGhVMXBGS0xNdEppdWlESDJKXzJ3a0pxX2Ryck4tck9WQjI?oc=5"
       }
      ]
     },
     {
      "tag": "文化部",
-     "text": "漫畫家麥人杰以雙寶記榮獲金漫大獎",
-     "detail": "創作40年發表感言，只要有讀者就會繼續畫下去。",
+     "text": "李遠宣布明年首辦國際漫畫節 台中舊城區變身漫畫世界",
+     "detail": "",
      "links": [
       {
-       "src": "E創傳媒",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE05X25UWWYtcTlDOVc1LXlZal9vcHlETDU4d1BmMWMzNTBDNUNuV2ZRN1Y0ZDQ5aGIyUENGV09SclhJRGNSTVQycDItZ2ZseTY5b1E?oc=5"
+       "src": "自由藝文網",
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5iQlJIN1lRZ0FXYmxYTXB2YkhoSWR2TVVZSjJtVnVJTzdkNUhSNzc0YlZESHJkdW1adzZiY2Q4V0ladm1hU001aWpTSUFidUNxcjRTVVJzYTQ4NGJlenQzS3dYQTFtZ9IBZkFVX3lxTE5iQlJIN1lRZ0FXYmxYTXB2YkhoSWR2TVVZSjJtVnVJTzdkNUhSNzc0YlZESHJkdW1adzZiY2Q4V0ladm1hU001aWpTSUFidUNxcjRTVVJzYTQ4NGJlenQzS3dYQTFtZw?oc=5"
       }
      ]
     },
     {
      "tag": "數位發展部",
-     "text": "面對新型態AI攻擊資安署提防護策略",
-     "detail": "呼籲企業穩紮資安基本功，並緊急針對漏洞發布警訊。",
+     "text": "新型態 AI 攻擊來襲!資安署提出企業防護策略與行動 呼籲穩紮「資安基本功」",
+     "detail": "",
      "links": [
       {
        "src": "數位發展部",
        "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9hU1NBSmlSVlp6WkdFbUJOckY2N2k2T25xT1I3YWhwQU9CbU03Y1V2T3FSZE1oazhFc3cwdVJCUGFwekJZazNDS2E0R0t0bDVGSjczRGdoWG5pUQ?oc=5"
-      },
-      {
-       "src": "iThome",
-       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9ST3YtcDJzSG9NemhneE9kYVlzVGozWmFMNmtQWnlQWF9YcU45ZExGVmp4eEhsb2hCMHd3Q2FOb1VfUm01MjlIRzY4MExoZw?oc=5"
       }
      ]
     },
     {
      "tag": "國科會",
-     "text": "近期無相關新聞",
+     "text": "全球智慧醫院 台中榮總躍居36名",
      "detail": "",
-     "links": [],
-     "empty": true
+     "links": [
+      {
+       "src": "UDN",
+       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBSODhPekYzemNlLWlqTG5lcGF6QnZRa3JLTjRueF9sQ0xoblh6XzNZMWp2N0F2TXJpdFVOUUhEUkYwaTI1cFhob2JDc2FNdDBqZnMwckNn0gFWQVVfeXFMUFI4OE96RjN6Y2UtaWpMbmVwYXpCdlFrcktONG54X2xDTGhuWHpfM1kxanY3QXZNcml0VU5RSERSRjBpMjVwWGhvYkNzYU10MGpmczByQ2c?oc=5"
+      }
+     ]
     },
     {
      "tag": "金管會",
-     "text": "金管會推TISA租稅優惠年扣2.4萬元",
-     "detail": "每人每年上限2.4萬元可列所得減除，祭退休利多。",
+     "text": "金管會宣布TISA租稅優惠 每人每年上限2.4萬、所得總額減除 | 陳怡慈 | 新聞",
+     "detail": "",
      "links": [
       {
-       "src": "Yahoo新聞",
-       "url": "https://news.google.com/rss/articles/CBMi5wJBVV95cUxPeUlDVGFVM0t2YlBNRVBCWXRTQzJPbnJFZmVNSXZBR2d0MXVYT01tNmo5bTR5OHlTX1F2dEp1TnhwcTRhUUpjUk9DaHZmUkdFWER5bVVxeGFhcG15QWlTcllJVEpuRUJLNW01Yl9NeVNmZUVfQlVCaURTbndrbXdTakdBcVpaSnp1cHRIbDdTdVAxYlpWV3FFT2FMdEhFdkpNWTNKNjVkWXJzb3JWc3pfUldNSVNyZHh4RHJwYVVjR3BBYVppSGNGUkVoRnhFazkzNDlzMTZrU2dRclB6MWE4LUwtN2VDN0laQ0g3Yy1xV2pEaFAwZ2lQYXVmM3IyR3RhYm8zSlFDOGtPWTZfOC1jWTNOUkd0YzVPVW9ZRU1sY0dJQzlXWUhISHRPQk50T0wzNVhVUGg1SURTazVsYU9BMFpobVZIbXZ3NUF0X0Q5SFJVazdERU51aHdoQ2o1RnVKWVc2N0FPSQ?oc=5"
-      },
-      {
-       "src": "三立新聞",
-       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE96VDFyTDlXOERRaTFYN0xXeF96OVlFYm5NazVKbUlQaVpMM0NWM2dSdXpmN1ZWeGdVMC1TdGR5ZHpGd3B1aTdrM3luVQ?oc=5"
+       "src": "風傳媒",
+       "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5tNDBzX0p2VUVVeEdRSFNUa0tZM2ZVbl96MC1fdC1NbGNwSll5V3JuMklyczlUeWE0ZVZXQzU2a0R0WGRVRFJVNTVZdW5qUQ?oc=5"
       }
      ]
     },
     {
      "tag": "國發會",
-     "text": "國發會通過572億元國際商港升級計畫",
-     "detail": "未來5年強化港埠智慧應用與營運韌性。",
+     "text": "政府做後盾！「企業投資美國融資保證機制」 即日起正式受理申請，助攻產業國際布局",
+     "detail": "",
      "links": [
       {
-       "src": "經濟日報",
-       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5OV1M5ZFhTZDliVnp1LXZzeF9kYkd2N25jNjRSTnB2SXl4RE9oSXRwMUVlUUFBYmhfR1VEXzJMN2thU3Z2REppa0Z4UngxOFpuYmxJb08xXzJwWTlFLUpmVnA3UUt3SE1QTFZRRWdDTDU5aGhFNHRVb0F30gFfQVVfeXFMUGx4TlpJTkoxMGJmUjdfbzJIRzhVQ1RtcUdKd25KQWdCNVFneUhDQzFzY1R6TzZROC11RTYtcndSQUNaQmFPazFxcmZEcEdQdFRIb2FITW9zdmU5U0tGcG8?oc=5"
-      },
-      {
-       "src": "旺得富理財網",
-       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9KTDVmWkl2TnpQdjZOVm16SnVJQVVEUzhhU0thVUx3VXBndmRJV3FsVkhUdzVqeDk2QURtTEtwZXBIUkZFb1UxTVhDTy1Mdmo4cnliSVMzcXIwYXMwTHNwSWg1cS1Cak8zQUE?oc=5"
+       "src": "海基會兩岸經貿網",
+       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFB1aTZoeGdYUHJ6V2EzM28xT1R2ZHNHX2U5N1lnMG1TNGtqbjE2akVGeVdPRU5ILV9DQVVOOE5zTE4tVnlDbEp6RC1kZktYb3NSNmMwMFZ0bw?oc=5"
       }
      ]
     },
     {
      "tag": "陸委會",
-     "text": "防範中共跨境鎮壓陸委會研議修反滲透法",
-     "detail": "民調顯示逾九成民眾支持台灣前途由自己決定。",
+     "text": "防跨境鎮壓 陸委會研議修正反滲透法",
+     "detail": "",
      "links": [
       {
        "src": "自由時報",
        "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5tQ1NtLS13MElJUnU3WEhPYk82aV82N0JLM1J3SDhsaExoWGZpanhQSm1sR1I0ejlJR0lBTzRHWFZYVGlzeWNDcFNYNEtYLVp1dkVqbVRKelJDNlhuRnhxU9IBZkFVX3lxTE9GckMxN3BDZC03RDFlOThGU2N2VUp0cUp1eTRxSkoxQlpYUzhzdVlDYjV2WGFnOGRPa2ZXNmtjZEVSOVZLMHNTUnk5Z3pYX2ZRUDY3U0hJeTQ2aGRLUU1oYkNHdG9MZw?oc=5"
-      },
-      {
-       "src": "TVBS新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE8yME4tMm9BT1VCODBFXzJyR2tsSlZ0Y3VMU1NCRFY1emthRVNnR0VxNU5ib1hkSmpXblJaSGpfaHpDY0oxTHhmVVVCRjNiMUZpTlE?oc=5"
       }
      ]
     },
     {
      "tag": "運動部",
-     "text": "台中烏日全民運動館啟用獲運動部補助",
-     "detail": "總經費3.9億元，運動部補助1億元興建。",
+     "text": "全民運》締49項大會紀錄桃園落幕 下屆兩年後彰化縣見",
+     "detail": "",
      "links": [
       {
        "src": "自由體育",
-       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE0xQ2l2RDFZRkhSSDZVbDByS0xWTFN5VXNDcTllQWk2OUJEM1VpUVVLNFQ4YWpEX2JsVmNQbVlVU3FsZFdnZU5QLUx4M3Ntb3d2d3RITHQ2cTVESDlMdmwxVGZGYXQ3QdIBZkFVX3lxTE0xQ2l2RDFZRkhSSDZVbDByS0xWTFN5VXNDcTllQWk2OUJEM1VpUVVLNFQ4YWpEX2JsVmNQbVlVU3FsZFdnZU5QLUx4M3Ntb3d2d3RITHQ2cTVESDlMdmwxVGZGYXQ3QQ?oc=5"
+       "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhUDlpQ3d0aWhfREoyYkUyVkNMT2p0Yi1zUlRsUzFiajd0OWx0Wm5zb2tkS3pISnh5WU1iXzBlY0M5NGt6dU05Z2RHdFJRU1ZHTUp3WWQ1TUtkdDduR2lOWG14UnBzQdIBZkFVX3lxTFBhUDlpQ3d0aWhfREoyYkUyVkNMT2p0Yi1zUlRsUzFiajd0OWx0Wm5zb2tkS3pISnh5WU1iXzBlY0M5NGt6dU05Z2RHdFJRU1ZHTUp3WWQ1TUtkdDduR2lOWG14UnBzQQ?oc=5"
       }
      ]
     }
@@ -938,126 +834,118 @@
    "items": [
     {
      "tag": "哲學",
-     "text": "中研院長廖俊智獲選美國哲學學會院士",
-     "detail": "榮獲國際學術殊榮。",
+     "text": "哈佛研究養成「1運動」習慣，生病天數減少43%！7招戶外運動重點助提升思考力",
+     "detail": "",
      "links": [
       {
-       "src": "中央研究院",
-       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05TnJwYUZlTWoxRC1iV2ZqeF9VVXV0ajQtcXpXNnBOeGdhenlVUDFGQnJGWkZybTVoZlFJRW1UZlZZVFBjMEZqWVFjdUxLSFo0RklLVjYxLUxidw?oc=5"
+       "src": "ELLE",
+       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOalZadnM5N3lGdVpTWDZPSkFkVi1BcTFFSUhCOVZYYmlkVHZNcFlHT0hoakNhY3JqNThlZUl4OFVFOVpBRU5RWk0xSjYzdnlIUkJsMi1FcThEWFc5ZjJhUXBhU1QwbEJ4dE9KOFllSlVsbWdxVV9qVEZRZ2RfcXhOemV3?oc=5"
       }
      ]
     },
     {
      "tag": "文學",
-     "text": "第二十二屆林榮三文學獎新詩獎揭曉",
-     "detail": "自由副刊公布本屆得獎者名單。",
+     "text": "日本作家村上龍逝世：寫盡青春的躁動與憤怒，看見日本繁華背後的裂痕",
+     "detail": "",
      "links": [
       {
-       "src": "自由藝文網",
-       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1xUVkzUFpaNHlPNVowdUttQ09wS3BocHktTnJlbnRzbW43c2NrRHhJY2lGTk5yWXZhUkMzTXNCa2t1STNEQ3dBUFozMzJnYm55Q0VkZnRvZ9IBXEFVX3lxTFBsd093OVd0bWhoSTM5N1ktSkQ2NUc2Vlo2X25JazhNM1VxOFFob1J4R1NidmRBUHBDU1B6bmVaOGhCYlBpekdtajdpM1NFeVVTVm9fbXRWZzV3MjU0?oc=5"
+       "src": "VERSE",
+       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5ST2tfVjIyTmJjNjNJTFVGeGxhanhqTmdRVjAtcXZYakoxZU1NSGp6ZXE4SUF2ZnJsQnloSkNlcHNLM1ZIeE9CbkxwZ3RvLTZrWXZzTDQwWElhZWtJY29JUWdsalNFVHNR?oc=5"
       }
      ]
     },
     {
      "tag": "藝術",
-     "text": "美術館兒童藝術教育國際論壇登場",
-     "detail": "以與兒童共創為主題，探索兒童參與的新關係。",
+     "text": "勤美術館長出夢幻「泡泡森林」！人氣藝術組合A.A. Murakami特展《After the Rain》11月登陸台中",
+     "detail": "",
      "links": [
       {
-       "src": "非池中藝術網",
-       "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE44Z0NoenF2RFhMcW14bmh2VVZUZ2VWN0pXNUZZSmZ2WGdsZU5tUi1YMk11YzVpRFdjTk9xMzVRbjlFUkVRcUJj?oc=5"
+       "src": "La Vie | 設計美學",
+       "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBVVW4tUEdFcWU0UHpNQWU5YWYzeE8yc0dSZU1PM0Rud1VHQi1fVVRsREF1RkJWTlY3Rkp0bUl1eF9VcTFIZkliWmFJNU16NWYyYU9RTQ?oc=5"
       }
      ]
     },
     {
      "tag": "社會學",
-     "text": "北市教育專業創新與行動研究頒獎",
-     "detail": "從社會情緒學習到跨域實踐展現教育創新。",
+     "text": "新進人員介紹——社會學研究所呂宜芳助研究員",
+     "detail": "",
      "links": [
       {
-       "src": "臺北市政府全球資訊網",
-       "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOaGVCdDVNUUY5TlNHZlJBYkF3QW9DT2NYS0dzQXlqQl9hVHJBc3J3anl5Rk45NndYejR1bHNTRDJIRHdNRmdIWW9oemdQbDJvSjFobkExeTA1ZWlRcmRvMUppQlRCLV9UWGtyY0JBTmVobmRRM3lpelhJcTBCLXVPaWlDaE8?oc=5"
+       "src": "中央研究院",
+       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBFZE9oUVdKaVp2dEFNeUllakhfTGYxOGVZd2EzV3RJdlFuSlpzVGVIczd6NGVLeWZBTUZPMkp1Tm0wRDk4ZmZXMm1ISXNCRDQ5MTR1a2JrSkdFUDA?oc=5"
       }
      ]
     },
     {
      "tag": "經濟學",
-     "text": "林毅夫獲頒最高權威榮譽傳奇再起",
-     "detail": "旺報報導經濟領域重量級肯定。",
+     "text": "拿台灣F-16當比喻！諾貝爾得主轟馬斯克：美應收回星鏈",
+     "detail": "",
      "links": [
       {
-       "src": "中時新聞網",
-       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TanRldkZ2dHV1dVFhU0VsYzBOaFdHTzdFXzNMZ3VUSlY1aEhjV0NMcHlzUFdBR0tibC15d1NVajdpTGlEei1mNTZ2WjNEZFVVSkFkeERFOXhwdW9JN3Z0M2dhaEM1Vndrb01N?oc=5"
+       "src": "TVBS新聞網",
+       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5qZC04ellTOVo0Q3VXOG9qMVJTVE9JeFd4SGpaT0RfS1ZGUnpfTXhhT1NGZ0RuM2xycWxlWjg3RTFYRlYyX2czS1pkNEpFWmc?oc=5"
       }
      ]
     },
     {
      "tag": "心理學",
-     "text": "最新研究指出白天常嗜睡失智風險增39%",
-     "detail": "白天經常打瞌睡者罹患失智症的機率顯著上升。",
+     "text": "心理系演講｜身心交會的路上：從臨床到健康心理學的研究反思與跨界",
+     "detail": "",
      "links": [
       {
-       "src": "大紀元",
-       "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE12YmpIMXQwZEh5R2dCUmRpa3VXQVpvN1dkS3VSNl9wYV9ONW10bGhuSHR4Y0xlMFFEMllIQnBuZDdMNW1XQ1VJTzBCRlRyNnRxR3A2Z3o3QlBpaklwbVlDcjFmN0ZXWHPSAWdBVV95cUxNdmJqSDF0MGRIeUdnQlJkaWt1V0FabzdXZEt1UjZfcGFfTjVtdGxobkh0eGNMZTBRRDJZSEJwbmQ3TDVtV0NVSU8wQkZUcjZ0cUdwNmd6N0JQaWpJcG1ZQ3IxZjdGV1hz?oc=5"
+       "src": "NCCU MAIL",
+       "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBhMlZmTVJJaXlRRFJBUXhJcFhhN29SdzZPTHlUSlZaMmk2ZUlIUFp4WHd4NW5PXzktS1R3VDN6Q3NSSlBWSTNPOUdfX1hjOF85cnNIUEpOR1M1UGxfN3cyQkFsVmJvQkNVSlc0?oc=5"
       }
      ]
     },
     {
      "tag": "法律",
-     "text": "政府呼籲推動修法阻絕中共跨境鎮壓",
-     "detail": "因應國安局證實中共跨境鎮壓有幫派協力。",
+     "text": "中共是最大黑幫！防跨境鎮壓只辦「蝦兵蟹將」 綠委將提修法加重刑責、納管新型態犯罪| 自由電子報",
+     "detail": "",
      "links": [
       {
-       "src": "新唐人電視台",
-       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBQOHFTSFhmak42aFpWOXhyVF9URll1MVg1OF92a01hN2JQa0VrWWN5Vk9NYnlQeXNwbHRESjFsTi1DSmhtSWVGQURJdnY5V0ZFb3BkTUY0THdRTzdNZnNNN9IBZkFVX3lxTE8xaXA0QTB3UzR0YXE2OGZucUItckpwdzJpWHFvVXBybjZmWWg5OWRnSDNLeW9qd0trSDF5Y2JkRkt0UHgtNXF5MjFWVVBUZGlnSjdsX0RJWVV0eVdGYmNvbDM5Z0RaUQ?oc=5"
-      },
-      {
-       "src": "FTNN 新聞網",
-       "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9aNU9HYXJVX1pYSU9SYjRpZlJranduNjExZUVuRHRuWFBYSVIxNTZ5ZHNyVVo5b3dKaEpLX1laSC1JTThwQU1VZk53UQ?oc=5"
+       "src": "LINE TODAY",
+       "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBIWEVMWUpkcV9wdWg4a0lCYm12b3BoU2xwN1dBZEJ4dktYcFlnRlBfbFVkal9mLTh0V2dHUDFHeVhLeG5EekVwYVRMZUsyeFZ3a1REY1VR?oc=5"
       }
      ]
     },
     {
      "tag": "數學",
-     "text": "微軟研究突破破解懸案31年KLS猜想",
-     "detail": "成功解決數學界的重大核心難題。",
+     "text": "Harvard Mathematicians Divided Over AI’s Role in Research and Teaching After OpenAI Breakthrough",
+     "detail": "",
      "links": [
       {
-       "src": "Microsoft",
-       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdFN5bkVfMDEwNVo4LTgzMkQ2c2Q5bzhLaXpwTWx3azk0X2RiWWMyZjNvRkoyRl9lM2FNclQ3OEwzSVFiUFdxbXQya1UxdVB6ZzdCYURxVjZoMUNKckdXakhmMG9UbC1rVlg4UmhtYzhWVjFlMm9lUElHck0ya01vY3ZackZSVjA0amFENmxIN29rekIzTnJIZWFtU01EWmtETjhEUEt6VGhKeTdkamtpQ2o2RVVuX3VpVWc?oc=5"
+       "src": "The Harvard Crimson",
+       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9ZQzJEODcyZzRTdHl6d1ZxSFpSY01uNUdtMS04ODI4b19MZ0lSd0E4ZmJoeGFIWkhxODBmakJKUDF2dHNkYW02akJaWDcwTnl1aWhFOTZFOENvVTdKT0ZBdXhnTlR3LVJQWG0yT1lFeUhuVzM3WjIwRzFn?oc=5"
       }
      ]
     },
     {
      "tag": "物理學",
-     "text": "物理學家成功囚禁單一反物質粒子數月",
-     "detail": "並精確控制其量子狀態，創下重要突破。",
+     "text": "Physicists Hold Single Antimatter Particle for Months and Control Its Quantum States",
+     "detail": "",
      "links": [
       {
        "src": "Sci.News",
        "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE92eTcwQ3RqZGVuMnhSdjZvQUJhalI0aUZMYUlKOWRENXU1a3dDWEVBTVZRd1duTGVmLU45OFYzdEFGeTdYd1ZlMkVvVWM5OW45aWxlSmJjRDlzS3pvalJHYi1HRU5XT213Ni1GWkd6cTMxZUFoOEotdUJB?oc=5"
-      },
-      {
-       "src": "Phys.org",
-       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE52LWl3U0FFZzM1b3prQ1FMU29kQkxFOU9FMmpOX0hTTGtPbkc3VkJJbHZFcklhb0pXcklQVnpZMlhjZnN2YUkwWC1BTV8tUmhxc2NIbC1YaVd3NEpIQmEybzlwR21XYlc3SjNZa3d2cHowbXd2aHA5OHJWTmY?oc=5"
       }
      ]
     },
     {
      "tag": "生物學",
-     "text": "科學家發現極小基因組紀錄之神秘微生物",
-     "detail": "挑戰生命極限，揭示基因組縮減的新認知。",
+     "text": "How spatial biology is tracking antibody drugs inside tumours",
+     "detail": "",
      "links": [
       {
-       "src": "BioTechniques",
-       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOdE1IT1VfamVvd1czUUZiamNmdVlIUzNyNjc4Qk05akZfZDRtbDFISEk4Q1NISkxLRDBMYTdReUJhT0hhR18tNFV0Uk9EVmhBSTR2RnNKOUlnNkctMDlnb2pkcmI5YzFuMXA2NWdEOTFyUmNmSWpQeVdmdUV3Y0FwakNSVEQ2eHJIcTI2SjVhTGxmVVpZczhRb295WDZHR1NoM05WbWQzcDBnYlJxZXlpZTZ1NWZFTmxfUlVPekJJb0oxVnJMcWE2dzhUb3c?oc=5"
+       "src": "Drug Target Review",
+       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQeTFDd2dNUUZQMC02dTdDR0wybXlNaURqdDFRM1EtXzVJeFhQWURxc3Iyd25BZHpRS3d0Rm41bDhfVjVDdS1fZDRnZmpkR1JTMlhHcTMwZkdDVEFkaVdWV3NWajJtT2pPdm5NeUg1R1lCOWYwR1ZXbzktUDlOWklURU82eGVDTjAwemZCOU5GTnZWNzhYTm9FZmlDeTU0OW9Ka2JFNTZnSGgxR2FwMGZRZ1lZQ1dGdw?oc=5"
       }
      ]
     },
     {
      "tag": "工程",
-     "text": "史丹佛開放自主機器人學習給全球研究",
-     "detail": "促進全球機器人與人工智慧領域之合作發展。",
+     "text": "Researchers open autonomous robotics learning to the world",
+     "detail": "",
      "links": [
       {
        "src": "Stanford Report",
@@ -1067,12 +955,12 @@
     },
     {
      "tag": "醫學",
-     "text": "直腸癌免疫療法獲美FDA重大突破批准",
-     "detail": "跨國臨床研究推動癌症治療新里程碑。",
+     "text": "FDA grants accelerated approval to groundbreaking rectal cancer immunotherapy",
+     "detail": "",
      "links": [
       {
-       "src": "EurekAlert!",
-       "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9ZUk5rSHFmN2I0NWNqNXRkZ3hFTHhwTzhFS282bUl0SzBfd28yay03R0k2OWxXVHU0M0dLVERzeWlGSXR1bzJwUEJCelI3TXlBNDA5aVM3aTIwNm93?oc=5"
+       "src": "News-Medical",
+       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNRGlXVmw3TmpWeUJvVVZrUkNzQ2pJaDl3SUlxS3hta01qa0R1QjJrQndUU0VsMEt5TS1Da0dfcERIbWplU2w4MUdwMVJiZ1RSWGtYbUhBN1lzX2xacF9zOUdSNFJkWF9UMDFqNWluS2NaY3lLSU9qY05xd1ZVOHdJVEF2dnRJTkVOMU1iam55b1VxSTl1cTNOejZlWUlYOGxSSFB2STVuUUNqTzdmTEJrZXR4b2NrQTdQVGpxNEJiQWdkZjA?oc=5"
       }
      ]
     }
@@ -1131,10 +1019,10 @@
    "t": "行政院院會（每週四上午）"
   }
  ],
- "source_count": 360,
+ "source_count": 365,
  "ai": true,
- "ai_dir": true,
+ "ai_dir": false,
  "version": "v7-單頁三次更新",
  "overview": [],
- "model": "gemini-3.5-flash"
+ "model": "gemini-3.8-flash"
 }
